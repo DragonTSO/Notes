@@ -1,0 +1,1249 @@
+# 🐉 SKYBLOCK TU TIÊN — Game Design Document
+
+> **Server:** TurtleMC SkyblockDragon
+> **Phiên bản:** Paper 1.21.4
+> **Cập nhật:** 15/04/2026
+
+---
+
+## 📋 Mục Lục
+
+1. [Tổng Quan](#1-tổng-quan)
+2. [Hệ Thống Tu Luyện (Cultivation)](#2-hệ-thống-tu-luyện)
+3. [Hệ Thống Skyblock Island](#3-hệ-thống-skyblock-island)
+4. [Hệ Thống Dungeon](#4-hệ-thống-dungeon)
+5. [Liên Kết Skyblock ↔ Dungeon](#5-liên-kết-skyblock--dungeon)
+6. [Hệ Thống Vũ Khí & Trang Bị (Linh Khí)](#6-hệ-thống-vũ-khí--trang-bị)
+7. [Hệ Thống Pet (Linh Thú)](#7-hệ-thống-pet)
+8. [Hệ Thống Skills (Công Pháp)](#8-hệ-thống-skills)
+9. [Hệ Thống Kinh Tế](#9-hệ-thống-kinh-tế)
+10. [Hệ Thống Quest](#10-hệ-thống-quest)
+11. [Hệ Thống Rank & Danh Hiệu](#11-hệ-thống-rank--danh-hiệu)
+12. [Hệ Thống PVP — Lôi Đài](#12-hệ-thống-pvp)
+13. [Hệ Thống Ruộng Linh Dược (Farm)](#13-hệ-thống-farm)
+14. [Hệ Thống Sự Kiện](#14-hệ-thống-sự-kiện)
+15. [Vòng Lặp Gameplay & Retention](#15-vòng-lặp-gameplay--retention)
+16. [Plugin Mapping](#16-plugin-mapping)
+17. [💰 Hệ Thống Nạp Tiền & VIP (Monetization)](#17-hệ-thống-nạp-tiền--vip)
+18. [🧠 Chiến Lược Hút Máu Tâm Lý](#18-chiến-lược-hút-máu-tâm-lý)
+
+---
+
+## 1. Tổng Quan
+
+### Concept
+**Skyblock Tu Tiên** là sự kết hợp giữa gameplay Skyblock truyền thống và thể loại **Tu Tiên** (cultivation) — nơi người chơi bắt đầu từ một hòn đảo nhỏ trên không trung, tu luyện để trở thành Tiên Nhân. Mỗi cảnh giới tu luyện mở ra nội dung mới, tạo cảm giác tiến bộ liên tục.
+
+### Triết Lý Thiết Kế
+
+| Nguyên Tắc | Mô Tả |
+|-------------|--------|
+| **Chiều Sâu** | Mỗi hệ thống có nhiều tầng nâng cấp, không bao giờ "hết đồ để cày" |
+| **Chiều Rộng** | Nhiều hệ thống song song (island, dungeon, pet, skill, trang bị, farm) |
+| **Liên Kết** | Skyblock cung cấp tài nguyên → Dungeon cung cấp trang bị → Cả hai đều cần cho Tu Luyện |
+| **Gây Nghiện** | Daily login reward, streak bonus, giới hạn dungeon/ngày, FOMO events, gacha nhẹ |
+| **Hút Máu** | VIP tầng cao, Battle Pass, Gacha, pain point → giải pháp trả phí, FOMO limited |
+| **Cộng Đồng** | Island coop, dungeon party, PVP arena, giao dịch |
+
+### Luồng Chơi Tổng Quan
+
+```
+┌─────────────┐     ┌──────────────┐     ┌──────────────┐
+│  BẮT ĐẦU    │────▶│  SKYBLOCK    │────▶│  TU LUYỆN    │
+│  (Phàm Nhân)│     │  Xây đảo,    │     │  Lên cảnh    │
+│              │     │  farm, craft  │     │  giới, đột   │
+│              │     │              │     │  phá boss     │
+└─────────────┘     └──────┬───────┘     └──────┬───────┘
+                           │                     │
+                    ┌──────▼───────┐     ┌──────▼───────┐
+                    │  DUNGEON     │◀───▶│  TRANG BỊ    │
+                    │  PvE, Boss,  │     │  Vũ khí,     │
+                    │  Phần thưởng │     │  Pet, Skill   │
+                    └──────┬───────┘     └──────────────┘
+                           │
+                    ┌──────▼───────┐
+                    │  PVP & EVENT │
+                    │  Lôi Đài,    │
+                    │  Rankings    │
+                    └──────────────┘
+```
+
+---
+
+## 2. Hệ Thống Tu Luyện
+
+### 2.1 Cảnh Giới (Realm / Cultivation Stage)
+
+Hệ thống tu luyện gồm **9 Đại Cảnh Giới**, mỗi cảnh giới có **9 tầng nhỏ** (Sơ Kỳ → Trung Kỳ → Hậu Kỳ → Đỉnh Phong → Viên Mãn) tạo tổng cộng **45 bậc tiến bộ**.
+
+| # | Cảnh Giới | Yêu Cầu Level | Lực Chiến Tối Thiểu | Đặc Quyền Mở Khóa |
+|---|-----------|---------------|---------------------|-------------------|
+| 1 | **Phàm Nhân** (Mortal) | 1-10 | 0 | Island cơ bản, Farm cơ bản |
+| 2 | **Luyện Khí** (Qi Refinement) | 11-20 | 500 | Dungeon Tầng 1-2, Pet slot 1 |
+| 3 | **Trúc Cơ** (Foundation) | 21-30 | 2,000 | Dungeon Tầng 3-4, Skill slot 2, Trade |
+| 4 | **Kim Đan** (Golden Core) | 31-40 | 8,000 | Dungeon Tầng 5-6, Pet slot 2, Island Tier 3 |
+| 5 | **Nguyên Anh** (Nascent Soul) | 41-50 | 25,000 | Dungeon Tầng 7-8, Skill slot 3, PVP Arena |
+| 6 | **Hóa Thần** (Spirit Severing) | 51-60 | 80,000 | Dungeon Tầng 9, Island Tier 5, Pet slot 3 |
+| 7 | **Luyện Hư** (Void Refining) | 61-70 | 200,000 | Dungeon Tầng 10, Legendary craft |
+| 8 | **Đại Thừa** (Mahayana) | 71-80 | 500,000 | Endgame Dungeon, Island Tier 6 |
+| 9 | **Tiên Nhân** (Immortal) | 81-100 | 1,000,000 | Tất cả, Danh hiệu đặc biệt |
+
+### 2.2 Cách Tu Luyện (Cách Lên Level)
+
+Người chơi nhận **Tu Vi** (EXP) qua nhiều hoạt động:
+
+| Hoạt Động | Tu Vi/Lần | Giới Hạn |
+|-----------|-----------|----------|
+| Đào khoáng sản Linh Quặng | 5-50 | Không giới hạn |
+| Thu hoạch Linh Dược (farm) | 10-80 | Không giới hạn |
+| Hoàn thành Dungeon | 200-5,000 | 5 lần/ngày |
+| Giết Boss Dungeon | 500-10,000 | Theo dungeon |
+| Quest hàng ngày | 100-500 | 5 quest/ngày |
+| Quest tuần | 1,000-3,000 | 3 quest/tuần |
+| AFK tu luyện (online) | 10/phút | 8 giờ/ngày |
+| PVP thắng | 50-200 | 20 trận/ngày |
+
+### 2.3 Đột Phá Cảnh Giới (Breakthrough)
+
+Để lên cảnh giới mới, người chơi phải **đột phá** — một thử thách đặc biệt:
+
+> **Điều kiện đột phá:**
+> 1. ✅ Đạt level yêu cầu
+> 2. ✅ Đạt lực chiến tối thiểu
+> 3. ✅ Thu thập **Đột Phá Đan** (vật phẩm drop từ Dungeon hoặc craft)
+> 4. ✅ Đánh bại **Boss Thiên Kiếp** (solo boss instance)
+
+**Boss Thiên Kiếp** scale theo cảnh giới, sử dụng MythicMobs:
+- Phàm Nhân → Luyện Khí: Boss `ThienKiep_LuyenKhi` (HP: 500, DMG: 10)
+- Kim Đan → Nguyên Anh: Boss `ThienKiep_NguyenAnh` (HP: 50,000, DMG: 200)
+- Đại Thừa → Tiên Nhân: Boss `ThienKiep_TienNhan` (HP: 5,000,000, DMG: 2,000)
+
+**Thất bại khi đột phá:**
+- Mất 50% Đột Phá Đan đã sử dụng
+- Cooldown 1 giờ trước khi thử lại
+- **KHÔNG** mất level hoặc trang bị
+
+---
+
+## 3. Hệ Thống Skyblock Island
+
+### 3.1 Island Tier
+
+Sử dụng **SuperiorSkyblock2** làm nền tảng, mở rộng với hệ thống Tier:
+
+| Tier | Tên Đảo | Kích Thước | Yêu Cầu Cảnh Giới | Tính Năng |
+|------|---------|-----------|-------------------|-----------|
+| 1 | **Hoang Đảo** | 50x50 | Phàm Nhân | Cobblestone gen, 1 farm plot |
+| 2 | **Linh Đảo** | 100x100 | Luyện Khí | Ore gen (sắt, vàng), 3 farm plot, 1 spawner slot |
+| 3 | **Tiên Đảo** | 150x150 | Kim Đan | Diamond/Emerald gen, 6 farm plot, 3 spawner slot |
+| 4 | **Long Đảo** | 200x200 | Nguyên Anh | Netherite gen, 10 farm plot, 5 spawner slot, Warp point |
+| 5 | **Thần Đảo** | 300x300 | Hóa Thần | Custom ore gen, 15 farm plot, 8 spawner slot |
+| 6 | **Thiên Đảo** | 500x500 | Đại Thừa | Unlimited plots, 15 spawner slot, Private dungeon portal |
+
+### 3.2 Island Upgrades
+
+Ngoài Tier, người chơi nâng cấp từng khía cạnh của đảo bằng **Linh Thạch** (tiền tệ chính):
+
+| Upgrade | Max Level | Hiệu Ứng | Chi Phí (mỗi level) |
+|---------|-----------|-----------|---------------------|
+| **Linh Mạch** (Ore Gen Speed) | 20 | +5% tốc độ gen ore | 500 → 50,000 |
+| **Linh Khí Nồng Độ** (AFK EXP Bonus) | 15 | +2% Tu Vi AFK | 1,000 → 30,000 |
+| **Linh Điền** (Farm Slot) | 20 | +1 farm plot | 300 → 20,000 |
+| **Trận Pháp** (Island Border Defense) | 10 | +10% damage reduction trên đảo | 2,000 → 100,000 |
+| **Kho Báu** (Island Storage) | 10 | +1 row kho đảo | 1,500 → 40,000 |
+| **Spawner Mở Rộng** | 15 | +1 spawner slot | 5,000 → 80,000 |
+| **Truyền Tống Trận** (Warp Points) | 5 | +1 warp point | 10,000 → 100,000 |
+
+### 3.3 Island Members & Roles
+
+| Role | Quyền Hạn |
+|------|-----------|
+| **Đảo Chủ** (Owner) | Toàn quyền, kick, upgrade, set role |
+| **Trưởng Lão** (Elder) | Build, break, invite, trade, dùng spawner |
+| **Đệ Tử** (Member) | Build, break, farm, dùng spawner |
+| **Khách** (Visitor) | Xem, không tương tác |
+
+**Lợi ích chơi cùng nhau:**
+- Island level = tổng đóng góp tất cả thành viên → Ranking đảo
+- Thành viên đảo chia sẻ **Linh Mạch Buff** (AFK bonus)
+- Party dungeon cùng thành viên đảo → +20% drop bonus
+- Hệ thống **Đóng Góp Đảo**: thành viên farm/craft → nhận điểm đóng góp → đổi thưởng
+
+### 3.4 Cobblestone/Ore Generator Progression
+
+Generator nâng cấp theo Island Tier:
+
+```
+Tier 1: Cobblestone (60%), Coal (25%), Iron (10%), Gold (5%)
+Tier 2: Cobblestone (40%), Iron (25%), Gold (15%), Lapis (10%), Diamond (5%), Linh Thạch Quặng (5%)
+Tier 3: Iron (20%), Gold (15%), Diamond (15%), Emerald (10%), Linh Thạch Quặng (20%), Huyền Thiết (10%), Tinh Kim (10%)
+Tier 4: Diamond (15%), Emerald (10%), Linh Thạch Quặng (25%), Huyền Thiết (15%), Tinh Kim (15%), Long Tinh (10%), Netherite (10%)
+Tier 5: Linh Thạch Quặng (30%), Huyền Thiết (20%), Tinh Kim (15%), Long Tinh (15%), Netherite (10%), Tiên Quặng (10%)
+Tier 6: Tất cả custom ore + Thần Quặng (5%)
+```
+
+---
+
+## 4. Hệ Thống Dungeon
+
+### 4.1 Cấu Trúc Dungeon
+
+Sử dụng **TurtleDungeon** plugin (có sẵn trên server), hệ thống gồm **10 Tầng Dungeon** + **3 Secret Dungeon**:
+
+| Tầng | Tên | Cảnh Giới YC | Mob Level | Boss | Giới Hạn/Ngày |
+|------|-----|-------------|-----------|------|---------------|
+| 1 | **Yêu Thú Lâm** | Luyện Khí Sơ | 5-10 | Sói Vương | 5 |
+| 2 | **Âm Hồn Động** | Luyện Khí Hậu | 10-15 | Quỷ Hồn | 5 |
+| 3 | **Hỏa Diễm Sơn** | Trúc Cơ Sơ | 15-25 | Viêm Ma | 4 |
+| 4 | **Băng Phong Cốc** | Trúc Cơ Hậu | 25-35 | Băng Long | 4 |
+| 5 | **Huyết Nguyệt Đàn** | Kim Đan Sơ | 35-45 | Huyết Tộc Chúa | 3 |
+| 6 | **Lôi Đình Tháp** | Kim Đan Hậu | 45-55 | Lôi Thú | 3 |
+| 7 | **Vạn Độc Trì** | Nguyên Anh Sơ | 55-65 | Độc Tôn | 2 |
+| 8 | **Long Cốt Mộ** | Nguyên Anh Hậu | 65-75 | Cổ Long | 2 |
+| 9 | **Tiên Phế Đô** | Hóa Thần | 75-90 | Đọa Tiên | 1 |
+| 10 | **Hỗn Nguyên Giới** | Luyện Hư | 90-100 | Hỗn Nguyên Thú | 1 |
+
+### 4.2 Secret Dungeon (Bí Cảnh)
+
+| Bí Cảnh | Yêu Cầu Đặc Biệt | Phần Thưởng Đặc Biệt |
+|---------|-------------------|----------------------|
+| **Cổ Mộ Bí Cảnh** | Tìm 4 mảnh bản đồ (drop từ Tầng 3-6) | Set trang bị Cổ Đại |
+| **Long Cung** | Cảnh giới Nguyên Anh + Chìa khóa Long Cung (craft) | Pet Rồng Legendary |
+| **Thiên Đạo Thí Luyện** | Cảnh giới Đại Thừa + 1M Linh Thạch phí vào | Tiên Khí vũ khí, danh hiệu |
+
+### 4.3 Dungeon Stages (Giai Đoạn)
+
+Mỗi Dungeon sử dụng hệ thống **Stage** từ TurtleDungeon:
+
+```
+Stage 1: KILLMOBS    → Tiêu diệt 30-100 quái (tùy tầng)
+Stage 2: KILLTYPE    → Tiêu diệt loại quái cụ thể (Elite mobs)
+Stage 3: CAPTUREHEART → Chiếm giữ điểm trong 60-120 giây
+Stage 4: KILLBOSS    → Đánh Boss cuối
+```
+
+**Chế độ khó (Hard Mode):**
+- Mở khóa sau khi clear Normal lần đầu
+- Mob +50% HP, +30% DMG
+- Boss có thêm phase 2
+- Drop rate tăng gấp đôi
+- Thêm cơ hội drop vật phẩm Legendary
+
+### 4.4 Phần Thưởng Dungeon
+
+| Loại | Drop Rate | Ví Dụ |
+|------|-----------|-------|
+| **Linh Thạch** | 100% | 100-10,000 tùy tầng |
+| **Tu Vi (EXP)** | 100% | 200-5,000 |
+| **Nguyên Liệu Craft** | 60-80% | Huyền Thiết, Tinh Kim, Long Tinh |
+| **Đột Phá Đan** | 10-30% | Cần cho đột phá cảnh giới |
+| **MMOItems Gear** | 5-20% | Vũ khí, giáp theo tier |
+| **Pet Egg** | 1-5% | Trứng Linh Thú |
+| **Skill Book** | 3-10% | Sách Công Pháp |
+| **Crate Key** | 15-40% | Chìa khóa rương thưởng |
+| **Legendary Drop** | 0.5-2% | Vũ khí/giáp đặc biệt, Pet hiếm |
+
+### 4.5 Party System
+
+- Tối đa **4 người** trong 1 party dungeon
+- Party thành viên cùng đảo: **+20% drop bonus**
+- Difficulty scale theo số người: Solo (100%) → 2P (180%) → 3P (260%) → 4P (340%)
+- Phần thưởng chia đều, ai cũng nhận full EXP
+
+---
+
+## 5. Liên Kết Skyblock ↔ Dungeon
+
+> [!IMPORTANT]
+> Đây là **trái tim** của gameplay — hai hệ thống phải liên kết chặt chẽ để người chơi luôn có lý do chuyển đổi qua lại.
+
+### 5.1 Skyblock → Dungeon (Đảo cung cấp cho Dungeon)
+
+| Từ Skyblock | Dùng Trong Dungeon |
+|-------------|-------------------|
+| **Linh Dược** (farm trên đảo) | Craft **Hồi Phục Đan** (heal pot), **Tăng Lực Đan** (buff pot) |
+| **Khoáng Sản** (mine trên đảo) | Craft/nâng cấp **vũ khí, giáp** MMOItems |
+| **Spawner mob drops** | Craft **Triệu Hồi Phù** (revive token trong dungeon) |
+| **Island Level cao** | Mở khóa **buff đảo** áp dụng cả trong dungeon |
+| **Linh Thạch** (kiếm từ đảo) | Phí vào Dungeon tầng cao, repair trang bị |
+
+### 5.2 Dungeon → Skyblock (Dungeon cung cấp cho Đảo)
+
+| Từ Dungeon | Dùng Trên Skyblock |
+|------------|-------------------|
+| **Nguyên liệu hiếm** | Nâng cấp Island Tier, craft advanced tools |
+| **Spawner drops** | Đặt spawner hiếm trên đảo (Blaze, Enderman, Wither Skeleton) |
+| **Enchant Books** | Enchant công cụ farming, mining hiệu quả hơn |
+| **MMOItems trang bị** | Tăng hiệu suất farming (Fortune+, Haste+) |
+| **Đột Phá Đan** | Lên cảnh giới → mở đảo Tier cao hơn |
+| **Bản thiết kế** (Blueprint) | Mở khóa machine/autocraft trên đảo |
+
+### 5.3 Vòng Lặp Liên Kết
+
+```
+    ┌──────────────────────────────────────────────────┐
+    │                                                  │
+    ▼                                                  │
+ SKYBLOCK                                          DUNGEON
+ ─────────                                         ────────
+ Farm Linh Dược ──► Craft Potion ──────────────────► Dùng trong Dungeon
+ Mine Khoáng Sản ──► Craft Vũ Khí ─────────────────► Trang bị vào Dungeon
+                                                       │
+ Đặt Spawner ◄────── Drop Spawner ◄────────────────── Drop từ Boss
+ Nâng Island Tier ◄─ Đột Phá Đan ◄─────────────────── Drop từ Dungeon
+ Craft Advanced ◄─── Blueprint ◄────────────────────── Phần thưởng clear
+    │                                                  ▲
+    │                                                  │
+    └──────────────────────────────────────────────────┘
+```
+
+### 5.4 Weekly Island Dungeon Challenge
+
+Mỗi tuần, đảo có thể mở **Đảo Dungeon Thử Thách**:
+- Tất cả thành viên đảo tham gia
+- Boss HP scale theo Island Level
+- Phần thưởng cho toàn bộ đảo: Island EXP, Linh Thạch kho đảo, Island upgrade points
+- Tạo cạnh tranh giữa các đảo → **Island Dungeon Ranking**
+
+---
+
+## 6. Hệ Thống Vũ Khí & Trang Bị (Linh Khí)
+
+### 6.1 Tier Trang Bị
+
+Sử dụng **MMOItems** plugin:
+
+| Tier | Tên | Màu | Nguồn | Cảnh Giới YC |
+|------|-----|-----|-------|-------------|
+| ⬜ | **Phàm Phẩm** (Common) | &f | Craft cơ bản | Phàm Nhân |
+| 🟢 | **Hạ Phẩm** (Uncommon) | &a | Craft, Dungeon T1-2 | Luyện Khí |
+| 🔵 | **Trung Phẩm** (Rare) | &9 | Dungeon T3-4 | Trúc Cơ |
+| 🟣 | **Thượng Phẩm** (Epic) | &5 | Dungeon T5-6 | Kim Đan |
+| 🟡 | **Cực Phẩm** (Legendary) | &6 | Dungeon T7-8, Craft đặc biệt | Nguyên Anh |
+| 🔴 | **Tiên Phẩm** (Mythic) | &c | Dungeon T9-10, Bí Cảnh | Hóa Thần |
+| 🌈 | **Thần Phẩm** (Divine) | &b&l | Event, Thiên Đạo Thí Luyện | Đại Thừa |
+
+### 6.2 Loại Trang Bị
+
+| Loại | Ví Dụ | Đặc Biệt |
+|------|-------|-----------|
+| **Kiếm** (Sword) | Thanh Phong Kiếm, Huyết Nhận | Tốc độ đánh nhanh, combo |
+| **Đao** (Axe/Blade) | Khai Thiên Đao | Damage cao, chậm |
+| **Thương** (Spear/Trident) | Long Nha Thương | Tầm xa, AoE nhẹ |
+| **Cung** (Bow) | Liệt Nhật Cung | Ranged, charge shot |
+| **Pháp Bảo** (Staff) | Huyền Thiên Trượng | Skill damage + buff |
+| **Giáp** (Armor Set) | Huyền Giáp Set | Set bonus khi mặc đủ |
+| **Phụ Kiện** (Accessory) | Linh Ngọc, Hộ Thân Phù | Passive buffs |
+
+### 6.3 Hệ Thống Cường Hóa (Enhancement)
+
+| Hệ Thống | Mô Tả | Nguyên Liệu |
+|-----------|--------|-------------|
+| **Cường Hóa** (+1 đến +15) | Tăng base stat | Cường Hóa Thạch (mine, dungeon) |
+| **Tinh Luyện** (Refine) | Thêm random sub-stat | Tinh Luyện Đan (craft từ Linh Dược) |
+| **Khảm Nạm** (Socket) | Gắn gem vào socket | Linh Thạch gem (dungeon drop) |
+| **Giác Tỉnh** (Awaken) | Mở khóa skill đặc biệt của vũ khí | Giác Tỉnh Phù (Bí Cảnh drop) |
+
+**Cường Hóa có tỉ lệ thất bại:**
+
+| Level | Tỉ Lệ Thành Công | Thất Bại |
+|-------|------------------|----------|
+| +1 → +5 | 100% | — |
+| +6 → +9 | 80% → 50% | Giảm 1 level |
+| +10 → +12 | 40% → 20% | Giảm 2 level |
+| +13 → +15 | 15% → 5% | Reset về +10 |
+
+> **Bảo Hộ Phù** (Protection Talisman): Ngăn giảm level khi thất bại. Drop từ Dungeon T7+ hoặc Event.
+
+---
+
+## 7. Hệ Thống Pet (Linh Thú)
+
+### 7.1 Tổng Quan
+
+Sử dụng **TurtlePet** plugin:
+
+| Rarity | Tên | Nguồn | Base Buff |
+|--------|-----|-------|-----------|
+| ⬜ Common | Thỏ Linh, Gà Linh | Drop đảo, craft | +3-5% stat |
+| 🟢 Uncommon | Sói Linh, Mèo Linh | Dungeon T1-3 | +5-10% stat |
+| 🔵 Rare | Phượng Hoàng Con, Hắc Báo | Dungeon T4-6 | +10-15% stat |
+| 🟣 Epic | Hỏa Kỳ Lân, Băng Long Con | Dungeon T7-8, Crate | +15-25% stat |
+| 🟡 Legendary | Long Vương, Phượng Hoàng | Bí Cảnh, Event | +25-40% stat |
+| 🔴 Mythic | Hỗn Nguyên Thú, Kỳ Lân Thần | Ultra-rare event | +40-60% stat |
+
+### 7.2 Pet Mechanics
+
+| Tính Năng | Mô Tả |
+|-----------|--------|
+| **Pet Slot** | Tối đa 3 slot (mở theo cảnh giới) |
+| **Pet Level** | 1-100, lên level bằng cách mang theo farm/dungeon |
+| **Pet Evolution** | Ở level 50 và 100, pet tiến hóa hình dạng & buff mạnh hơn |
+| **Pet Skill** | Mỗi pet có 1-3 skill riêng (tự động trigger) |
+| **Pet Fusion** | Hy sinh 3 pet cùng rarity → 1 pet rarity cao hơn (60% thành công) |
+| **Pet Food** | Craft từ Linh Dược trên đảo → tăng EXP pet |
+
+### 7.3 Pet Buffs Theo Loại
+
+| Loại Pet | Buff Chính | Tốt Cho |
+|----------|-----------|---------|
+| **Chiến Đấu** (Combat) | +ATK, +Crit | Dungeon, PVP |
+| **Phòng Thủ** (Tank) | +HP, +DEF | Dungeon tank |
+| **Thu Hoạch** (Gather) | +Mining Speed, +Farm Speed | Skyblock farming |
+| **May Mắn** (Lucky) | +Drop Rate, +Linh Thạch | Cả hai |
+| **Hỗ Trợ** (Support) | +Heal, +Party Buff | Party dungeon |
+
+---
+
+## 8. Hệ Thống Skills (Công Pháp)
+
+### 8.1 Skill Tree
+
+Sử dụng **TurtleSkills** plugin, chia thành **4 nhánh Công Pháp**:
+
+#### 🔥 Hỏa Đạo (Fire Path) — Damage dealer
+```
+Tầng 1: Hỏa Cầu Thuật (Fireball) ─── 50 DMG, 5s CD
+   └─ Tầng 2: Liệt Diễm Chưởng (Flame Palm) ─── 120 DMG, AoE, 8s CD
+       └─ Tầng 3: Tam Muội Chân Hỏa (True Fire) ─── 300 DMG, DoT, 15s CD
+           └─ Tầng 4: Phượng Hoàng Niết Bàn (Phoenix Rebirth) ─── 800 DMG, AoE + self rez, 60s CD
+```
+
+#### ❄️ Băng Đạo (Ice Path) — CC/Control
+```
+Tầng 1: Băng Tiễn (Ice Arrow) ─── 30 DMG + Slow, 4s CD
+   └─ Tầng 2: Băng Phong Bão (Blizzard) ─── 80 DMG + AoE Freeze, 10s CD
+       └─ Tầng 3: Tuyệt Đối Linh Vực (Absolute Zero) ─── 200 DMG + Stun 3s, 20s CD
+           └─ Tầng 4: Băng Phong Thiên Giáng (Ice Apocalypse) ─── 600 DMG + AoE Freeze 5s, 45s CD
+```
+
+#### 🛡️ Thổ Đạo (Earth Path) — Tank/Defense
+```
+Tầng 1: Thạch Bì (Stone Skin) ─── +30% DEF, 10s duration, 15s CD
+   └─ Tầng 2: Địa Chấn (Earthquake) ─── 60 DMG + Knockback, 8s CD
+       └─ Tầng 3: Bất Động Minh Vương (Immovable King) ─── +80% DEF + Taunt, 12s CD
+           └─ Tầng 4: Sơn Hà Xã Tắc (Mountain & River) ─── Team Shield 5s + Reflect, 50s CD
+```
+
+#### 💚 Mộc Đạo (Wood Path) — Healer/Support
+```
+Tầng 1: Linh Dược Thuật (Herb Heal) ─── Heal 50 HP, 6s CD
+   └─ Tầng 2: Sinh Cơ (Regeneration) ─── HoT 20HP/s 10s, 12s CD
+       └─ Tầng 3: Vạn Mộc Hồi Xuân (Forest Revival) ─── AoE Heal + Cleanse, 18s CD
+           └─ Tầng 4: Luân Hồi Mộc (Cycle of Life) ─── Full team rez to 50% HP, 120s CD
+```
+
+### 8.2 Skill Slot & Equip
+
+- Mỗi người chơi có **tối đa 4 skill slot** (mở dần theo cảnh giới)
+- Có thể mix skill từ các nhánh khác nhau
+- Skill lên cấp bằng cách sử dụng + **Skill Point** (nhận khi lên level)
+- **Skill Book** drop từ Dungeon để mở khóa skill mới
+
+### 8.3 Passive Skills (Tu Luyện Thụ Động)
+
+Ngoài active skill, người chơi có passive vĩnh viễn:
+
+| Passive | Max Level | Hiệu Ứng | Cách Lên |
+|---------|-----------|-----------|----------|
+| **Kiếm Thuật** | 50 | +1% Sword DMG/lv | Dùng kiếm |
+| **Khoáng Thuật** | 50 | +1% Mining Speed/lv | Đào mỏ |
+| **Dược Thuật** | 50 | +1% Potion Effect/lv | Craft potion |
+| **Luyện Khí Thuật** | 50 | +1% AFK Tu Vi/lv | Online time |
+| **Thú Thuật** | 50 | +1% Pet EXP/lv | Mang pet |
+
+---
+
+## 9. Hệ Thống Kinh Tế
+
+### 9.1 Tiền Tệ
+
+| Loại | Ký Hiệu | Nguồn Chính | Sử Dụng |
+|------|---------|-------------|---------|
+| **Linh Thạch** 💎 | `LS` | Mining, Dungeon, Trade | Upgrade đảo, craft, mua NPC, phí dungeon |
+| **Xu** 🪙 | `Xu` | Quest, PVP, Vote | Mua cosmetic, crate key, gacha |
+| **Điểm Danh Vọng** ⭐ | `DV` | Milestone, Achievement | Mua danh hiệu, skin đặc biệt |
+
+### 9.2 Luồng Kinh Tế
+
+```
+                    NGUỒN THU
+                    ──────────
+        Mining ─────────────────────┐
+        Dungeon clear ──────────────┤
+        Mob farming ────────────────┤──► Linh Thạch
+        Trade bán hàng ────────────┤
+        Quest ──────────────────────┘
+
+        Quest hàng ngày ────────────┐
+        PVP thắng ──────────────────┤──► Xu
+        Vote ───────────────────────┤
+        Achievement ────────────────┘
+
+                    CHI TIÊU
+                    ────────
+        Upgrade Island ◄───────────┐
+        Craft vũ khí ◄─────────────┤
+        Mua NPC shop ◄─────────────┤──► Linh Thạch (SINK chính)
+        Cường hóa ◄────────────────┤
+        Phí Dungeon cao cấp ◄──────┘
+
+        Crate key ◄────────────────┐
+        Cosmetic ◄──────────────────┤──► Xu (SINK phụ)
+        Pet gacha ◄─────────────────┘
+```
+
+### 9.3 Chợ Giao Dịch (Trade)
+
+- **NPC Shop**: Mua/bán giá cố định (giá thấp hơn thị trường)
+- **Chợ Người Chơi**: Đặt bán item với giá tùy chọn (thuế 5%)
+- **Đấu Giá**: Item hiếm bán đấu giá, thời gian 24-48h
+- Cần cảnh giới **Trúc Cơ** để mở khóa Trade
+
+---
+
+## 10. Hệ Thống Quest
+
+### 10.1 Quest Hàng Ngày (Daily Quest)
+
+Mỗi ngày reset 5 quest ngẫu nhiên từ pool:
+
+| Quest | Yêu Cầu | Phần Thưởng |
+|-------|---------|-------------|
+| Tu Luyện Cần Cù | AFK 30 phút | 100 Tu Vi + 200 LS |
+| Khai Khoáng | Đào 200 ore | 150 Tu Vi + 300 LS |
+| Diệt Yêu | Giết 50 mob trên đảo | 100 Tu Vi + 150 LS |
+| Luyện Đan | Craft 10 potion | 80 Tu Vi + 250 LS |
+| Nông Phu | Thu hoạch 100 Linh Dược | 120 Tu Vi + 200 LS |
+| Dungeon Tập Sự | Clear 1 dungeon bất kỳ | 300 Tu Vi + 500 LS |
+| Giao Thương | Bán 5 item trên chợ | 50 Tu Vi + 400 LS |
+| Luyện Pet | Pet lên 1 level | 100 Tu Vi + 100 LS |
+
+**Daily Streak Bonus:**
+- 3 ngày liên tiếp: +50% phần thưởng quest
+- 7 ngày liên tiếp: Random Crate Key
+- 14 ngày liên tiếp: 1 Pet Egg (Uncommon+)
+- 30 ngày liên tiếp: 1 Legendary Crate Key + 50,000 LS
+
+### 10.2 Quest Tuần (Weekly Quest)
+
+3 quest mỗi tuần, khó hơn, thưởng lớn hơn:
+
+| Quest | Yêu Cầu | Phần Thưởng |
+|-------|---------|-------------|
+| Chinh Phục | Clear 10 Dungeon | 3,000 Tu Vi + 5,000 LS + Crate Key |
+| Đại Thương Gia | Kiếm 50,000 LS từ Trade | 2,000 Tu Vi + Xu 500 |
+| Đảo Chủ | Nâng Island Level +5 | 2,500 Tu Vi + 3,000 LS + Blueprint Random |
+
+### 10.3 Quest Chính Tuyến (Main Story)
+
+Chuỗi quest dẫn dắt người chơi qua toàn bộ nội dung:
+
+```
+📖 Chương 1: Khởi Đầu Tu Tiên
+   ├─ Q1: Xây dựng đảo cơ bản (Island Tier 1)
+   ├─ Q2: Farm 100 Linh Dược đầu tiên
+   ├─ Q3: Craft vũ khí Phàm Phẩm đầu tiên
+   └─ Q4: Đột phá Luyện Khí ★ Thưởng: Pet Egg + 5,000 LS
+
+📖 Chương 2: Bước Vào Tu Đạo
+   ├─ Q5: Clear Dungeon Tầng 1 (Yêu Thú Lâm)
+   ├─ Q6: Tìm 1 Skill Book và trang bị skill
+   ├─ Q7: Nâng Pet lên level 10
+   └─ Q8: Đột phá Trúc Cơ ★ Thưởng: Hạ Phẩm Weapon + 10,000 LS
+
+📖 Chương 3: Kim Đan Đại Đạo
+   ├─ Q9: Nâng Island lên Tier 3
+   ├─ Q10: Clear Dungeon Tầng 5 (Hard Mode)
+   ├─ Q11: Cường hóa vũ khí lên +7
+   └─ Q12: Đột phá Kim Đan ★ Thưởng: Epic Weapon + Pet Epic + 50,000 LS
+
+📖 Chương 4: Nguyên Anh Hiển Thế
+   ├─ Q13: Party clear Dungeon Tầng 7
+   ├─ Q14: Hoàn thành 1 Bí Cảnh (Secret Dungeon)
+   ├─ Q15: Thắng 10 trận PVP Arena
+   └─ Q16: Đột phá Nguyên Anh ★ Thưởng: Legendary Weapon + 200,000 LS
+
+📖 Chương 5: Tiên Đạo Vô Tận
+   ├─ Q17: Clear Dungeon Tầng 10
+   ├─ Q18: Nâng Island lên Tier 6
+   ├─ Q19: Sở hữu 1 Legendary Pet level 100
+   └─ Q20: Đột phá Tiên Nhân ★ Thưởng: Divine Weapon + Danh hiệu "Tiên Nhân" + 1,000,000 LS
+```
+
+---
+
+## 11. Hệ Thống Rank & Danh Hiệu
+
+### 11.1 Rank Ingame (LuckPerms)
+
+| Rank | Điều Kiện | Prefix | Đặc Quyền |
+|------|-----------|--------|-----------|
+| Phàm Nhân | Mặc định | `&7[Phàm]` | Cơ bản |
+| Tu Sĩ | Luyện Khí+ | `&a[Tu Sĩ]` | 2 homes, /warp |
+| Đạo Sĩ | Trúc Cơ+ | `&9[Đạo Sĩ]` | 3 homes, /trade |
+| Chân Nhân | Kim Đan+ | `&5[Chân Nhân]` | 5 homes, /fly on island |
+| Đại Năng | Nguyên Anh+ | `&6[Đại Năng]` | 7 homes, /nick |
+| Tiên Tôn | Hóa Thần+ | `&c[Tiên Tôn]` | 10 homes, custom prefix color |
+| Thần | Đại Thừa+ | `&b[Thần]` | 15 homes, all commands |
+| Tiên Đế | Tiên Nhân Viên Mãn | `&b&l✦[Tiên Đế]✦` | Unlimited, special effects |
+
+### 11.2 Danh Hiệu (Titles)
+
+Danh hiệu hiển thị dưới tên, thu thập qua thành tích:
+
+| Danh Hiệu | Điều Kiện | Buff |
+|-----------|-----------|------|
+| 🐉 Long Sát | Clear Dungeon 8 (Hard Mode) | +5% DMG to Boss |
+| ⚔️ Kiếm Thánh | Cường hóa vũ khí +15 | +10% Sword DMG |
+| 🏝️ Vạn Đảo Chi Vương | Island Level 100 | +10% Island Generation |
+| 🐾 Ngự Thú Sư | 5 Pet Legendary+ | +15% Pet EXP |
+| 💀 Sát Thần | 1000 PVP Kills | +5% PVP DMG |
+| 🌟 Tiên Nhân | Đột phá Tiên Nhân | +20% tất cả stat |
+| 🏆 Thiên Hạ Đệ Nhất | Top 1 Lực Chiến | Hiệu ứng particle đặc biệt |
+
+---
+
+## 12. Hệ Thống PVP — Lôi Đài
+
+### 12.1 PVP Arena
+
+- Vị trí: `/warp pvp`
+- Yêu cầu: Cảnh giới **Nguyên Anh+**
+- Khu vực tự do PVP, không drop item
+- Giết người → nhận Xu + Tu Vi
+
+### 12.2 Lôi Đài (Ranked PVP)
+
+| Season | Thời Gian | Phần Thưởng Top |
+|--------|-----------|-----------------|
+| Mùa | 30 ngày | Top 1: Divine Weapon + 500K LS |
+| | | Top 2-3: Legendary Weapon + 200K LS |
+| | | Top 4-10: Epic Weapon + 100K LS |
+| | | Top 11-50: 50K LS + Crate Key |
+
+**Hệ thống ELO:**
+- Bắt đầu: 1000 ELO
+- Thắng: +15-30 ELO (tùy đối thủ)
+- Thua: -10-20 ELO
+- Rank: Bronze → Silver → Gold → Platinum → Diamond → Immortal
+
+### 12.3 Cân Bằng PVP
+
+- Trong Lôi Đài, trang bị được normalize theo tier (không phải +15 vs +1)
+- Skill vẫn giữ nguyên → khuyến khích đa dạng build
+- Pet buff giảm 50% trong PVP
+- Potion effect bị giới hạn
+
+---
+
+## 13. Hệ Thống Ruộng Linh Dược (Farm)
+
+### 13.1 Loại Linh Dược
+
+| Linh Dược | Thời Gian Trồng | Giá Bán (LS) | Công Dụng |
+|-----------|-----------------|-------------|-----------|
+| **Linh Thảo** | 10 phút | 5 | Craft Heal Pot cơ bản |
+| **Huyết Liên** | 30 phút | 15 | Craft Heal Pot trung |
+| **Hỏa Linh Chi** | 1 giờ | 40 | Craft Tăng Lực Đan |
+| **Băng Tâm Thảo** | 2 giờ | 80 | Craft Phòng Thủ Đan |
+| **Cửu Diệp Liên** | 4 giờ | 200 | Craft Đột Phá Đan |
+| **Thiên Niên Nhân Sâm** | 12 giờ | 500 | Craft Ultimate Potion |
+| **Vạn Năm Linh Chi** | 24 giờ | 1,500 | Craft Tiên Đan |
+| **Hỗn Nguyên Hoa** | 48 giờ | 5,000 | Craft Divine Potion |
+
+### 13.2 Farm Mechanics
+
+- Mỗi farm plot: 3x3 blocks (9 ô trồng)
+- Có thể tưới nước (Linh Tuyền) → giảm 20% thời gian
+- Bón phân (Linh Thổ) → +30% sản lượng
+- Pet Thu Hoạch → auto harvest khi offline
+- Linh Dược cấp cao cần cảnh giới tương ứng mới trồng được
+
+---
+
+## 14. Hệ Thống Sự Kiện
+
+### 14.1 Sự Kiện Cố Định (Scheduled)
+
+| Sự Kiện | Tần Suất | Mô Tả |
+|---------|---------|-------|
+| **Thiên Giáng Linh Vũ** | Mỗi 6 giờ | 10 phút mining buff toàn server (+50% drop) |
+| **Yêu Thú Xâm Lược** | Mỗi 4 giờ | Mob đặc biệt spawn, giết → rare drops |
+| **Linh Thạch Đại Hội** | Mỗi 8 giờ | Mini-game mining competition → Top 3 thưởng lớn |
+| **Boss Thế Giới** (World Boss) | Mỗi 12 giờ | Boss khổng lồ, cả server tham gia, top DMG nhận thưởng |
+
+### 14.2 Sự Kiện Mùa (Seasonal)
+
+| Sự Kiện | Thời Gian | Nội Dung |
+|---------|-----------|----------|
+| **Hội Đấu Tông Môn** | 2 tuần/lần | Tournament PVP giữa các đảo, phần thưởng đảo |
+| **Bí Cảnh Hạn Chế** | 1 tháng/lần | Dungeon đặc biệt chỉ mở trong 3 ngày |
+| **Thiên Kiếp Giáng Lâm** | Tết/Lễ | Event Boss cực mạnh, drop vật phẩm limited |
+| **Linh Thú Đại Hội** | 2 tuần/lần | Pet PvE competition, xếp hạng pet mạnh nhất |
+
+### 14.3 Daily Login Rewards
+
+| Ngày | Phần Thưởng |
+|------|-------------|
+| 1 | 500 LS |
+| 2 | 1,000 LS |
+| 3 | Common Crate Key |
+| 4 | 2,000 LS |
+| 5 | Uncommon Crate Key |
+| 6 | 3,000 LS |
+| 7 | **Rare Crate Key + 5,000 LS + Pet Food x10** |
+| 14 | **Epic Crate Key + 20,000 LS** |
+| 30 | **Legendary Crate Key + 100,000 LS + Random Skill Book** |
+
+---
+
+## 15. Vòng Lặp Gameplay & Retention
+
+### 15.1 Core Loop (Vòng lặp cốt lõi)
+
+```
+          ┌───── FARM (Skyblock) ─────┐
+          │   Mine, trồng, craft      │
+          │   → Thu thập tài nguyên   │
+          ▼                           │
+    ┌── TRANG BỊ ──┐           ┌── BÁN/TRADE ──┐
+    │  Craft gear   │           │  Bán Linh Dược │
+    │  Upgrade      │           │  Đổi tài nguyên│
+    └──────┬───────┘           └───────┬────────┘
+           │                           │
+           ▼                           │
+    ┌── DUNGEON ───┐                   │
+    │  PvE combat  │                   │
+    │  Boss kill   │                   │
+    └──────┬───────┘                   │
+           │                           │
+           ▼                           │
+    ┌── PHẦN THƯỞNG ──┐               │
+    │  Gear drops      │               │
+    │  Đột Phá Đan    │───────────────┘
+    │  Pet, Skill      │
+    └──────┬───────────┘
+           │
+           ▼
+    ┌── ĐỘT PHÁ ──┐
+    │  Lên cảnh giới│
+    │  Mở nội dung  │──── LOOP LẠI với nội dung mới ───►
+    │  mới          │
+    └───────────────┘
+```
+
+### 15.2 Engagement Hooks (Móc Giữ Chân)
+
+| Hook | Cơ Chế | Tâm Lý |
+|------|--------|--------|
+| **Daily Login** | Streak reward tăng dần, reset nếu miss | Loss aversion |
+| **Dungeon Limit** | 1-5 lần/ngày tùy tầng | Scarcity, phải quay lại ngày mai |
+| **Cường Hóa RNG** | Tỉ lệ thành công giảm dần | Gambling dopamine |
+| **Pet Gacha** | Fusion 60% thành công | "Thêm 1 lần nữa" |
+| **World Boss Timer** | Mỗi 12h, miss = mất thưởng | FOMO |
+| **Season Ranking** | Reset hàng tháng | Cạnh tranh liên tục |
+| **Story Quest** | "Chương tiếp theo" cliff-hanger | Curiosity |
+| **Island Ranking** | Bảng xếp hạng đảo | Social competition |
+| **Linh Dược Timer** | Cây cần thời gian thực | Quay lại check |
+| **Streak Bonus** | Quest streak nhân thưởng | Consistency |
+| **Limited Event** | Chỉ mở 3 ngày/tháng | Urgency |
+
+### 15.3 Progression Pacing (Nhịp Tiến Bộ)
+
+| Giai Đoạn | Thời Gian | Nội Dung Chính |
+|-----------|-----------|----------------|
+| **Newbie** (Ngày 1-3) | 3 ngày | Tutorial, đảo cơ bản, Phàm Nhân → Luyện Khí |
+| **Early** (Ngày 4-14) | ~10 ngày | Dungeon T1-4, Island Tier 2, First Pet, First Skill |
+| **Mid** (Ngày 15-45) | ~30 ngày | Dungeon T5-7, Kim Đan+, Pet Epic, Gear +7-10 |
+| **Late** (Ngày 46-90) | ~45 ngày | Dungeon T8-10, Bí Cảnh, PVP, Nguyên Anh+ |
+| **Endgame** (90+ ngày) | Ongoing | Min-max gear +15, Tiên Nhân, Rankings, Events |
+
+### 15.4 Retention Milestones
+
+```
+Ngày 1:  ★ Đầu tiên — Đảo đầu tiên, cảm giác bắt đầu mới
+Ngày 3:  ★ Đột phá đầu tiên — Luyện Khí, mở Dungeon
+Ngày 7:  ★ First Dungeon Clear — Loot dopamine
+Ngày 14: ★ First Pet — Companion attachment
+Ngày 30: ★ Kim Đan — "Nửa đường rồi, không thể bỏ"
+Ngày 60: ★ Bí Cảnh + PVP — Social hooks activate
+Ngày 90: ★ Endgame chase — Perfection, rankings
+```
+
+---
+
+## 16. Plugin Mapping
+
+### Bảng Plugin → Hệ Thống
+
+| Hệ Thống | Plugin Chính | Plugin Hỗ Trợ |
+|-----------|-------------|---------------|
+| **Tu Luyện / Level** | TurtleLevel | PlaceholderAPI, LuckPerms |
+| **Skyblock** | SuperiorSkyblock2 | WorldGuard, VoidGen, FancyHolograms |
+| **Dungeon** | TurtleDungeon | MythicMobs, MythicLib |
+| **Vũ Khí / Trang Bị** | MMOItems | MythicLib, NBTAPI |
+| **Pet** | TurtlePet | TurtlePetGenerator |
+| **Skills** | TurtleSkills | MythicLib |
+| **Kinh Tế** | PlayerPoints, Essentials | TurtleStorage |
+| **Crate / Gacha** | ExcellentCrates | — |
+| **Quest** | *Cần thêm plugin* | PlaceholderAPI |
+| **Menu / GUI** | DeluxeMenus | HeadDatabase |
+| **Rank** | LuckPerms | TAB, PlaceholderAPI |
+| **NPC** | FancyNpcs | FancyHolograms |
+| **PVP Arena** | *Cần thêm plugin* | WorldGuard |
+| **Portal** | TurtleCustomPortals | Multiverse-Core |
+| **Damage Display** | TurtleDamageIndicator | — |
+| **Build Tool** | FastAsyncWorldEdit | AxiomPaper |
+
+> [!WARNING]
+> ### Plugin Cần Bổ Sung
+> - **Quest Plugin**: Cần BetonQuest hoặc QualityQuests cho hệ thống quest phức tạp
+> - **PVP Arena Plugin**: Cần BattleArena hoặc tương đương cho ranked PVP
+> - **AFK Reward**: TurtleAFK (đã có trên server SMP?) hoặc tương đương
+> - **Auction House**: Cần plugin đấu giá (Auction House plugin)
+> - **Custom Enchants**: Có thể cần ExcellentEnchants cho enchant đặc biệt
+
+---
+
+## 📎 Phụ Lục
+
+### A. Công Thức Lực Chiến
+
+```
+Lực Chiến = (ATK × 2) + (DEF × 1.5) + (HP × 0.5)
+           + Pet_Buff + Skill_Bonus
+           + Gear_Enhancement_Bonus
+           + Title_Bonus
+```
+
+### B. Bảng Tỉ Lệ Drop Dungeon Chi Tiết
+
+| Item | T1-2 | T3-4 | T5-6 | T7-8 | T9-10 |
+|------|------|------|------|------|-------|
+| Linh Thạch | 100-300 | 300-800 | 800-2K | 2K-5K | 5K-10K |
+| Đột Phá Đan | 10% | 15% | 20% | 25% | 30% |
+| Gear (tier tương ứng) | 15% | 12% | 10% | 8% | 5% |
+| Pet Egg | 3% | 3% | 4% | 5% | 5% |
+| Skill Book | 5% | 5% | 7% | 8% | 10% |
+| Crate Key | 30% | 25% | 20% | 15% | 15% |
+| Mảnh Bản Đồ Bí Cảnh | — | — | 2% | 3% | 5% |
+| Legendary Item | — | — | — | 0.5% | 2% |
+
+### C. NPC Shop Locations
+
+| NPC | Vị Trí | Chức Năng |
+|-----|--------|-----------|
+| **Lão Trúc** | Spawn | Hướng dẫn newbie, bán basic items |
+| **Tiên Nương** | Spawn | Quest NPC |
+| **Vương Thiết** | /warp trade | Mua/bán trang bị |
+| **Dược Sư** | /warp trade | Mua/bán Linh Dược, Potion |
+| **Thú Sư** | /warp trade | Pet shop, Pet food |
+| **Lôi Sư** | /warp pvp | PVP arena NPC |
+| **Dungeon Thủ** | /warp dungeon | Vào dungeon, mua phí vào |
+
+---
+
+## 17. 💰 Hệ Thống Nạp Tiền & VIP (Monetization)
+
+> [!CAUTION]
+> **Triết lý hút máu:** Người chơi FREE vẫn chơi được, nhưng phải cày **gấp 5-10 lần** so với VIP. Mọi pain point trong gameplay đều có giải pháp trả phí. Không bán trực tiếp sức mạnh — bán **tốc độ, tiện ích, và ngoại hình**.
+
+### 17.1 Tiền Tệ Nạp — Linh Ngọc (💎 Premium Currency)
+
+| Gói Nạp | Giá (VNĐ) | Linh Ngọc | Bonus Lần Đầu | Bonus Thường |
+|---------|-----------|-----------|---------------|-------------|
+| Thử Nghiệm | 20,000 | 200 | +200 (×2) | +20 (10%) |
+| Tiểu Gia | 50,000 | 550 | +550 (×2) | +55 (10%) |
+| Thiếu Gia | 100,000 | 1,200 | +1,200 (×2) | +180 (15%) |
+| Đại Gia | 200,000 | 2,600 | +2,600 (×2) | +520 (20%) |
+| Hào Môn | 500,000 | 7,000 | +7,000 (×2) | +2,100 (30%) |
+| Thần Hào | 1,000,000 | 15,000 | +15,000 (×2) | +6,000 (40%) |
+
+> **Bonus lần đầu ×2** → Tâm lý "lần đầu quá hời, phải nạp thử" → Hook nạp lần đầu
+> **Bonus tăng theo gói** → Càng nạp nhiều càng "hời" → Upsell lên gói cao
+
+**Đặc biệt — Thẻ Tháng (Monthly Card):**
+
+| Loại | Giá | Nhận Ngay | Nhận Mỗi Ngày (30 ngày) | Tổng |
+|------|-----|-----------|------------------------|------|
+| **Thẻ Tháng Bạc** | 50,000 VNĐ | 300 LN | 50 LN/ngày | 1,800 LN |
+| **Thẻ Tháng Vàng** | 100,000 VNĐ | 800 LN | 120 LN/ngày + 1 Crate Key | 4,400 LN + 30 Key |
+
+> **Phải login mỗi ngày để nhận** → Retention hook cực mạnh
+> **Giá trị gấp 3-4× so với nạp thẳng** → Ai cũng thấy "hời" → Conversion rate cao nhất
+
+---
+
+### 17.2 Gói VIP (Vĩnh Viễn)
+
+| VIP | Giá (LN) | Giá (VNĐ tương đương) | Đặc Quyền |
+|-----|---------|----------------------|-----------|
+| 🥉 **VIP 1 — Ngoại Môn** | 500 | ~50K | Cơ bản |
+| 🥈 **VIP 2 — Nội Môn** | 1,500 | ~130K | Khá |
+| 🥇 **VIP 3 — Chân Truyền** | 3,500 | ~290K | Mạnh |
+| 💎 **VIP 4 — Trưởng Lão** | 7,000 | ~530K | Rất mạnh |
+| 👑 **VIP 5 — Tông Chủ** | 15,000 | ~1M | Siêu VIP |
+
+#### Chi Tiết Đặc Quyền VIP
+
+| Đặc Quyền | Free | VIP1 | VIP2 | VIP3 | VIP4 | VIP5 |
+|-----------|------|------|------|------|------|------|
+| **Dungeon lượt/ngày** | Base | +1 | +2 | +3 | +5 | +8 |
+| **Tu Vi Bonus** | 0% | +10% | +20% | +35% | +50% | +80% |
+| **Drop Rate Bonus** | 0% | +5% | +10% | +15% | +25% | +40% |
+| **Linh Thạch Bonus** | 0% | +10% | +15% | +25% | +35% | +50% |
+| **AFK Tu Luyện Giới Hạn** | 8h | 10h | 12h | 16h | 20h | 24h |
+| **Pet Slot Bonus** | 0 | 0 | +1 | +1 | +2 | +2 |
+| **Skill Slot Bonus** | 0 | 0 | 0 | +1 | +1 | +2 |
+| **Farm Plot Bonus** | 0 | +1 | +2 | +4 | +6 | +10 |
+| **Island Size Bonus** | 0 | +10% | +20% | +30% | +40% | +50% |
+| **/fly trên đảo** | ❌ | ❌ | ✅ | ✅ | ✅ | ✅ |
+| **/heal (CD 10m)** | ❌ | ❌ | ❌ | ✅ | ✅ | ✅ |
+| **Auto-collect Linh Dược** | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ |
+| **Bỏ qua Dungeon cooldown** | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
+| **Prefix đặc biệt** | ❌ | 🥉 | 🥈 | 🥇 | 💎 | 👑 |
+| **Particle effect** | ❌ | ❌ | ❌ | ✅ | ✅ | ✅ (chọn) |
+| **Kho riêng (Ender Chest)** | 1 row | 2 row | 3 row | 4 row | 5 row | 6 row |
+| **Daily Bonus Linh Ngọc** | 0 | 5 | 10 | 20 | 35 | 50 |
+| **Cường Hóa bảo vệ** | ❌ | ❌ | ❌ | -5% penalty | -10% penalty | -15% penalty |
+| **Trade thuế giảm** | 5% | 4% | 3% | 2% | 1% | 0% |
+
+> **Thiết kế:** VIP1-2 rẻ, dễ mua → hook lần đầu. VIP3+ tạo khoảng cách lớn → FOMO upgrade.
+> **VIP5 Bỏ qua Dungeon cooldown** = ultimate whale bait, cày vô hạn.
+
+---
+
+### 17.3 Battle Pass — Tu Tiên Lệnh (Mỗi Mùa 30 Ngày)
+
+| Loại | Giá | Nội Dung |
+|------|-----|----------|
+| **Free Pass** | 0 | 30 tầng thưởng cơ bản (Linh Thạch, EXP, materials) |
+| **Tu Tiên Lệnh** | 1,000 LN (~100K VNĐ) | 30 tầng thưởng Premium + tất cả Free |
+| **Tu Tiên Lệnh Cao Cấp** | 2,500 LN (~200K VNĐ) | Premium + Skip 10 tầng + Skin độc quyền |
+
+#### Phần Thưởng Battle Pass Theo Tầng
+
+| Tầng | Free Track | Premium Track |
+|------|-----------|---------------|
+| 1-5 | 500 LS mỗi tầng | 200 LN + Uncommon Crate Key |
+| 10 | 2,000 LS | **Pet Egg Epic** + 500 LN |
+| 15 | 5,000 LS | **Skill Book Rare** + Bảo Hộ Phù x3 |
+| 20 | Common Key | **Legendary Crate Key** + 1,000 LN |
+| 25 | 10,000 LS | **Trang bị Epic Exclusive** (chỉ có qua BP) |
+| 30 | 20,000 LS | **👑 Skin Vũ Khí Exclusive + Pet Legendary + 2,000 LN** |
+
+> **Tâm lý:** Người chơi cày free track → thấy premium track hấp dẫn hơn gấp 10 lần
+> **Exclusive items** chỉ có qua BP → Miss = mất vĩnh viễn → FOMO cực mạnh
+> **Mua muộn vẫn nhận hết** → Cho phép mua BP ngày cuối, nhận tất cả tầng đã qua
+
+---
+
+### 17.4 Gacha — Thiên Cơ Luân (Vòng Quay May Mắn)
+
+#### 🎰 Thiên Cơ Luân Thường (Linh Ngọc Gacha)
+
+| Lượt Quay | Giá |
+|-----------|-----|
+| 1 lượt | 100 LN |
+| 10 lượt | 900 LN (giảm 10%) |
+| 50 lượt | 4,000 LN (giảm 20%) |
+
+**Pool Thưởng:**
+
+| Rarity | Tỉ Lệ | Ví Dụ Item |
+|--------|--------|------------|
+| ⬜ Common | 45% | 500-1,000 LS, Pet Food, Linh Dược |
+| 🟢 Uncommon | 25% | 2,000-5,000 LS, Cường Hóa Thạch x5, Uncommon Pet |
+| 🔵 Rare | 15% | 10,000 LS, Bảo Hộ Phù, Rare Pet, Skill Book |
+| 🟣 Epic | 10% | 30,000 LS, Epic Pet, Epic Gear, Đột Phá Đan x5 |
+| 🟡 Legendary | 4% | Legendary Pet, Legendary Gear, 100,000 LS |
+| 🔴 **JACKPOT** | 1% | **Mythic Pet, Divine Gear, 500,000 LS** |
+
+**Pity System (Bảo Đáy):**
+- Mỗi 50 lượt không trúng Legendary+ → **Đảm bảo 1 Legendary**
+- Mỗi 100 lượt không trúng Jackpot → **Đảm bảo 1 Jackpot**
+- Counter **KHÔNG reset** khi đổi banner → Người chơi yên tâm quay
+
+> **Tâm lý:** Pity system tạo cảm giác "gần trúng rồi, quay thêm" → Chi nhiều hơn dự định
+
+#### 🎰 Thiên Cơ Luân Giới Hạn (Limited Banner — Mỗi 2 Tuần)
+
+Mỗi 2 tuần có banner mới với **1 item Exclusive** không thể kiếm bằng cách khác:
+
+| Banner Ví Dụ | Exclusive Item | Rate-Up |
+|-------------|---------------|--------|
+| "Long Vương Giáng Thế" | 🐉 Pet Long Vương Hoàng Kim | 50% khi trúng Legendary |
+| "Kiếm Tiên Truyền Thuyết" | ⚔️ Huyền Thiên Kiếm (Mythic) | 50% khi trúng Jackpot |
+| "Phượng Hoàng Niết Bàn" | 🔥 Phượng Hoàng Skin Set | 50% khi trúng Epic+ |
+
+> **2 tuần rồi hết** → "Nếu không quay bây giờ, mất vĩnh viễn" → FOMO maximum
+
+---
+
+### 17.5 Shop Tiện Ích (Convenience Shop)
+
+Bán bằng Linh Ngọc — mua shortcut, không bán sức mạnh trực tiếp:
+
+| Item | Giá (LN) | Hiệu Ứng | Pain Point Giải Quyết |
+|------|---------|-----------|----------------------|
+| **Đột Phá Bảo Đan** | 200 | Đảm bảo đột phá 100% (không cần đánh boss) | Boss Thiên Kiếp quá khó |
+| **Bảo Hộ Phù Cao Cấp** | 150 | Cường hóa thất bại → không giảm level | Mất +12 về +10 quá đau |
+| **Dungeon Reset Phù** | 100 | Reset giới hạn dungeon ngày, thêm 1 lượt | Hết lượt dungeon, muốn cày thêm |
+| **Tu Vi Đan x2** | 80 | Double EXP 2 giờ | Lên level quá chậm |
+| **Linh Tuyền Cao Cấp** | 50 | Giảm 50% thời gian farm (thay vì 20%) | Chờ cây mọc lâu quá |
+| **Mở Rộng Kho** | 300 | +1 row kho vĩnh viễn | Kho đầy không đủ chỗ |
+| **Đổi Tên** | 100 | Đổi tên nhân vật 1 lần | Muốn đổi tên |
+| **Hồi Sinh Phù** | 50 | Hồi sinh tại chỗ trong dungeon (thay vì restart) | Chết ở boss gần hết máu |
+| **Pet Slot Mở Rộng** | 500 | +1 pet slot vĩnh viễn (max +3) | Thiếu chỗ mang pet |
+| **Skill Reset Đan** | 200 | Reset toàn bộ skill point | Build sai muốn đổi |
+| **Teleport Đan** | 30 | Teleport ngay đến bất kỳ warp | Lười đi bộ |
+| **Auto-Loot Phù** (24h) | 80 | Tự động nhặt drop 24 giờ | Nhặt đồ mệt tay |
+| **Tăng Tốc AFK** (24h) | 100 | AFK Tu Vi ×2 trong 24h | AFK EXP quá ít |
+
+> **Chiến lược:** Tạo pain point TRƯỚC → bán giải pháp SAU
+> Ví dụ: Cường hóa +10→+12 thất bại 3 lần (mất ~2 ngày cày) → Player rage → Thấy Bảo Hộ Phù 150 LN = "rẻ hơn cày lại"
+
+---
+
+### 17.6 Crate System — Rương Bảo Vật (ExcellentCrates)
+
+Sử dụng plugin **ExcellentCrates** đã có trên server:
+
+| Rương | Key Source | Thưởng Tốt Nhất | Mua Key Bằng LN |
+|-------|-----------|-----------------|----------------|
+| **Rương Đồng** | Daily login, quest | Uncommon gear | 30 LN/key |
+| **Rương Bạc** | Weekly quest, dungeon | Rare gear, Pet Egg | 80 LN/key |
+| **Rương Vàng** | Hard dungeon, event | Epic gear, Skill Book | 200 LN/key |
+| **Rương Kim Cương** | Bí Cảnh, season reward | Legendary gear/pet | 500 LN/key |
+| **Rương Tiên** | Chỉ bán bằng LN | Mythic gear, Divine chance | 1,000 LN/key |
+
+> **Rương Tiên** = pure premium crate, best items → whale magnet
+> **Key drop rate đủ để "nếm" nhưng không đủ để "no"** → Mua thêm key
+
+---
+
+### 17.7 Cosmetic Shop (Ngoại Hình)
+
+Bán bằng Linh Ngọc — **KHÔNG ảnh hưởng gameplay**, nhưng flex status:
+
+| Loại | Giá (LN) | Ví Dụ |
+|------|---------|-------|
+| **Skin Vũ Khí** | 300-800 | Kiếm Lửa Effect, Đao Băng Giá Effect |
+| **Cánh (Wings)** | 500-1,500 | Thiên Thần, Ác Quỷ, Phượng Hoàng |
+| **Aura/Particle** | 200-600 | Hỏa Diễm, Lôi Điện, Linh Khí xoáy |
+| **Trail (Đường Đi)** | 150-400 | Hoa Rơi, Linh Quang, Sao Băng |
+| **Chat Color/Format** | 100-300 | Gradient tên, Bold chat, Emoji |
+| **Island Theme** | 800-2,000 | Re-skin đảo: Tiên Giới, Ma Giới, Long Cung |
+| **Pet Skin** | 300-500 | Skin mới cho pet hiện có |
+| **Kill Effect** | 200-500 | Effect đặc biệt khi giết mob/player |
+| **Danh Hiệu Custom** | 1,000 | Tự tạo danh hiệu riêng (có duyệt) |
+
+> **Key insight:** Người chơi CHỊU CHI NHIỀU NHẤT cho cosmetic để flex trước bạn bè
+> **Limited cosmetic** (mỗi season/event) → FOMO + exclusivity
+
+---
+
+### 17.8 Gói Khởi Đầu & Gói Giới Hạn (Starter & Limited Packs)
+
+#### Gói Khởi Đầu (Mỗi Account Chỉ Mua 1 Lần)
+
+| Gói | Giá (VNĐ) | Nội Dung | Giá Trị Thực |
+|-----|-----------|----------|-------------|
+| **Tân Thủ** | 20,000 | 200 LN + Uncommon Pet + 5,000 LS + 3 Crate Key | ~80K giá trị |
+| **Tu Sĩ** | 50,000 | 600 LN + Rare Pet + 20,000 LS + Epic Key + Skin | ~200K giá trị |
+| **Đại Năng** | 200,000 | 3,000 LN + Epic Pet + 100,000 LS + VIP2 + Legendary Key | ~800K giá trị |
+
+> **"Giá trị gấp 4×"** → Tâm lý: "Không mua = lỗ" → Conversion rate rất cao
+> **Chỉ mua 1 lần** → Urgency: "Nếu skip bây giờ, mất cơ hội tốt nhất"
+
+#### Gói Giới Hạn (Flash Sale — Random, 24-48h)
+
+| Gói | Giá | Trigger Xuất Hiện | Nội Dung |
+|-----|-----|-------------------|----------|
+| **Gói Cứu Trang Bị** | 50 LN | Sau khi cường hóa thất bại 3 lần | Bảo Hộ Phù x5 + Cường Hóa Thạch x20 |
+| **Gói Sức Mạnh** | 100 LN | Sau khi thua dungeon 2 lần | Tu Vi Đan x2 + Hồi Sinh Phù x3 + Buff Pot |
+| **Gói Pet Cứu Hộ** | 80 LN | Sau khi Pet Fusion thất bại | Pet Egg (guaranteed Rare+) + Pet Food x50 |
+| **Gói Hết Lượt** | 60 LN | Sau khi hết lượt dungeon ngày | Dungeon Reset x3 + Double Drop 2h |
+| **Gói Level Up** | 150 LN | Khi còn thiếu <10% EXP để lên level | Tu Vi Đan x3 + AFK Boost 24h |
+
+> **Flash Sale xuất hiện ĐÚNG LÚC người chơi frustrated** → Conversion tối đa
+> **Countdown timer** → "Còn 23:59:00" → Urgency
+
+---
+
+### 17.9 Hệ Thống Nạp Tích Lũy (Spending Milestone)
+
+Càng nạp nhiều → càng nhiều thưởng bonus:
+
+| Tổng Nạp Tích Lũy | Thưởng |
+|-------------------|--------|
+| 500 LN | Danh hiệu "Tiểu Thí Chủ" + 1,000 LS |
+| 2,000 LN | Frame Avatar Bronze + Pet Egg Rare |
+| 5,000 LN | Frame Avatar Silver + Legendary Key + 50,000 LS |
+| 10,000 LN | Frame Avatar Gold + VIP3 (nếu chưa có) + Exclusive Skin |
+| 25,000 LN | Frame Avatar Diamond + Mythic Pet Egg + 500,000 LS |
+| 50,000 LN | 👑 Frame Avatar Crown + Danh Hiệu "Thần Hào" + Divine Weapon Box |
+
+> **Tâm lý:** Người đã nạp 4,000 LN → "Chỉ thêm 1,000 nữa là được Silver frame" → Nạp thêm
+> **Các milestone gần nhau ở đầu, xa dần ở sau** → Hook người mới, whale tự chạy
+
+---
+
+## 18. 🧠 Chiến Lược Hút Máu Tâm Lý
+
+### 18.1 Pain Point → Solution Framework
+
+Mỗi hệ thống gameplay được thiết kế với **điểm đau** có chủ đích:
+
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                    VÒNG LẶP HÚT MÁU                               │
+│                                                                     │
+│   Gameplay Fun ──► Hit Wall (Pain Point) ──► Frustration            │
+│        ▲                                        │                   │
+│        │                                        ▼                   │
+│        │                              ┌── Cày (Free Path) ── Lâu    │
+│        │                              │                             │
+│        │                              └── Nạp (Paid Path) ── Nhanh  │
+│        │                                        │                   │
+│        └────────────────────────────────────────┘                   │
+│                                                                     │
+│   Key: Pain point phải ĐỦ ĐAU để muốn nạp,                       │
+│        nhưng KHÔNG QUÁ ĐAU để bỏ game                             │
+└─────────────────────────────────────────────────────────────────────┘
+```
+
+### 18.2 Bảng Pain Point Chi Tiết
+
+| Hệ Thống | Pain Point (Điểm Đau) | Giải Pháp Free | Giải Pháp Trả Phí | Tỉ Lệ Nhanh Hơn |
+|-----------|----------------------|---------------|-------------------|------------------|
+| **Dungeon** | Hết lượt ngày, muốn cày thêm | Chờ ngày mai | Dungeon Reset Phù / VIP | Ngay lập tức |
+| **Cường Hóa** | Thất bại -2 level, mất 2 ngày cày | Cày lại nguyên liệu | Bảo Hộ Phù | 100% bảo toàn |
+| **Đột Phá** | Boss Thiên Kiếp quá khó | Cày gear mạnh hơn | Đột Phá Bảo Đan | Skip boss |
+| **Level** | Lên level chậm (mid-late game) | Grind thêm | Tu Vi Đan ×2, VIP EXP bonus | 2-3× nhanh hơn |
+| **Pet** | Fusion thất bại 40%, mất 3 pet | Cày 3 pet mới | Pet Egg từ Gacha/Crate | Ngay lập tức |
+| **Farm** | Cây mọc lâu (12-48h) | Chờ | Linh Tuyền Cao Cấp / VIP auto-collect | 50% nhanh hơn |
+| **Kho** | Kho đầy, không đủ chỗ | Bán bớt | Mở Rộng Kho | Vĩnh viễn |
+| **PVP** | Thua vì gear yếu | Cày gear free | VIP drop bonus → gear nhanh hơn | 2-5× |
+| **Island** | Đảo nhỏ, thiếu plot | Cày LS upgrade | VIP Island bonus | +50% size |
+| **Trade** | Thuế 5% mỗi giao dịch | Chấp nhận | VIP giảm → 0% thuế | 100% tiết kiệm |
+
+### 18.3 Chiến Thuật Tâm Lý Cụ Thể
+
+#### 💀 Sunk Cost Fallacy (Chi Phí Chìm)
+```
+Người chơi đã nạp 200K VNĐ:
+├─ Có VIP2, Pet Epic, Gear +10
+├─ Đang ở Kim Đan (giữa game)
+├─ Suy nghĩ: "Đã đầu tư nhiều rồi, bỏ thì phí"
+└─ Kết quả: Tiếp tục nạp thêm để "bảo vệ đầu tư"
+```
+
+#### 🔥 FOMO (Fear of Missing Out)
+- Limited banner Gacha chỉ 2 tuần → "Bây giờ hoặc không bao giờ"
+- Battle Pass exclusive skin → "Season này miss = mất vĩnh viễn"
+- Flash Sale sau fail → "Giá tốt nhất, chỉ 24h"
+- World Boss mỗi 12h → Login để không bỏ lỡ
+- Event mùa chỉ 3 ngày → Phải chơi ngay
+
+#### 👥 Social Pressure (Áp Lực Xã Hội)
+- VIP prefix hiển thị trước tên → Ai cũng biết ai là VIP
+- Cosmetic wings/aura → "Sao nó đẹp thế, mình cũng muốn"
+- Island ranking → VIP đảo lên nhanh → Đảo free tụt hạng
+- PVP → VIP gear tốt hơn → Free thua → Muốn mạnh hơn
+- **Thông báo toàn server:** "🎉 [Player] vừa nhận được 🐉 Long Vương từ Thiên Cơ Luân!"
+
+#### ⏰ Time Gate → Pay to Skip
+- Dungeon limit/ngày → Mua thêm lượt
+- Farm timer 48h → Mua tăng tốc  
+- Đột phá cooldown 1h → Mua skip
+- Cường hóa cần nguyên liệu → Mua trực tiếp
+- **Nguyên tắc:** Mọi thứ cần THỜI GIAN đều có thể MUA bằng TIỀN
+
+#### 🎰 Variable Ratio Reinforcement (Phần Thưởng Ngẫu Nhiên)
+- Crate opening → "Lần này có thể trúng Legendary"
+- Gacha pity system → "Còn 12 lượt nữa là guaranteed"
+- Cường hóa RNG → "Lần sau chắc thành công"
+- Dungeon rare drop → "Boss này có thể drop Mythic"
+- **Hiệu ứng ánh sáng/âm thanh** khi trúng item hiếm → Dopamine rush
+
+### 18.4 Luồng Hút Máu Theo Thời Gian Chơi
+
+```
+📅 NGÀY 1-3 (Newbie)
+├─ Cho chơi miễn phí, rất fun, progress nhanh
+├─ Hiển thị Gói Khởi Đầu Tân Thủ 20K ("Giá trị 80K!")
+├─ Hiển thị Thẻ Tháng Bạc ("Chỉ 50K cho 30 ngày!")
+└─ Target: First purchase, phá vỡ rào cản tâm lý nạp
+
+📅 NGÀY 4-14 (Early)
+├─ Hit wall đầu tiên: hết lượt dungeon, lên level chậm
+├─ Flash Sale "Gói Sức Mạnh" xuất hiện khi fail dungeon
+├─ VIP1 quảng cáo: "+10% Tu Vi, +1 lượt dungeon"
+├─ Battle Pass Season bắt đầu
+└─ Target: VIP1 + Thẻ Tháng, tổng ~100-150K
+
+📅 NGÀY 15-45 (Mid Game)
+├─ Cường hóa bắt đầu thất bại nhiều → Bảo Hộ Phù
+├─ Pet Fusion thất bại → Gacha Pet temptation
+├─ VIP2-3 gap rõ ràng (thấy VIP3 fly, heal, particle)
+├─ Limited Banner Gacha đầu tiên
+└─ Target: VIP2-3 + Gacha + BP, tổng ~300-500K
+
+📅 NGÀY 46-90 (Late Game)
+├─ PVP gap: VIP gear mạnh hơn Free rõ ràng
+├─ Island ranking: VIP đảo top, Free đảo tụt
+├─ Sunk cost: "Đã nạp 500K rồi, thêm chút nữa"
+├─ Nạp tích lũy gần milestone → "Thêm 1,000 LN nữa = Gold Frame"
+└─ Target: VIP4 + ongoing spending, tổng ~1-2M
+
+📅 NGÀY 90+ (Endgame / Whale)
+├─ Min-max gear +15: cần Bảo Hộ Phù liên tục
+├─ Collect all Legendary/Mythic Pet: Gacha heavy
+├─ Season ranking chase: spend to stay competitive
+├─ VIP5 = ultimate flex + 0% tax + unlimited dungeon
+├─ Cosmetic collecting: mua hết skin mỗi season
+└─ Target: VIP5 + whale spending, tổng 5M+
+```
+
+### 18.5 Doanh Thu Dự Kiến (Mô Hình)
+
+| Phân Khúc | % Người Chơi | Chi Tiêu Trung Bình | Mô Tả |
+|-----------|-------------|---------------------|--------|
+| **Free Player** | 60% | 0 | Không nạp, cày grind |
+| **Minnow** (Cá Nhỏ) | 20% | 50-200K VNĐ | Thẻ Tháng + Gói Khởi Đầu |
+| **Dolphin** (Cá Heo) | 12% | 200K-1M VNĐ | VIP2-3 + BP + Gacha nhẹ |
+| **Whale** (Cá Voi) | 5% | 1-5M VNĐ | VIP4-5 + Gacha nặng |
+| **Mega Whale** | 3% | 5M+ VNĐ | Max everything, mọi cosmetic |
+
+> [!TIP]
+> **80/20 Rule:** ~80% doanh thu đến từ ~20% người chơi (Dolphin + Whale)
+> **Focus:** Nuôi Free player để tạo ecosystem → Whale nạp để flex trước Free player
+
+### 18.6 Thông Báo "Ai Đó Vừa Trúng" (Social Proof)
+
+Hiển thị toàn server khi:
+- 🎉 Ai đó quay trúng Legendary+ từ Gacha
+- 🎉 Ai đó mở Rương Tiên trúng Mythic
+- 🎉 Ai đó cường hóa +13, +14, +15 thành công
+- 🎉 Ai đó đột phá Tiên Nhân
+- 🎉 Ai đó mua VIP5
+
+> **Mục đích:** "Người khác trúng được, mình cũng có thể" → Kích thích quay/mở thêm
+
+---
+
+> [!TIP]
+> ### Ưu Tiên Phát Triển
+> 1. **Phase 1**: Skyblock core + Tu Luyện + Level + Dungeon T1-4
+> 2. **Phase 2**: MMOItems gear + Pet system + Dungeon T5-7
+> 3. **Phase 3**: Skills + Quest + Trade + Dungeon T8-10
+> 4. **Phase 4**: PVP + Events + Bí Cảnh + Polish
+> 5. **Phase 5**: VIP System + Gacha + Battle Pass + Monetization
+
+---
+
+*Document Version: 2.0 — Skyblock Tu Tiên Game Design + Monetization*
+*Created: 15/04/2026*
+*Updated: 15/04/2026 — Thêm hệ thống hút máu toàn diện*

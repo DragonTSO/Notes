@@ -27,6 +27,8 @@
 17. [💰 Hệ Thống Nạp Tiền & VIP (Monetization)](#17-hệ-thống-nạp-tiền--vip)
 18. [🧠 Chiến Lược Hút Máu Tâm Lý](#18-chiến-lược-hút-máu-tâm-lý)
 
+> **Note:** Section 6 bao gồm hệ thống **Nhập Thần** (6.4) — hy sinh item để tăng chỉ số vĩnh viễn.
+
 ---
 
 ## 1. Tổng Quan
@@ -365,6 +367,115 @@ Sử dụng **MMOItems** plugin:
 | +13 → +15 | 15% → 5% | Reset về +10 |
 
 > **Bảo Hộ Phù** (Protection Talisman): Ngăn giảm level khi thất bại. Drop từ Dungeon T7+ hoặc Event.
+
+### 6.4 Hệ Thống Nhập Thần (魂入 — Soul Infusion)
+
+> [!IMPORTANT]
+> **Nhập Thần** là hệ thống **hy sinh item/trang bị** để **tăng chỉ số vĩnh viễn** cho nhân vật. Item bị tiêu hủy, chỉ số được giữ mãi. Đây là **item sink** chính của server, giúp cân bằng kinh tế và tạo mục tiêu cày dài hạn.
+
+#### 6.4.1 Cơ Chế Hoạt Động
+
+```
+┌───────────────────────────────────────────────────────┐
+│               GIAO DIỆN NHẬP THẦN                      │
+│                                                       │
+│   ┌─────────────────────────────────────────┐   │
+│   │  [🟢 ATK] [🔵 DEF] [🟡 HP]  [🟣 SPD]         │   │
+│   │  [🟠 CRIT] [⚪ LUCK]                          │   │
+│   │                                             │   │
+│   │  6 Ô NHẬP THẦN (mở theo cảnh giới)         │   │
+│   └─────────────────────────────────────────┘   │
+│                                                       │
+│   ┌─────────┐   Bỏ item vào ô → Xác nhận         │
+│   │  ITEM   │   → Item bị tiêu hủy                │
+│   │  ⬇️     │   → Chỉ số cộng vĩnh viễn vào ô   │
+│   └─────────┘                                     │
+└───────────────────────────────────────────────────────┘
+```
+
+Người chơi mở GUI Nhập Thần (qua NPC hoặc `/nhapthan`), đặt item vào ô tương ứng, xác nhận → item bị **tiêu hủy vĩnh viễn** và chỉ số được cộng vào nhân vật.
+
+#### 6.4.2 Các Ô Nhập Thần (6 Ô)
+
+| Ô | Tên | Chỉ Số Tăng | Mở Khóa Tại | Nhận Item Loại |
+|---|-----|-------------|------------|----------------|
+| 🟢 | **Công Lực** (ATK) | +ATK | Luyện Khí (Lv51) | Vũ khí (Kiếm, Đao, Thương, Cung, Pháp Bảo) |
+| 🔵 | **Thủ Ngự** (DEF) | +DEF | Luyện Khí (Lv51) | Giáp (Helmet, Chest, Legs, Boots) |
+| 🟡 | **Sinh Lực** (HP) | +Max HP | Trúc Cơ (Lv121) | Giáp, Phụ Kiện, Đồ ăn đặc biệt |
+| 🟣 | **Tốc Độ** (SPD) | +Speed, +Attack Speed | Kim Đan (Lv201) | Boots, Phụ Kiện, Skill Book |
+| 🟠 | **Bạo Kích** (CRIT) | +Crit Rate, +Crit DMG | Nguyên Anh (Lv321) | Vũ khí, Linh Ngọc, Độc dược |
+| ⚪ | **Vận Khí** (LUCK) | +Drop Rate, +Linh Thạch | Hóa Thần (Lv451) | Mọi loại item |
+
+#### 6.4.3 Chỉ Số Nhận Được Theo Tier Item
+
+Mỗi item hy sinh cho chỉ số khác nhau tùy **tier và cường hóa**:
+
+| Tier Item | ATK/DEF | HP | SPD | CRIT Rate | LUCK |
+|-----------|---------|-----|-----|-----------|------|
+| ⬜ Phàm Phẩm | +1 | +5 | +0.5% | +0.1% | +0.1% |
+| 🟢 Hạ Phẩm | +3 | +15 | +1% | +0.3% | +0.2% |
+| 🔵 Trung Phẩm | +8 | +40 | +2% | +0.5% | +0.5% |
+| 🟣 Thượng Phẩm | +20 | +100 | +3% | +1% | +1% |
+| 🟡 Cực Phẩm | +50 | +250 | +5% | +2% | +2% |
+| 🔴 Tiên Phẩm | +120 | +600 | +8% | +3.5% | +3.5% |
+| 🌈 Thần Phẩm | +300 | +1,500 | +12% | +5% | +5% |
+
+**Bonus cường hóa:** Item đã cường hóa cho thêm stat:
+- +1 → +5: +10%/level bonus
+- +6 → +10: +15%/level bonus
+- +11 → +15: +25%/level bonus
+
+> **Ví dụ:** Cực Phẩm Kiếm +10 nhập thần vào ô ATK:
+> Base: +50 ATK
+> Cường hóa: +5 level × 10% + 5 level × 15% = +125% bonus
+> **Tổng: +50 × 2.25 = +112 ATK vĩnh viễn**
+
+#### 6.4.4 Giới Hạn Nhập Thần (Cap Theo Cảnh Giới)
+
+Mỗi ô có **giới hạn chỉ số tối đa**, tăng theo cảnh giới:
+
+| Cảnh Giới | ATK Cap | DEF Cap | HP Cap | SPD Cap | CRIT Cap | LUCK Cap |
+|-----------|---------|---------|--------|---------|----------|----------|
+| Luyện Khí | 50 | 50 | 200 | — | — | — |
+| Trúc Cơ | 150 | 150 | 600 | — | — | — |
+| Kim Đan | 400 | 400 | 1,500 | 20% | — | — |
+| Nguyên Anh | 1,000 | 1,000 | 4,000 | 40% | 15% | — |
+| Hóa Thần | 2,500 | 2,500 | 10,000 | 60% | 30% | 20% |
+| Luyện Hư | 5,000 | 5,000 | 20,000 | 80% | 45% | 35% |
+| Đại Thừa | 8,000 | 8,000 | 35,000 | 100% | 60% | 50% |
+| Tiên Nhân | **15,000** | **15,000** | **60,000** | **120%** | **80%** | **70%** |
+
+> **Tâm lý:** Mỗi lần lên cảnh giới → cap tăng mạnh → cần farm nhiều item hơn để "fill" cap mới
+> **Đột phá cảnh giới = mở thêm "đất trống" để cày**
+
+#### 6.4.5 Nhập Thần Cao Cấp (Advanced Infusion)
+
+| Tính Năng | Yêu Cầu | Hiệu Ứng |
+|-----------|---------|----------|
+| **Nhập Song Thần** | Luyện Hư+ | Nhập 2 item cùng lúc vào 1 ô → +20% bonus |
+| **Nhập Thần Hoàn Mỹ** | Item +15 | Nhập item +15 → triple chỉ số (thay vì 2.25×) |
+| **Thiên Đạo Nhập** | Tiên Nhân | Bỏ qua cap, cộng thẳng (nhưng EXP giảm 50%) |
+| **Chuyển Hóa Nhập Thần** | 500 LN (shop) | Chuyển chỉ số từ ô này sang ô khác (mất 20%) |
+
+#### 6.4.6 Nguồn Item Để Nhập Thần
+
+| Nguồn | Loại Item | Hiệu Quả |
+|-------|----------|----------|
+| **Dungeon drop** | Vũ khí/giáp các tier | Nguồn chính, cày vô hạn |
+| **Craft** | Vũ khí/giáp Phàm-Hạ Phẩm | Rẻ, feedfiller cho giai đoạn đầu |
+| **Gacha/Crate** | Gear các tier | Item thừa từ gacha có chỗ dùng |
+| **PVP reward** | Gear season | Gear cuối season nhập thần |
+| **Trade/Mua** | Mua gear cũ từ người khác | Tạo nhu cầu trade |
+| **Nhập Thần Đan** (shop) | Item đặc biệt | 150 LN, cho +30 ATK/DEF trực tiếp |
+
+> [!TIP]
+> **Tại sao Nhập Thần gây nghiện:**
+> - **Item không bao giờ thừa**: mọi gear dư đều có giá trị → luôn có lý do cày
+> - **Tiến bộ vĩnh viễn**: không bao giờ mất chỉ số đã nhập → cảm giác thoả mãn
+> - **Cap tăng theo cảnh giới**: luôn có mục tiêu mới → không bao giờ "xong"
+> - **Biến gear trash thành giá trị**: trúng gear yếu từ dungeon? Nhập thần!
+> - **VIP cày nhiều dungeon = nhiều gear = nhập thần nhanh hơn** → Hút máu tự nhiên
+> - **Nhập Thần Đan từ shop** = skip grind bằng tiền → Monetization
 
 ---
 

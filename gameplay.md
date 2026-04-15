@@ -76,23 +76,33 @@
 
 ### 2.1 Cảnh Giới (Realm / Cultivation Stage)
 
-Hệ thống tu luyện gồm **9 Đại Cảnh Giới**, mỗi cảnh giới có **nhiều tầng nhỏ** (Sơ Kỳ → Trung Kỳ → Hậu Kỳ → Đỉnh Phong → Viên Mãn). Tổng cộng **1,000 level**, phân bổ theo cảnh giới.
+Hệ thống tu luyện gồm **9 Đại Cảnh Giới**, mỗi cảnh giới có **5 tầng nhỏ** (Sơ Kỳ → Trung Kỳ → Hậu Kỳ → Đỉnh Phong → Viên Mãn), tạo tổng cộng **45 bậc tu luyện**.
 
-| # | Cảnh Giới | Level | Thực Lực Tối Thiểu | Dungeon Mở Khóa | Đặc Quyền Khác |
-|---|-----------|-------|---------------------|-----------------|----------------|
-| 1 | **Phàm Nhân** (Mortal) | 1-50 | 0 | — | Island cơ bản, Farm cơ bản |
-| 2 | **Luyện Khí** (Qi Refinement) | 51-120 | 500 | Yêu Thú Lâm, Âm Hồn Động | Pet slot 1 |
-| 3 | **Trúc Cơ** (Foundation) | 121-200 | 2,000 | Hỏa Diễm Sơn, Băng Phong Cốc | Skill slot 2, Trade |
-| 4 | **Kim Đan** (Golden Core) | 201-320 | 8,000 | Huyết Nguyệt Đàn, Lôi Đình Tháp | Pet slot 2, Island Tier 3 |
-| 5 | **Nguyên Anh** (Nascent Soul) | 321-450 | 25,000 | Vạn Độc Trì, Long Cốt Mộ | Skill slot 3, PVP Arena |
-| 6 | **Hóa Thần** (Spirit Severing) | 451-580 | 80,000 | Tiên Phế Đô | Island Tier 5, Pet slot 3 |
-| 7 | **Luyện Hư** (Void Refining) | 581-720 | 200,000 | Hỗn Nguyên Giới | Legendary craft |
-| 8 | **Đại Thừa** (Mahayana) | 721-880 | 500,000 | Bí Cảnh | Island Tier 6 |
-| 9 | **Tiên Nhân** (Immortal) | 881-1000 | 1,000,000 | Tất cả | Danh hiệu đặc biệt |
+> [!IMPORTANT]
+> **Cảnh Giới dựa trên TU VI, không phải Level!**
+> Người chơi tích lũy Tu Vi (tu luyện kinh nghiệm) qua mọi hoạt động. Khi đủ Tu Vi → đủ điều kiện đột phá lên cảnh giới mới.
+> **Level** (1-1000) là hệ thống phụ, tăng tự động song song khi cày Tu Vi, dùng để mở khóa một số tính năng nhỏ.
 
-### 2.2 Cách Tu Luyện (Cách Lên Level)
+| # | Cảnh Giới | Tu Vi Yêu Cầu | Thực Lực Tối Thiểu | Dungeon Mở Khóa | Đặc Quyền Khác |
+|---|-----------|---------------|---------------------|-----------------|----------------|
+| 1 | **Phàm Nhân** (Mortal) | 0 | 0 | — | Island cơ bản, Farm cơ bản |
+| 2 | **Luyện Khí** (Qi Refinement) | 5,000 | 500 | Yêu Thú Lâm, Âm Hồn Động | Pet slot 1 |
+| 3 | **Trúc Cơ** (Foundation) | 25,000 | 2,000 | Hỏa Diễm Sơn, Băng Phong Cốc | Skill slot 2, Trade |
+| 4 | **Kim Đan** (Golden Core) | 100,000 | 8,000 | Huyết Nguyệt Đàn, Lôi Đình Tháp | Pet slot 2, Island Tier 3 |
+| 5 | **Nguyên Anh** (Nascent Soul) | 350,000 | 25,000 | Vạn Độc Trì, Long Cốt Mộ | Skill slot 3, PVP Arena |
+| 6 | **Hóa Thần** (Spirit Severing) | 1,000,000 | 80,000 | Tiên Phế Đô | Island Tier 5, Pet slot 3 |
+| 7 | **Luyện Hư** (Void Refining) | 3,000,000 | 200,000 | Hỗn Nguyên Giới | Legendary craft |
+| 8 | **Đại Thừa** (Mahayana) | 10,000,000 | 500,000 | Bí Cảnh | Island Tier 6 |
+| 9 | **Tiên Nhân** (Immortal) | 50,000,000 | 1,000,000 | Tất cả | Danh hiệu đặc biệt |
 
-Người chơi nhận **Tu Vi** (EXP) qua nhiều hoạt động:
+> **Tầng nhỏ** (Sơ Kỳ → Viên Mãn) là các mốc Tu Vi trung gian trong mỗi cảnh giới.
+> Ví dụ: Luyện Khí cần 5,000 Tu Vi → Sơ Kỳ (5K), Trung Kỳ (8K), Hậu Kỳ (12K), Đỉnh Phong (18K), Viên Mãn (23K) → Đủ 25K = sẵn sàng đột phá Trúc Cơ.
+
+### 2.2 Tu Vi & Level
+
+#### Tu Vi (Tu Luyện Kinh Nghiệm) — Hệ Thống CHÍNH
+
+Tu Vi là **đại lượng tích lũy vĩnh viễn**, KHÔNG bao giờ mất. Mọi hoạt động đều tạo Tu Vi:
 
 | Hoạt Động | Tu Vi/Lần | Giới Hạn |
 |-----------|-----------|----------|
@@ -104,26 +114,48 @@ Người chơi nhận **Tu Vi** (EXP) qua nhiều hoạt động:
 | Quest tuần | 1,000-3,000 | 3 quest/tuần |
 | AFK tu luyện (online) | 10/phút | 8 giờ/ngày |
 | PVP thắng | 50-200 | 20 trận/ngày |
+| Nhập Thần (bonus Tu Vi) | 50-500 | Theo item nhập |
+
+> Tu Vi tích lũy liên tục → khi đạt mốc cảnh giới → thanh Tu Vi **phát sáng** → có thể đột phá
+
+#### Level (1-1000) — Hệ Thống PHỤ
+
+Level tăng **tự động** song song khi cày Tu Vi (cứ X Tu Vi = +1 Level). Level dùng để:
+- Hiển thị tiến độ nhanh (dễ hiểu hơn số Tu Vi lớn)
+- Mở khóa một số quest, NPC dialogue
+- Đóng góp vào Thực Lực (Level × 5)
+- **KHÔNG** quyết định cảnh giới — chỉ Tu Vi mới quyết định
 
 ### 2.3 Đột Phá Cảnh Giới (Breakthrough)
 
-Để lên cảnh giới mới, người chơi phải **đột phá** — một thử thách đặc biệt:
+Khi Tu Vi đạt mốc yêu cầu, người chơi có thể **đột phá** lên cảnh giới mới:
 
 > **Điều kiện đột phá:**
-> 1. ✅ Đạt level yêu cầu
-> 2. ✅ Đạt lực chiến tối thiểu
+> 1. ✅ Tích đủ **Tu Vi** yêu cầu (thanh Tu Vi đầy)
+> 2. ✅ Đạt **Thực Lực** tối thiểu
 > 3. ✅ Thu thập **Đột Phá Đan** (vật phẩm drop từ Dungeon hoặc craft)
 > 4. ✅ Đánh bại **Boss Thiên Kiếp** (solo boss instance)
 
+```
+   TU VI ████████████████████░░░░  85% → Chưa đủ đột phá
+   TU VI █████████████████████████ 100% → ✅ Sẵn sàng đột phá!
+   
+   Điều kiện khác:
+   ✅ Thực Lực: 8,500 / 8,000 (đủ)
+   ✅ Đột Phá Đan: 3/3 (đủ)
+   ⬜ Boss Thiên Kiếp: Chưa đánh → [VÀO BOSS]
+```
+
 **Boss Thiên Kiếp** scale theo cảnh giới, sử dụng MythicMobs:
-- Phàm Nhân → Luyện Khí (Lv50): Boss `ThienKiep_LuyenKhi` (HP: 500, DMG: 10)
-- Kim Đan → Nguyên Anh (Lv320): Boss `ThienKiep_NguyenAnh` (HP: 50,000, DMG: 200)
-- Đại Thừa → Tiên Nhân (Lv880): Boss `ThienKiep_TienNhan` (HP: 5,000,000, DMG: 2,000)
+- Phàm Nhân → Luyện Khí (5K Tu Vi): Boss `ThienKiep_LuyenKhi` (HP: 500, DMG: 10)
+- Kim Đan → Nguyên Anh (350K Tu Vi): Boss `ThienKiep_NguyenAnh` (HP: 50,000, DMG: 200)
+- Đại Thừa → Tiên Nhân (50M Tu Vi): Boss `ThienKiep_TienNhan` (HP: 5,000,000, DMG: 2,000)
 
 **Thất bại khi đột phá:**
 - Mất 50% Đột Phá Đan đã sử dụng
 - Cooldown 1 giờ trước khi thử lại
-- **KHÔNG** mất level hoặc trang bị
+- **KHÔNG** mất Tu Vi hoặc trang bị
+- Tu Vi vẫn giữ nguyên, chỉ cần thu thập lại Đan và thử lại Boss
 
 ### 2.4 Hệ Thống Thực Lực (戰力 — Combat Power)
 
@@ -139,14 +171,14 @@ THỰC LỰC = (ATK × 3) + (DEF × 2) + (HP × 0.3)
            + Pet_Score
            + Skill_Score
            + Title_Bonus
-           + Level_Bonus
+           + Tu_Vi_Bonus
 ```
 
 #### Nguồn Đóng Góp Thực Lực
 
 | Nguồn | Đóng Góp | Ví Dụ |
 |-------|----------|-------|
-| **Level** | Level × 5 | Lv500 = 2,500 điểm |
+| **Tu Vi** | Tu Vi ÷ 100 | 1M Tu Vi = 10,000 điểm |
 | **Trang Bị** (Gear) | Theo tier + cường hóa | Cực Phẩm Set +10 = ~15,000 |
 | **Nhập Thần** | Tổng chỉ số đã nhập × hệ số | 500 ATK nhập = 1,500 |
 | **Pet** | Rarity + Level | Legendary Lv100 = ~5,000 |
@@ -178,7 +210,7 @@ THỰC LỰC = (ATK × 3) + (DEF × 2) + (HP × 0.3)
 
 > **Tâm lý:** Thực Lực là **con số flex lớn nhất** — người chơi luôn so sánh với nhau
 > Mỗi hành động (cày dungeon, nhập thần, lên pet, cường hóa) đều tăng số này → Tất cả đều có ý nghĩa
-> **Dungeon yêu cầu Thực Lực tối thiểu** → Người chơi PHẢI mạnh mới vào được, không chỉ cần level
+> **Dungeon yêu cầu Cảnh Giới + Thực Lực** → Người chơi PHẢI tu luyện đủ Tu Vi VÀ đủ mạnh mới vào được
 
 ---
 
@@ -245,27 +277,27 @@ Tier 6: Tất cả custom ore + Thần Quặng (5%)
 
 ### 4.1 Cấu Trúc Dungeon
 
-Sử dụng **TurtleDungeon** plugin (có sẵn trên server). Dungeon **KHÔNG giới hạn lượt chơi** — người chơi có thể cày thoải mái, nhưng chỉ vào được dungeon phù hợp **cảnh giới hiện tại**.
+Sử dụng **TurtleDungeon** plugin (có sẵn trên server). Dungeon **KHÔNG giới hạn lượt chơi** — người chơi có thể cày thoải mái, nhưng chỉ vào được dungeon phù hợp **cảnh giới** và **Thực Lực**.
 
 Hệ thống gồm **10 Tầng Dungeon** + **3 Secret Dungeon**:
 
-| Tầng | Tên | Cảnh Giới Yêu Cầu | Level YC | ⚔ Thực Lực YC | Mob Level | Boss |
-|------|-----|--------------------|----------|--------------|-----------|------|
-| 1 | **Yêu Thú Lâm** | Luyện Khí Sơ Kỳ | 51+ | 500 | 50-100 | Sói Vương |
-| 2 | **Âm Hồn Động** | Luyện Khí Hậu Kỳ | 90+ | 1,500 | 80-130 | Quỷ Hồn |
-| 3 | **Hỏa Diễm Sơn** | Trúc Cơ Sơ Kỳ | 121+ | 3,000 | 120-200 | Viêm Ma |
-| 4 | **Băng Phong Cốc** | Trúc Cơ Hậu Kỳ | 170+ | 6,000 | 160-250 | Băng Long |
-| 5 | **Huyết Nguyệt Đàn** | Kim Đan Sơ Kỳ | 201+ | 12,000 | 200-350 | Huyết Tộc Chúa |
-| 6 | **Lôi Đình Tháp** | Kim Đan Hậu Kỳ | 270+ | 25,000 | 260-400 | Lôi Thú |
-| 7 | **Vạn Độc Trì** | Nguyên Anh Sơ Kỳ | 321+ | 50,000 | 320-500 | Độc Tôn |
-| 8 | **Long Cốt Mộ** | Nguyên Anh Hậu Kỳ | 400+ | 100,000 | 380-600 | Cổ Long |
-| 9 | **Tiên Phế Đô** | Hóa Thần | 451+ | 200,000 | 450-750 | Đọa Tiên |
-| 10 | **Hỗn Nguyên Giới** | Luyện Hư | 581+ | 400,000 | 580-1000 | Hỗn Nguyên Thú |
+| Tầng | Tên | Cảnh Giới Yêu Cầu | ⚔ Thực Lực YC | Mob Level | Boss |
+|------|-----|--------------------|--------------|-----------|------|
+| 1 | **Yêu Thú Lâm** | Luyện Khí Sơ Kỳ | 500 | 50-100 | Sói Vương |
+| 2 | **Âm Hồn Động** | Luyện Khí Hậu Kỳ | 1,500 | 80-130 | Quỷ Hồn |
+| 3 | **Hỏa Diễm Sơn** | Trúc Cơ Sơ Kỳ | 3,000 | 120-200 | Viêm Ma |
+| 4 | **Băng Phong Cốc** | Trúc Cơ Hậu Kỳ | 6,000 | 160-250 | Băng Long |
+| 5 | **Huyết Nguyệt Đàn** | Kim Đan Sơ Kỳ | 12,000 | 200-350 | Huyết Tộc Chúa |
+| 6 | **Lôi Đình Tháp** | Kim Đan Hậu Kỳ | 25,000 | 260-400 | Lôi Thú |
+| 7 | **Vạn Độc Trì** | Nguyên Anh Sơ Kỳ | 50,000 | 320-500 | Độc Tôn |
+| 8 | **Long Cốt Mộ** | Nguyên Anh Hậu Kỳ | 100,000 | 380-600 | Cổ Long |
+| 9 | **Tiên Phế Đô** | Hóa Thần | 200,000 | 450-750 | Đọa Tiên |
+| 10 | **Hỗn Nguyên Giới** | Luyện Hư | 400,000 | 580-1000 | Hỗn Nguyên Thú |
 
 > [!CAUTION]
-> **Vào Dungeon yêu cầu CẢ HAI điều kiện:** Cảnh Giới (đủ level) **VÀ** Thực Lực tối thiểu.
+> **Vào Dungeon yêu cầu CẢ HAI điều kiện:** Cảnh Giới (đủ Tu Vi đã đột phá) **VÀ** Thực Lực tối thiểu.
 > Nếu đủ cảnh giới nhưng Thực Lực chưa đủ → **Không vào được** → Phải cường hóa gear, nhập thần, nâng pet...
-> Đây là động lực để người chơi **đầu tư vào TẤT CẢ hệ thống**, không chỉ cày level.
+> Đây là động lực để người chơi **đầu tư vào TẤT CẢ hệ thống**, không chỉ cày Tu Vi.
 
 > [!NOTE]
 > **Không giới hạn lượt chơi!** Người chơi cày dungeon thoải mái, nhưng phần thưởng có **Diminishing Returns** — mỗi lần clear thêm trong ngày, drop rate giảm dần:

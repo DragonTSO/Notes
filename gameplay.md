@@ -78,7 +78,7 @@
 
 Hệ thống tu luyện gồm **9 Đại Cảnh Giới**, mỗi cảnh giới có **nhiều tầng nhỏ** (Sơ Kỳ → Trung Kỳ → Hậu Kỳ → Đỉnh Phong → Viên Mãn). Tổng cộng **1,000 level**, phân bổ theo cảnh giới.
 
-| # | Cảnh Giới | Level | Lực Chiến Tối Thiểu | Dungeon Mở Khóa | Đặc Quyền Khác |
+| # | Cảnh Giới | Level | Thực Lực Tối Thiểu | Dungeon Mở Khóa | Đặc Quyền Khác |
 |---|-----------|-------|---------------------|-----------------|----------------|
 | 1 | **Phàm Nhân** (Mortal) | 1-50 | 0 | — | Island cơ bản, Farm cơ bản |
 | 2 | **Luyện Khí** (Qi Refinement) | 51-120 | 500 | Yêu Thú Lâm, Âm Hồn Động | Pet slot 1 |
@@ -124,6 +124,61 @@ Người chơi nhận **Tu Vi** (EXP) qua nhiều hoạt động:
 - Mất 50% Đột Phá Đan đã sử dụng
 - Cooldown 1 giờ trước khi thử lại
 - **KHÔNG** mất level hoặc trang bị
+
+### 2.4 Hệ Thống Thực Lực (戰力 — Combat Power)
+
+**Thực Lực** là chỉ số tổng hợp thể hiện **sức mạnh toàn diện** của người chơi. Con số này được tính tự động từ tất cả hệ thống và hiển thị luôn dưới tên nhân vật.
+
+#### Công Thức Tính Thực Lực
+
+```
+THỰC LỰC = (ATK × 3) + (DEF × 2) + (HP × 0.3)
+           + (SPD × 50) + (CRIT_RATE × 100) + (LUCK × 80)
+           + Gear_Score
+           + Nhập_Thần_Score
+           + Pet_Score
+           + Skill_Score
+           + Title_Bonus
+           + Level_Bonus
+```
+
+#### Nguồn Đóng Góp Thực Lực
+
+| Nguồn | Đóng Góp | Ví Dụ |
+|-------|----------|-------|
+| **Level** | Level × 5 | Lv500 = 2,500 điểm |
+| **Trang Bị** (Gear) | Theo tier + cường hóa | Cực Phẩm Set +10 = ~15,000 |
+| **Nhập Thần** | Tổng chỉ số đã nhập × hệ số | 500 ATK nhập = 1,500 |
+| **Pet** | Rarity + Level | Legendary Lv100 = ~5,000 |
+| **Skill** | Số skill + level skill | 4 skill max = ~3,000 |
+| **Danh Hiệu** | Mỗi danh hiệu có điểm riêng | Tiên Nhân = +5,000 |
+| **Cảnh Giới** | Bonus cố định khi đột phá | Kim Đan = +3,000 |
+
+#### Hiển Thị Thực Lực
+
+| Vị Trí | Cách Hiển Thị |
+|---------|----------------|
+| **Dưới tên** | `⚔ Thực Lực: 125,000` (màu theo rank) |
+| **Tab list** | Cột Thực Lực bên cạnh tên |
+| **Menu Info** | Trang thông tin nhân vật (`/info`) |
+| **Bảng Xếp Hạng** | Top Thực Lực toàn server |
+| **Khi nhắm** | Xem Thực Lực người khác khi nhấp chuột |
+
+#### Màu Sắc Theo Mức Thực Lực
+
+| Thực Lực | Màu | Xếp Hạng |
+|----------|-----|----------|
+| 0 - 1,000 | &7 (Xám) | Phàm Nhân |
+| 1,001 - 5,000 | &a (Xanh lá) | Sơ Cấp |
+| 5,001 - 20,000 | &b (Xanh dương) | Trung Cấp |
+| 20,001 - 80,000 | &5 (Tím) | Cao Cấp |
+| 80,001 - 250,000 | &6 (Vàng) | Cường Giả |
+| 250,001 - 600,000 | &c (Đỏ) | Bá Chủ |
+| 600,001+ | &c&l (Đỏ đậm) | Thiên Huyền |
+
+> **Tâm lý:** Thực Lực là **con số flex lớn nhất** — người chơi luôn so sánh với nhau
+> Mỗi hành động (cày dungeon, nhập thần, lên pet, cường hóa) đều tăng số này → Tất cả đều có ý nghĩa
+> **Dungeon yêu cầu Thực Lực tối thiểu** → Người chơi PHẢI mạnh mới vào được, không chỉ cần level
 
 ---
 
@@ -194,18 +249,23 @@ Sử dụng **TurtleDungeon** plugin (có sẵn trên server). Dungeon **KHÔNG 
 
 Hệ thống gồm **10 Tầng Dungeon** + **3 Secret Dungeon**:
 
-| Tầng | Tên | Cảnh Giới Yêu Cầu | Level YC | Mob Level | Boss |
-|------|-----|--------------------|----------|-----------|------|
-| 1 | **Yêu Thú Lâm** | Luyện Khí Sơ Kỳ | 51+ | 50-100 | Sói Vương |
-| 2 | **Âm Hồn Động** | Luyện Khí Hậu Kỳ | 90+ | 80-130 | Quỷ Hồn |
-| 3 | **Hỏa Diễm Sơn** | Trúc Cơ Sơ Kỳ | 121+ | 120-200 | Viêm Ma |
-| 4 | **Băng Phong Cốc** | Trúc Cơ Hậu Kỳ | 170+ | 160-250 | Băng Long |
-| 5 | **Huyết Nguyệt Đàn** | Kim Đan Sơ Kỳ | 201+ | 200-350 | Huyết Tộc Chúa |
-| 6 | **Lôi Đình Tháp** | Kim Đan Hậu Kỳ | 270+ | 260-400 | Lôi Thú |
-| 7 | **Vạn Độc Trì** | Nguyên Anh Sơ Kỳ | 321+ | 320-500 | Độc Tôn |
-| 8 | **Long Cốt Mộ** | Nguyên Anh Hậu Kỳ | 400+ | 380-600 | Cổ Long |
-| 9 | **Tiên Phế Đô** | Hóa Thần | 451+ | 450-750 | Đọa Tiên |
-| 10 | **Hỗn Nguyên Giới** | Luyện Hư | 581+ | 580-1000 | Hỗn Nguyên Thú |
+| Tầng | Tên | Cảnh Giới Yêu Cầu | Level YC | ⚔ Thực Lực YC | Mob Level | Boss |
+|------|-----|--------------------|----------|--------------|-----------|------|
+| 1 | **Yêu Thú Lâm** | Luyện Khí Sơ Kỳ | 51+ | 500 | 50-100 | Sói Vương |
+| 2 | **Âm Hồn Động** | Luyện Khí Hậu Kỳ | 90+ | 1,500 | 80-130 | Quỷ Hồn |
+| 3 | **Hỏa Diễm Sơn** | Trúc Cơ Sơ Kỳ | 121+ | 3,000 | 120-200 | Viêm Ma |
+| 4 | **Băng Phong Cốc** | Trúc Cơ Hậu Kỳ | 170+ | 6,000 | 160-250 | Băng Long |
+| 5 | **Huyết Nguyệt Đàn** | Kim Đan Sơ Kỳ | 201+ | 12,000 | 200-350 | Huyết Tộc Chúa |
+| 6 | **Lôi Đình Tháp** | Kim Đan Hậu Kỳ | 270+ | 25,000 | 260-400 | Lôi Thú |
+| 7 | **Vạn Độc Trì** | Nguyên Anh Sơ Kỳ | 321+ | 50,000 | 320-500 | Độc Tôn |
+| 8 | **Long Cốt Mộ** | Nguyên Anh Hậu Kỳ | 400+ | 100,000 | 380-600 | Cổ Long |
+| 9 | **Tiên Phế Đô** | Hóa Thần | 451+ | 200,000 | 450-750 | Đọa Tiên |
+| 10 | **Hỗn Nguyên Giới** | Luyện Hư | 581+ | 400,000 | 580-1000 | Hỗn Nguyên Thú |
+
+> [!CAUTION]
+> **Vào Dungeon yêu cầu CẢ HAI điều kiện:** Cảnh Giới (đủ level) **VÀ** Thực Lực tối thiểu.
+> Nếu đủ cảnh giới nhưng Thực Lực chưa đủ → **Không vào được** → Phải cường hóa gear, nhập thần, nâng pet...
+> Đây là động lực để người chơi **đầu tư vào TẤT CẢ hệ thống**, không chỉ cày level.
 
 > [!NOTE]
 > **Không giới hạn lượt chơi!** Người chơi cày dungeon thoải mái, nhưng phần thưởng có **Diminishing Returns** — mỗi lần clear thêm trong ngày, drop rate giảm dần:
@@ -930,13 +990,31 @@ Ngày 90: ★ Endgame chase — Perfection, rankings
 
 ## 📎 Phụ Lục
 
-### A. Công Thức Lực Chiến
+### A. Công Thức Thực Lực (Chi Tiết)
 
 ```
-Lực Chiến = (ATK × 2) + (DEF × 1.5) + (HP × 0.5)
-           + Pet_Buff + Skill_Bonus
-           + Gear_Enhancement_Bonus
+THỰC LỰC = (ATK × 3) + (DEF × 2) + (HP × 0.3)
+           + (SPD% × 50) + (CRIT_RATE% × 100) + (LUCK% × 80)
+           + Gear_Score
+           + Nhập_Thần_Score
+           + Pet_Score
+           + Skill_Score
            + Title_Bonus
+           + (Level × 5)
+           + Cảnh_Giới_Bonus
+
+--- GEAR SCORE ---
+Gear_Score = ∑(Tier_Base × Enhancement_Multiplier) cho mỗi trang bị
+  Tier Base: Phàm=50, Hạ=150, Trung=400, Thượng=1000, Cực=2500, Tiên=5000, Thần=10000
+  Enhancement: +1=×1.1, +5=×1.5, +10=×2.5, +15=×4.0
+
+--- NHẬP THẦN SCORE ---
+Nhập_Thần_Score = (ATK_nhập × 3) + (DEF_nhập × 2) + (HP_nhập × 0.3) + ...
+
+--- CẢNH GIỚI BONUS ---
+Phàm Nhân=0, Luyện Khí=200, Trúc Cơ=600, Kim Đan=1500,
+Nguyên Anh=3000, Hóa Thần=6000, Luyện Hư=12000,
+Đại Thừa=25000, Tiên Nhân=50000
 ```
 
 ### B. Bảng Tỉ Lệ Drop Dungeon Chi Tiết

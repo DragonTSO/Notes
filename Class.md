@@ -1,4 +1,4 @@
-# 📖 Hệ Thống Class — Skyblock Tu Tiên
+?# 📖 Hệ Thống Class — Skyblock Tu Tiên
 
 > **Chọn Class tại Cảnh Giới 2 (Luyện Khí)** qua NPC hoặc lệnh `/class`
 > Mỗi người chơi chọn **1 trong 5 Class**. Có thể chuyển class tại CG 9 và CG 13.
@@ -9,10 +9,10 @@
 
 | # | Class | Vai Trò | Vũ Khí Chính | Stat Chính | Màu |
 |---|-------|---------|-------------|-----------|-----|
-| 1 | ⚔️ **Kiếm Tu** | Melee DPS | Kiếm, Đao | ATK, Crit | &c Đỏ |
-| 2 | 🔮 **Pháp Tu** | Magic DPS / CC | Pháp Bảo, Staff | Skill DMG, SPD | &5 Tím |
-| 3 | 🛡️ **Thể Tu** | Tank / Brawler | Quyền, Thương | DEF, HP | &6 Vàng |
-| 4 | 💚 **Y Tu** | Support / Healer | Phù, Trượng | Heal, Buff | &a Xanh lá |
+| Lv 1     | ⚔️ **Kiếm Tu** | Melee DPS | Kiếm, Đao | ATK, Crit | &c Đỏ |
+| Lv 30    | 🔮 **Pháp Tu** | Magic DPS / CC | Pháp Bảo, Staff | Skill DMG, SPD | &5 Tím |
+| Lv 60    | 🛡️ **Thể Tu** | Tank / Brawler | Quyền, Thương | DEF, HP | &6 Vàng |
+| Lv 100   | 💚 **Y Tu** | Support / Healer | Phù, Trượng | Heal, Buff | &a Xanh lá |
 | 5 | 🗡️ **Ám Tu** | Assassin / Burst | Đoản Đao, Ám Khí | Crit, SPD | &8 Xám |
 
 ---
@@ -50,18 +50,18 @@ Kiếm Tu là con đường tu luyện tập trung vào **kiếm thuật**, sử
 ```
 Loại: Active — Single Target
 Mô tả: Phóng 3 đòn kiếm liên tiếp vào mục tiêu phía trước
-DMG: 150 / 250 / 400 / 600 (theo skill level 1-4)
+DMG: Base 150 (+4.5/level) [Max Lv: 100]
 Hiệu ứng: Mỗi đòn cộng dồn +10% DMG
 Range: 3 blocks
 CD: 5s | Mana: 20
 ```
 
-| Skill Lv | DMG | Bonus | Upgrade Cost |
+| Mốc Level | DMG | Bonus | Upgrade Cost |
 |----------|-----|-------|-------------|
-| 1 | 150 | — | Mặc định |
-| 2 | 250 | +10% Crit | 500 LS |
-| 3 | 400 | +20% Crit | 2,000 LS |
-| 4 | 600 | +30% Crit, xuyên 1 target | 10,000 LS |
+| Lv 1     | 150 | — | Mặc định |
+| Lv 30    | 250 | +10% Crit | 500 LT |
+| Lv 60    | 400 | +20% Crit | 2,000 LT |
+| Lv 100   | 600 | +30% Crit, xuyên 1 target | 10,000 LT |
 
 ---
 
@@ -70,18 +70,18 @@ CD: 5s | Mana: 20
 ```
 Loại: Active — Ranged
 Mô tả: Phóng kiếm khí theo đường thẳng, xuyên qua mọi mob trên đường bay
-DMG: 300 / 500 / 750 / 1,100 (theo skill level)
+DMG: Base 300 (+8.1/level) [Max Lv: 100]
 Hiệu ứng: Xuyên mob, giảm 10% DEF target 5s
 Range: 15 blocks
 CD: 8s | Mana: 35
 ```
 
-| Skill Lv | DMG | Bonus | Upgrade Cost |
+| Mốc Level | DMG | Bonus | Upgrade Cost |
 |----------|-----|-------|-------------|
-| 1 | 300 | Xuyên mob | Mặc định |
-| 2 | 500 | +Slow 20% 3s | 1,500 LS |
-| 3 | 750 | +Bleed 50 DMG/s 3s | 5,000 LS |
-| 4 | 1,100 | AoE nổ cuối đường bay | 20,000 LS |
+| Lv 1     | 300 | Xuyên mob | Mặc định |
+| Lv 30    | 500 | +Slow 20% 3s | 1,500 LT |
+| Lv 60    | 750 | +Bleed 50 DMG/s 3s | 5,000 LT |
+| Lv 100   | 1,100 | AoE nổ cuối đường bay | 20,000 LT |
 
 ---
 
@@ -90,18 +90,18 @@ CD: 8s | Mana: 35
 ```
 Loại: Active — AoE
 Mô tả: Triệu hồi hàng trăm kiếm ảo bay xuống khu vực xung quanh
-DMG: 800 / 1,200 / 1,800 / 2,500 (theo skill level)
+DMG: Base 800 (+17.2/level) [Max Lv: 100]
 Hiệu ứng: AoE 5 block, xuyên giáp 30%
 Range: 5 blocks radius
 CD: 15s | Mana: 60
 ```
 
-| Skill Lv | DMG | Bonus | Upgrade Cost |
+| Mốc Level | DMG | Bonus | Upgrade Cost |
 |----------|-----|-------|-------------|
-| 1 | 800 | Xuyên giáp 30% | Mặc định |
-| 2 | 1,200 | Radius +1 block | 3,000 LS |
-| 3 | 1,800 | +Knockback | 12,000 LS |
-| 4 | 2,500 | Xuyên giáp 50%, slow 30% | 50,000 LS |
+| Lv 1     | 800 | Xuyên giáp 30% | Mặc định |
+| Lv 30    | 1,200 | Radius +1 block | 3,000 LT |
+| Lv 60    | 1,800 | +Knockback | 12,000 LT |
+| Lv 100   | 2,500 | Xuyên giáp 50%, slow 30% | 50,000 LT |
 
 ---
 
@@ -110,17 +110,17 @@ CD: 15s | Mana: 60
 ```
 Loại: Active — Cone AoE
 Mô tả: Phóng kiếm khí hình quạt phía trước, crit rate tăng mạnh
-DMG: 2,000 / 3,000 / 4,500 / 6,000 (theo skill level)
+DMG: Base 2,000 (+40.4/level) [Max Lv: 100]
 Hiệu ứng: Cone 60°, 8 blocks, +50% Crit Rate 5s sau khi dùng
 CD: 30s | Mana: 100
 ```
 
-| Skill Lv | DMG | Bonus | Upgrade Cost |
+| Mốc Level | DMG | Bonus | Upgrade Cost |
 |----------|-----|-------|-------------|
-| 1 | 2,000 | +50% Crit Rate 5s | Mặc định |
-| 2 | 3,000 | +Crit DMG +30% | 15,000 LS |
-| 3 | 4,500 | Cone mở rộng 90° | 60,000 LS |
-| 4 | 6,000 | +80% Crit Rate, reset CD skill 1 | 200,000 LS |
+| Lv 1     | 2,000 | +50% Crit Rate 5s | Mặc định |
+| Lv 30    | 3,000 | +Crit DMG +30% | 15,000 LT |
+| Lv 60    | 4,500 | Cone mở rộng 90° | 60,000 LT |
+| Lv 100   | 6,000 | +80% Crit Rate, reset CD skill 1 | 200,000 LT |
 
 ---
 
@@ -129,17 +129,17 @@ CD: 30s | Mana: 100
 ```
 Loại: Ultimate — Single Target
 Mô tả: Tập trung toàn bộ kiếm khí vào 1 đòn chém duy nhất, bỏ qua mọi phòng thủ
-DMG: 10,000 / 15,000 / 22,000 / 35,000 (theo skill level)
+DMG: Base 10,000 (+252.5/level) [Max Lv: 100]
 Hiệu ứng: Ignore DEF, ignore Shield, không thể dodge
 CD: 120s | Mana: 200
 ```
 
-| Skill Lv | DMG | Bonus | Upgrade Cost |
+| Mốc Level | DMG | Bonus | Upgrade Cost |
 |----------|-----|-------|-------------|
-| 1 | 10,000 | Ignore DEF | Mặc định |
-| 2 | 15,000 | +Execute: x2 DMG nếu target < 20% HP | 50,000 LS |
-| 3 | 22,000 | +Hồi 30% HP nếu giết target | 200,000 LS |
-| 4 | 35,000 | +3s bất tử sau khi dùng | 1,000,000 LS |
+| Lv 1     | 10,000 | Ignore DEF | Mặc định |
+| Lv 30    | 15,000 | +Execute: x2 DMG nếu target < 20% HP | 50,000 LT |
+| Lv 60    | 22,000 | +Hồi 30% HP nếu giết target | 200,000 LT |
+| Lv 100   | 35,000 | +3s bất tử sau khi dùng | 1,000,000 LT |
 
 ---
 
@@ -176,18 +176,18 @@ Pháp Tu tu luyện theo con đường **pháp thuật**, sử dụng ngũ hành
 ```
 Loại: Active — AoE (Hỏa)
 Mô tả: Phóng quả cầu lửa gây nổ AoE khi chạm mục tiêu
-DMG: 120 / 200 / 350 / 550
+DMG: Base 120 (+4.3/level) [Max Lv: 100]
 Hiệu ứng: AoE 3 block, gây Burn 20 DMG/s 3s
 Range: 12 blocks
 CD: 6s | Mana: 25
 ```
 
-| Skill Lv | DMG | Bonus | Upgrade Cost |
+| Mốc Level | DMG | Bonus | Upgrade Cost |
 |----------|-----|-------|-------------|
-| 1 | 120 | Burn 3s | Mặc định |
-| 2 | 200 | AoE +1 block | 500 LS |
-| 3 | 350 | Burn 5s, +40 DMG/s | 2,000 LS |
-| 4 | 550 | Nổ 2 lần (aftershock) | 10,000 LS |
+| Lv 1     | 120 | Burn 3s | Mặc định |
+| Lv 30    | 200 | AoE +1 block | 500 LT |
+| Lv 60    | 350 | Burn 5s, +40 DMG/s | 2,000 LT |
+| Lv 100   | 550 | Nổ 2 lần (aftershock) | 10,000 LT |
 
 ---
 
@@ -196,18 +196,18 @@ CD: 6s | Mana: 25
 ```
 Loại: Active — AoE CC (Thủy/Băng)
 Mô tả: Tạo bão băng xung quanh, gây DMG và đóng băng kẻ địch
-DMG: 400 / 650 / 950 / 1,400
+DMG: Base 400 (+10.1/level) [Max Lv: 100]
 Hiệu ứng: AoE 4 block, Freeze 2s, Slow 40% 5s
 Range: Self-centered
 CD: 12s | Mana: 45
 ```
 
-| Skill Lv | DMG | Bonus | Upgrade Cost |
+| Mốc Level | DMG | Bonus | Upgrade Cost |
 |----------|-----|-------|-------------|
-| 1 | 400 | Freeze 2s | Mặc định |
-| 2 | 650 | Slow +50%, 6s | 1,500 LS |
-| 3 | 950 | Freeze 3s, AoE +1 | 5,000 LS |
-| 4 | 1,400 | Frozen target nhận +30% DMG | 20,000 LS |
+| Lv 1     | 400 | Freeze 2s | Mặc định |
+| Lv 30    | 650 | Slow +50%, 6s | 1,500 LT |
+| Lv 60    | 950 | Freeze 3s, AoE +1 | 5,000 LT |
+| Lv 100   | 1,400 | Frozen target nhận +30% DMG | 20,000 LT |
 
 ---
 
@@ -216,18 +216,18 @@ CD: 12s | Mana: 45
 ```
 Loại: Active — AoE Burst (Lôi/Kim)
 Mô tả: Triệu hồi sét từ trời đánh xuống khu vực rộng
-DMG: 1,200 / 1,800 / 2,700 / 4,000
+DMG: Base 1,200 (+28.3/level) [Max Lv: 100]
 Hiệu ứng: AoE 6 block, Stun 3s, chain lightning lây sang 3 mob gần
 Range: 15 blocks (targeted)
 CD: 20s | Mana: 80
 ```
 
-| Skill Lv | DMG | Bonus | Upgrade Cost |
+| Mốc Level | DMG | Bonus | Upgrade Cost |
 |----------|-----|-------|-------------|
-| 1 | 1,200 | Stun 3s | Mặc định |
-| 2 | 1,800 | Chain +5 mob | 3,000 LS |
-| 3 | 2,700 | Stun 4s, AoE +2 | 12,000 LS |
-| 4 | 4,000 | Đánh sét 3 lần liên tiếp | 50,000 LS |
+| Lv 1     | 1,200 | Stun 3s | Mặc định |
+| Lv 30    | 1,800 | Chain +5 mob | 3,000 LT |
+| Lv 60    | 2,700 | Stun 4s, AoE +2 | 12,000 LT |
+| Lv 100   | 4,000 | Đánh sét 3 lần liên tiếp | 50,000 LT |
 
 ---
 
@@ -236,7 +236,7 @@ CD: 20s | Mana: 80
 ```
 Loại: Active — AoE + Debuff
 Mô tả: Giải phóng 5 nguyên tố cùng lúc, gây DMG + random debuff mạnh
-DMG: 1,800 / 2,800 / 4,000 / 5,500
+DMG: Base 1,800 (+37.4/level) [Max Lv: 100]
 Hiệu ứng: AoE 5 block, random 1 trong 5 debuff:
   - Hỏa: Burn 100 DMG/s 5s
   - Thủy: Freeze 3s
@@ -246,12 +246,12 @@ Hiệu ứng: AoE 5 block, random 1 trong 5 debuff:
 CD: 25s | Mana: 120
 ```
 
-| Skill Lv | DMG | Bonus | Upgrade Cost |
+| Mốc Level | DMG | Bonus | Upgrade Cost |
 |----------|-----|-------|-------------|
-| 1 | 1,800 | 1 random debuff | Mặc định |
-| 2 | 2,800 | 2 random debuff | 15,000 LS |
-| 3 | 4,000 | 3 random debuff | 60,000 LS |
-| 4 | 5,500 | Tất cả 5 debuff cùng lúc | 200,000 LS |
+| Lv 1     | 1,800 | 1 random debuff | Mặc định |
+| Lv 30    | 2,800 | 2 random debuff | 15,000 LT |
+| Lv 60    | 4,000 | 3 random debuff | 60,000 LT |
+| Lv 100   | 5,500 | Tất cả 5 debuff cùng lúc | 200,000 LT |
 
 ---
 
@@ -271,12 +271,12 @@ Duration: 15s
 CD: 150s | Mana: 250
 ```
 
-| Skill Lv | Duration | Bonus | Upgrade Cost |
+| Mốc Level | Duration | Bonus | Upgrade Cost |
 |----------|----------|-------|-------------|
-| 1 | 15s | +200% Skill DMG | Mặc định |
-| 2 | 18s | +250% Skill DMG | 50,000 LS |
-| 3 | 22s | +300% Skill DMG, hồi Mana 50/s | 200,000 LS |
-| 4 | 25s | +400% Skill DMG, team cũng được +50% | 1,000,000 LS |
+| Lv 1     | 15s | +200% Skill DMG | Mặc định |
+| Lv 30    | 18s | +250% Skill DMG | 50,000 LT |
+| Lv 60    | 22s | +300% Skill DMG, hồi Mana 50/s | 200,000 LT |
+| Lv 100   | 25s | +400% Skill DMG, team cũng được +50% | 1,000,000 LT |
 
 ---
 
@@ -318,12 +318,12 @@ Hiệu ứng: +50% DEF 8s, giảm DMG nhận 20%
 CD: 10s | Mana: 20
 ```
 
-| Skill Lv | DEF Bonus | Duration | Upgrade Cost |
+| Mốc Level | DEF Bonus | Duration | Upgrade Cost |
 |----------|-----------|----------|-------------|
-| 1 | +50% DEF | 8s | Mặc định |
-| 2 | +70% DEF | 10s | 500 LS |
-| 3 | +90% DEF, +30% DMG Reduction | 12s | 2,000 LS |
-| 4 | +120% DEF, reflect 10% DMG | 15s | 10,000 LS |
+| Lv 1     | +50% DEF | 8s | Mặc định |
+| Lv 30    | +70% DEF | 10s | 500 LT |
+| Lv 60    | +90% DEF, +30% DMG Reduction | 12s | 2,000 LT |
+| Lv 100   | +120% DEF, reflect 10% DMG | 15s | 10,000 LT |
 
 ---
 
@@ -332,18 +332,18 @@ CD: 10s | Mana: 20
 ```
 Loại: Active — Melee AoE + CC
 Mô tả: Đấm mạnh xuống đất, gây knockback và taunt kẻ địch
-DMG: 400 / 650 / 1,000 / 1,500
+DMG: Base 400 (+11.1/level) [Max Lv: 100]
 Hiệu ứng: AoE 3 block, Knockback 5 block, Taunt 3s
 Range: Self-centered
 CD: 12s | Mana: 40
 ```
 
-| Skill Lv | DMG | Bonus | Upgrade Cost |
+| Mốc Level | DMG | Bonus | Upgrade Cost |
 |----------|-----|-------|-------------|
-| 1 | 400 | Taunt 3s | Mặc định |
-| 2 | 650 | Taunt 4s, +stun 1s | 1,500 LS |
-| 3 | 1,000 | AoE +2, slow 30% | 5,000 LS |
-| 4 | 1,500 | Taunt 5s, hồi 10% MaxHP | 20,000 LS |
+| Lv 1     | 400 | Taunt 3s | Mặc định |
+| Lv 30    | 650 | Taunt 4s, +stun 1s | 1,500 LT |
+| Lv 60    | 1,000 | AoE +2, slow 30% | 5,000 LT |
+| Lv 100   | 1,500 | Taunt 5s, hồi 10% MaxHP | 20,000 LT |
 
 ---
 
@@ -357,12 +357,12 @@ Hiệu ứng: Shield 500/800/1,200/2,000 HP, phản 20% DMG 6s
 CD: 18s | Mana: 60
 ```
 
-| Skill Lv | Shield | Reflect | Upgrade Cost |
+| Mốc Level | Shield | Reflect | Upgrade Cost |
 |----------|--------|---------|-------------|
-| 1 | 500 HP | 20% | Mặc định |
-| 2 | 800 HP | 25% | 3,000 LS |
-| 3 | 1,200 HP | 30%, chặn CC | 12,000 LS |
-| 4 | 2,000 HP | 40%, heal từ DMG phản | 50,000 LS |
+| Lv 1     | 500 HP | 20% | Mặc định |
+| Lv 30    | 800 HP | 25% | 3,000 LT |
+| Lv 60    | 1,200 HP | 30%, chặn CC | 12,000 LT |
+| Lv 100   | 2,000 HP | 40%, heal từ DMG phản | 50,000 LT |
 
 ---
 
@@ -377,12 +377,12 @@ Hạn chế: Không thể di chuyển trong thời gian cast
 CD: 25s | Mana: 100
 ```
 
-| Skill Lv | DEF Bonus | Reflect | Upgrade Cost |
+| Mốc Level | DEF Bonus | Reflect | Upgrade Cost |
 |----------|-----------|---------|-------------|
-| 1 | +100% | 40% | Mặc định |
-| 2 | +130% | 45%, hồi 5% HP/s | 15,000 LS |
-| 3 | +160% | 50%, Taunt 10 block | 60,000 LS |
-| 4 | +200% | 60%, có thể di chuyển chậm | 200,000 LS |
+| Lv 1     | +100% | 40% | Mặc định |
+| Lv 30    | +130% | 45%, hồi 5% HP/s | 15,000 LT |
+| Lv 60    | +160% | 50%, Taunt 10 block | 60,000 LT |
+| Lv 100   | +200% | 60%, có thể di chuyển chậm | 200,000 LT |
 
 ---
 
@@ -400,12 +400,12 @@ Hiệu ứng:
 CD: 180s | Mana: 200
 ```
 
-| Skill Lv | Duration | Bonus | Upgrade Cost |
+| Mốc Level | Duration | Bonus | Upgrade Cost |
 |----------|----------|-------|-------------|
-| 1 | 8s | Bất tử + 50% reflect | Mặc định |
-| 2 | 10s | +60% reflect, heal 3%/s | 50,000 LS |
-| 3 | 12s | +70% reflect, team +20% DEF | 200,000 LS |
-| 4 | 15s | +80% reflect, nổ AoE 5,000 DMG khi hết | 1,000,000 LS |
+| Lv 1     | 8s | Bất tử + 50% reflect | Mặc định |
+| Lv 30    | 10s | +60% reflect, heal 3%/s | 50,000 LT |
+| Lv 60    | 12s | +70% reflect, team +20% DEF | 200,000 LT |
+| Lv 100   | 15s | +80% reflect, nổ AoE 5,000 DMG khi hết | 1,000,000 LT |
 
 ---
 
@@ -442,17 +442,17 @@ Y Tu tu luyện theo con đường **y thuật**, sử dụng linh dược và l
 ```
 Loại: Active — Single Target Heal
 Mô tả: Chữa lành mục tiêu bằng linh dược
-Heal: 200 / 350 / 550 / 800
+Heal: Base 200 (+6.1/level) [Max Lv: 100]
 Range: 10 blocks
 CD: 6s | Mana: 25
 ```
 
-| Skill Lv | Heal | Bonus | Upgrade Cost |
+| Mốc Level | Heal | Bonus | Upgrade Cost |
 |----------|------|-------|-------------|
-| 1 | 200 HP | — | Mặc định |
-| 2 | 350 HP | +Cleanse 1 debuff | 500 LS |
-| 3 | 550 HP | +HoT 30 HP/s 5s | 2,000 LS |
-| 4 | 800 HP | +Shield 200HP 5s | 10,000 LS |
+| Lv 1     | 200 HP | — | Mặc định |
+| Lv 30    | 350 HP | +Cleanse 1 debuff | 500 LT |
+| Lv 60    | 550 HP | +HoT 30 HP/s 5s | 2,000 LT |
+| Lv 100   | 800 HP | +Shield 200HP 5s | 10,000 LT |
 
 ---
 
@@ -461,18 +461,18 @@ CD: 6s | Mana: 25
 ```
 Loại: Active — Party Heal over Time
 Mô tả: Tạo vùng hồi máu cho toàn party
-Heal: 50/70/100/150 HP/s
+Heal: Base 50 (+1/level) [Max Lv: 100]
 Duration: 10s
 Range: 8 block radius
 CD: 15s | Mana: 50
 ```
 
-| Skill Lv | HoT | Bonus | Upgrade Cost |
+| Mốc Level | HoT | Bonus | Upgrade Cost |
 |----------|-----|-------|-------------|
-| 1 | 50 HP/s | Party AoE | Mặc định |
-| 2 | 70 HP/s | +5% ATK buff | 1,500 LS |
-| 3 | 100 HP/s | +10% ATK buff, radius +2 | 5,000 LS |
-| 4 | 150 HP/s | +15% ATK + DEF buff | 20,000 LS |
+| Lv 1     | 50 HP/s | Party AoE | Mặc định |
+| Lv 30    | 70 HP/s | +5% ATK buff | 1,500 LT |
+| Lv 60    | 100 HP/s | +10% ATK buff, radius +2 | 5,000 LT |
+| Lv 100   | 150 HP/s | +15% ATK + DEF buff | 20,000 LT |
 
 ---
 
@@ -481,18 +481,18 @@ CD: 15s | Mana: 50
 ```
 Loại: Active — Party Shield + Buff
 Mô tả: Bọc toàn party trong lớp Linh Khí bảo vệ
-Shield: 400 / 600 / 900 / 1,500 HP
+Shield: Base 400 (+11.1/level) [Max Lv: 100]
 Buff: +15% ATK toàn party 8s
 Range: 10 block radius
 CD: 18s | Mana: 70
 ```
 
-| Skill Lv | Shield | ATK Buff | Upgrade Cost |
+| Mốc Level | Shield | ATK Buff | Upgrade Cost |
 |----------|--------|----------|-------------|
-| 1 | 400 HP | +15% ATK | Mặc định |
-| 2 | 600 HP | +20% ATK | 3,000 LS |
-| 3 | 900 HP | +25% ATK + SPD | 12,000 LS |
-| 4 | 1,500 HP | +30% ATK + SPD + Crit | 50,000 LS |
+| Lv 1     | 400 HP | +15% ATK | Mặc định |
+| Lv 30    | 600 HP | +20% ATK | 3,000 LT |
+| Lv 60    | 900 HP | +25% ATK + SPD | 12,000 LT |
+| Lv 100   | 1,500 HP | +30% ATK + SPD + Crit | 50,000 LT |
 
 ---
 
@@ -501,18 +501,18 @@ CD: 18s | Mana: 70
 ```
 Loại: Active — Cleanse + Shield
 Mô tả: Thanh tẩy mọi debuff và tạo shield mạnh cho party
-Shield: 800 / 1,200 / 1,800 / 3,000 HP
+Shield: Base 800 (+22.2/level) [Max Lv: 100]
 Hiệu ứng: Cleanse ALL debuff toàn party + Shield
 Range: 12 block radius
 CD: 20s | Mana: 100
 ```
 
-| Skill Lv | Shield | Bonus | Upgrade Cost |
+| Mốc Level | Shield | Bonus | Upgrade Cost |
 |----------|--------|-------|-------------|
-| 1 | 800 HP | Cleanse all | Mặc định |
-| 2 | 1,200 HP | +Immune debuff 3s | 15,000 LS |
-| 3 | 1,800 HP | +Immune 5s, heal 300 | 60,000 LS |
-| 4 | 3,000 HP | +Immune 8s, reflect debuff | 200,000 LS |
+| Lv 1     | 800 HP | Cleanse all | Mặc định |
+| Lv 30    | 1,200 HP | +Immune debuff 3s | 15,000 LT |
+| Lv 60    | 1,800 HP | +Immune 5s, heal 300 | 60,000 LT |
+| Lv 100   | 3,000 HP | +Immune 8s, reflect debuff | 200,000 LT |
 
 ---
 
@@ -529,12 +529,12 @@ Hiệu ứng:
 CD: 240s | Mana: 300
 ```
 
-| Skill Lv | Bonus | Upgrade Cost |
+| Mốc Level | Bonus | Upgrade Cost |
 |----------|-------|-------------|
-| 1 | Rez + Full heal | Mặc định |
-| 2 | +Immune 5s, rez với 100% HP | 50,000 LS |
-| 3 | +Buff rez'd ally: +30% ATK 15s | 200,000 LS |
-| 4 | +Hồi sinh không giới hạn range, party +50% stat 10s | 1,000,000 LS |
+| Lv 1     | Rez + Full heal | Mặc định |
+| Lv 30    | +Immune 5s, rez với 100% HP | 50,000 LT |
+| Lv 60    | +Buff rez'd ally: +30% ATK 15s | 200,000 LT |
+| Lv 100   | +Hồi sinh không giới hạn range, party +50% stat 10s | 1,000,000 LT |
 
 ---
 
@@ -576,12 +576,12 @@ Hiệu ứng: Tàng hình 5s, đòn đánh tiếp +DMG, crit guaranteed
 CD: 10s | Mana: 20
 ```
 
-| Skill Lv | Stealth | DMG Bonus | Upgrade Cost |
+| Mốc Level | Stealth | DMG Bonus | Upgrade Cost |
 |----------|---------|-----------|-------------|
-| 1 | 5s | +100% DMG | Mặc định |
-| 2 | 6s | +150% DMG, +SPD 30% | 500 LS |
-| 3 | 7s | +200% DMG, xuyên giáp 20% | 2,000 LS |
-| 4 | 8s | +300% DMG, stun target 1.5s | 10,000 LS |
+| Lv 1     | 5s | +100% DMG | Mặc định |
+| Lv 30    | 6s | +150% DMG, +SPD 30% | 500 LT |
+| Lv 60    | 7s | +200% DMG, xuyên giáp 20% | 2,000 LT |
+| Lv 100   | 8s | +300% DMG, stun target 1.5s | 10,000 LT |
 
 ---
 
@@ -590,18 +590,18 @@ CD: 10s | Mana: 20
 ```
 Loại: Active — Single Target + DoT
 Mô tả: Phi ám khí tẩm độc vào mục tiêu
-DMG: 250 / 400 / 600 / 900 (instant) + Poison DoT
+DMG: Base 250 (+6.6/level) [Max Lv: 100]
 Hiệu ứng: Poison 50/80/120/200 DMG/s trong 5s
 Range: 10 blocks
 CD: 8s | Mana: 30
 ```
 
-| Skill Lv | Instant DMG | Poison/s | Upgrade Cost |
+| Mốc Level | Instant DMG | Poison/s | Upgrade Cost |
 |----------|-------------|----------|-------------|
-| 1 | 250 | 50 | Mặc định |
-| 2 | 400 | 80, -10% heal received | 1,500 LS |
-| 3 | 600 | 120, -20% heal, slow 20% | 5,000 LS |
-| 4 | 900 | 200, -30% heal, slow 40% | 20,000 LS |
+| Lv 1     | 250 | 50 | Mặc định |
+| Lv 30    | 400 | 80, -10% heal received | 1,500 LT |
+| Lv 60    | 600 | 120, -20% heal, slow 20% | 5,000 LT |
+| Lv 100   | 900 | 200, -30% heal, slow 40% | 20,000 LT |
 
 ---
 
@@ -610,18 +610,18 @@ CD: 8s | Mana: 30
 ```
 Loại: Active — Teleport + Burst
 Mô tả: Dịch chuyển tức thì ra sau lưng target và đâm chí mạng
-DMG: 1,500 / 2,200 / 3,500 / 5,000
+DMG: Base 1,500 (+35.4/level) [Max Lv: 100]
 Hiệu ứng: Teleport sau lưng target, DMG x2 nếu đang tàng hình
 Range: 15 blocks
 CD: 15s | Mana: 60
 ```
 
-| Skill Lv | DMG | Bonus | Upgrade Cost |
+| Mốc Level | DMG | Bonus | Upgrade Cost |
 |----------|-----|-------|-------------|
-| 1 | 1,500 | x2 từ stealth | Mặc định |
-| 2 | 2,200 | +Bleed 100/s 5s | 3,000 LS |
-| 3 | 3,500 | +Reset Ám Ảnh Bộ CD | 12,000 LS |
-| 4 | 5,000 | x3 từ stealth, reset nếu target chết | 50,000 LS |
+| Lv 1     | 1,500 | x2 từ stealth | Mặc định |
+| Lv 30    | 2,200 | +Bleed 100/s 5s | 3,000 LT |
+| Lv 60    | 3,500 | +Reset Ám Ảnh Bộ CD | 12,000 LT |
+| Lv 100   | 5,000 | x3 từ stealth, reset nếu target chết | 50,000 LT |
 
 ---
 
@@ -630,18 +630,18 @@ CD: 15s | Mana: 60
 ```
 Loại: Active — AoE + Debuff
 Mô tả: Phóng mạng lưới ám khí bao phủ khu vực
-DMG: 2,000 / 3,200 / 4,500 / 6,500
+DMG: Base 2,000 (+45.5/level) [Max Lv: 100]
 Hiệu ứng: AoE 6 block, Blind 3s + Slow 50%
 Range: 12 blocks
 CD: 25s | Mana: 100
 ```
 
-| Skill Lv | DMG | Bonus | Upgrade Cost |
+| Mốc Level | DMG | Bonus | Upgrade Cost |
 |----------|-----|-------|-------------|
-| 1 | 2,000 | Blind 3s + Slow 50% | Mặc định |
-| 2 | 3,200 | Blind 4s, -20% DEF | 15,000 LS |
-| 3 | 4,500 | Blind 5s, -30% DEF, AoE +2 | 60,000 LS |
-| 4 | 6,500 | Blind 6s, -40% DEF, trap kéo mob lại trung tâm | 200,000 LS |
+| Lv 1     | 2,000 | Blind 3s + Slow 50% | Mặc định |
+| Lv 30    | 3,200 | Blind 4s, -20% DEF | 15,000 LT |
+| Lv 60    | 4,500 | Blind 5s, -30% DEF, AoE +2 | 60,000 LT |
+| Lv 100   | 6,500 | Blind 6s, -40% DEF, trap kéo mob lại trung tâm | 200,000 LT |
 
 ---
 
@@ -658,12 +658,12 @@ Hiệu ứng:
 CD: 150s | Mana: 200
 ```
 
-| Skill Lv | Mark Duration | Final Burst | Upgrade Cost |
+| Mốc Level | Mark Duration | Final Burst | Upgrade Cost |
 |----------|--------------|-------------|-------------|
-| 1 | 10s | 8,000 DMG | Mặc định |
-| 2 | 12s | 12,000 DMG, +tàng hình 3s sau kill | 50,000 LS |
-| 3 | 15s | 18,000 DMG, mark lây sang target gần nếu kill | 200,000 LS |
-| 4 | 18s | 30,000 DMG, mark 2 target cùng lúc | 1,000,000 LS |
+| Lv 1     | 10s | 8,000 DMG | Mặc định |
+| Lv 30    | 12s | 12,000 DMG, +tàng hình 3s sau kill | 50,000 LT |
+| Lv 60    | 15s | 18,000 DMG, mark lây sang target gần nếu kill | 200,000 LT |
+| Lv 100   | 18s | 30,000 DMG, mark 2 target cùng lúc | 1,000,000 LT |
 
 ---
 

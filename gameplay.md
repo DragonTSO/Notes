@@ -76,27 +76,109 @@
 
 ### 2.1 Cảnh Giới (Realm / Cultivation Stage)
 
-Hệ thống tu luyện gồm **9 Đại Cảnh Giới**, mỗi cảnh giới có **5 tầng nhỏ** (Sơ Kỳ → Trung Kỳ → Hậu Kỳ → Đỉnh Phong → Viên Mãn), tạo tổng cộng **45 bậc tu luyện**.
+Hệ thống tu luyện gồm **19 Đại Cảnh Giới**, chia thành **3 Đại Giới** (Phàm → Tiên → Thần). Mỗi cảnh giới có **5 tầng nhỏ** (Sơ Kỳ → Trung Kỳ → Hậu Kỳ → Đỉnh Phong → Viên Mãn), tạo tổng cộng **95 bậc tu luyện**.
 
 > [!IMPORTANT]
 > **Cảnh Giới dựa trên TU VI, không phải Level!**
 > Người chơi tích lũy Tu Vi (tu luyện kinh nghiệm) qua mọi hoạt động. Khi đủ Tu Vi → đủ điều kiện đột phá lên cảnh giới mới.
 > **Level** (1-1000) là hệ thống phụ, tăng tự động song song khi cày Tu Vi, dùng để mở khóa một số tính năng nhỏ.
 
-| # | Cảnh Giới | Tu Vi Yêu Cầu | Thực Lực Tối Thiểu | Dungeon Mở Khóa | Đặc Quyền Khác |
-|---|-----------|---------------|---------------------|-----------------|----------------|
-| 1 | **Phàm Nhân** (Mortal) | 0 | 0 | — | Island cơ bản, Farm cơ bản |
-| 2 | **Luyện Khí** (Qi Refinement) | 5,000 | 500 | Yêu Thú Lâm, Âm Hồn Động | Pet slot 1 |
-| 3 | **Trúc Cơ** (Foundation) | 25,000 | 2,000 | Hỏa Diễm Sơn, Băng Phong Cốc | Skill slot 2, Trade |
-| 4 | **Kim Đan** (Golden Core) | 100,000 | 8,000 | Huyết Nguyệt Đàn, Lôi Đình Tháp | Pet slot 2, Island Tier 3 |
-| 5 | **Nguyên Anh** (Nascent Soul) | 350,000 | 25,000 | Vạn Độc Trì, Long Cốt Mộ | Skill slot 3, PVP Arena |
-| 6 | **Hóa Thần** (Spirit Severing) | 1,000,000 | 80,000 | Tiên Phế Đô | Island Tier 5, Pet slot 3 |
-| 7 | **Luyện Hư** (Void Refining) | 3,000,000 | 200,000 | Hỗn Nguyên Giới | Legendary craft |
-| 8 | **Đại Thừa** (Mahayana) | 10,000,000 | 500,000 | Bí Cảnh | Island Tier 6 |
-| 9 | **Tiên Nhân** (Immortal) | 50,000,000 | 1,000,000 | Tất cả | Danh hiệu đặc biệt |
+#### 🟢 PHÀM GIỚI (Mortal Realm) — Cảnh Giới 1-7
+
+| # | Cảnh Giới | Tu Vi YC | Thực Lực YC | Dungeon Mở Khóa | Đặc Quyền |
+|---|-----------|----------|-------------|-----------------|-----------|
+| 1 | **Phàm Nhân** (Mortal) | 0 | 0 | — | Island cơ bản, Farm |
+| 2 | **Luyện Khí** (Qi Refinement) | 5,000 | 500 | Yêu Thú Lâm | Pet slot 1, Chọn Class |
+| 3 | **Trúc Cơ** (Foundation) | 25,000 | 2,000 | Âm Hồn Động | Skill slot 2, Trade |
+| 4 | **Kim Đan** (Golden Core) | 100,000 | 8,000 | Hỏa Diễm Sơn | Pet slot 2, Island T3 |
+| 5 | **Nguyên Anh** (Nascent Soul) | 350,000 | 25,000 | Băng Phong Cốc | Skill slot 3, PVP |
+| 6 | **Hóa Thần** (Spirit Severing) | 1,000,000 | 80,000 | Huyết Nguyệt Đàn | Island T5, Pet slot 3 |
+| 7 | **Luyện Hư** (Void Refining) | 3,000,000 | 200,000 | Lôi Đình Tháp | Legendary craft |
+
+#### 🔵 TIÊN GIỚI (Immortal Realm) — Cảnh Giới 8-13
+
+| # | Cảnh Giới | Tu Vi YC | Thực Lực YC | Dungeon Mở Khóa | Đặc Quyền |
+|---|-----------|----------|-------------|-----------------|-----------|
+| 8 | **Đại Thừa** (Mahayana) | 8,000,000 | 500,000 | Vạn Độc Trì | Island T6 |
+| 9 | **Độ Kiếp** (Tribulation) | 20,000,000 | 800,000 | Long Cốt Mộ | Chuyển Class lần 1 |
+| 10 | **Tiên Nhân** (Immortal) | 50,000,000 | 1,500,000 | Tiên Phế Đô | Danh hiệu Tiên |
+| 11 | **Thiên Tiên** (Heavenly Immortal) | 120,000,000 | 3,000,000 | Hỗn Nguyên Giới | Class Skill T2 |
+| 12 | **Kim Tiên** (Golden Immortal) | 300,000,000 | 6,000,000 | Bí Cảnh Cấp 1 | Pet slot 4 |
+| 13 | **Thái Ất** (Supreme Unity) | 700,000,000 | 12,000,000 | Bí Cảnh Cấp 2 | Chuyển Class lần 2 |
+
+#### 🟣 THẦN GIỚI (Divine Realm) — Cảnh Giới 14-19
+
+| # | Cảnh Giới | Tu Vi YC | Thực Lực YC | Dungeon Mở Khóa | Đặc Quyền |
+|---|-----------|----------|-------------|-----------------|-----------|
+| 14 | **Đại La** (Great Luo) | 1,500,000,000 | 25,000,000 | Thiên Đạo Thí Luyện | Island T7 |
+| 15 | **Chuẩn Thánh** (Quasi-Saint) | 3,500,000,000 | 50,000,000 | Bí Cảnh Cấp 3 | Class Skill T3 |
+| 16 | **Thánh Nhân** (Saint) | 8,000,000,000 | 100,000,000 | Thánh Giới Dungeon | Pet slot 5 |
+| 17 | **Thiên Đế** (Heavenly Emperor) | 20,000,000,000 | 250,000,000 | Đế Cung | Danh hiệu Đế |
+| 18 | **Đạo Tổ** (Dao Ancestor) | 50,000,000,000 | 600,000,000 | Đạo Cảnh | Toàn bộ skill max |
+| 19 | **Hồng Mông** (Primordial Chaos) | 100,000,000,000 | 1,000,000,000 | Tất cả | Danh hiệu tối thượng |
 
 > **Tầng nhỏ** (Sơ Kỳ → Viên Mãn) là các mốc Tu Vi trung gian trong mỗi cảnh giới.
-> Ví dụ: Luyện Khí cần 5,000 Tu Vi → Sơ Kỳ (5K), Trung Kỳ (8K), Hậu Kỳ (12K), Đỉnh Phong (18K), Viên Mãn (23K) → Đủ 25K = sẵn sàng đột phá Trúc Cơ.
+> Ví dụ: Luyện Khí cần 5K Tu Vi → Sơ Kỳ (5K), Trung Kỳ (8K), Hậu Kỳ (12K), Đỉnh Phong (18K), Viên Mãn (23K) → Đủ 25K = sẵn sàng đột phá Trúc Cơ.
+
+### 2.2 Hệ Thống Class (Nghề Tu Luyện)
+
+Khi đạt **Luyện Khí** (Cảnh Giới 2), người chơi chọn **1 trong 4 Class**:
+
+| Class | Tên | Vai Trò | Vũ Khí Chính | Stat Chính |
+|-------|-----|---------|-------------|-----------|
+| ⚔️ | **Kiếm Tu** (Sword Cultivator) | Melee DPS | Kiếm, Đao | ATK, Crit |
+| 🔮 | **Pháp Tu** (Spell Cultivator) | Magic DPS / CC | Pháp Bảo, Staff | Skill DMG, SPD |
+| 🛡️ | **Thể Tu** (Body Cultivator) | Tank / Brawler | Quyền, Thương | DEF, HP |
+| 💚 | **Y Tu** (Healer Cultivator) | Support / Healer | Phù, Cung | Heal, Buff |
+
+#### Class Skills (Mỗi class có skill tree riêng)
+
+**⚔️ Kiếm Tu — `Sát thương bùng nổ, combo nhanh`**
+
+| Tầng | Skill | Hiệu Ứng | CD |
+|------|-------|-----------|----|
+| T1 | Phong Kiếm Trảm | 150 DMG, 3 combo liên tiếp | 5s |
+| T2 | Vạn Kiếm Quy Tông | 500 DMG AoE, xuyên giáp 30% | 15s |
+| T3 | Kiếm Khí Tung Hoành | 1,500 DMG cone, crit +50% 5s | 30s |
+| Ultimate | Nhất Kiếm Phá Thiên | 10,000 DMG single, ignore DEF | 120s |
+
+**🔮 Pháp Tu — `AoE damage, crowd control`**
+
+| Tầng | Skill | Hiệu Ứng | CD |
+|------|-------|-----------|----|
+| T1 | Hỏa Cầu Thuật | 120 DMG AoE 3 block | 6s |
+| T2 | Băng Phong Bão | 400 DMG AoE + Freeze 2s | 12s |
+| T3 | Lôi Đình Vạn Quân | 1,200 DMG AoE rộng + Stun 3s | 25s |
+| Ultimate | Thiên Địa Pháp Tướng | Transform 15s: +200% Skill DMG, AoE x2 | 150s |
+
+**🛡️ Thể Tu — `Tanky, taunt, phản dame`**
+
+| Tầng | Skill | Hiệu Ứng | CD |
+|------|-------|-----------|----|
+| T1 | Thạch Bì Thuật | +50% DEF 8s, giảm DMG nhận 20% | 10s |
+| T2 | Bá Vương Quyền | 300 DMG + Knockback + Taunt 3s | 12s |
+| T3 | Bất Động Minh Vương | +100% DEF, phản 30% DMG 6s | 25s |
+| Ultimate | Kim Cang Bất Hoại | Bất tử 8s + phản 50% DMG + AoE Taunt | 180s |
+
+**💚 Y Tu — `Heal, buff team, cleanse`**
+
+| Tầng | Skill | Hiệu Ứng | CD |
+|------|-------|-----------|----|
+| T1 | Linh Dược Thuật | Heal 200 HP cho 1 target | 6s |
+| T2 | Sinh Cơ Quyết | HoT 50HP/s 10s cho cả party | 15s |
+| T3 | Tịnh Hóa | Cleanse debuff + Shield 500HP toàn party | 20s |
+| Ultimate | Luân Hồi Mộc | Rez tất cả ally chết gần đó + Full heal party | 240s |
+
+#### Quy Tắc Class
+
+| Quy Tắc | Chi Tiết |
+|----------|---------|
+| **Chọn Class** | Tại Cảnh Giới 2 (Luyện Khí), chọn qua NPC `/class` |
+| **Chuyển Class** | Được chuyển tại CG 9 (Độ Kiếp) và CG 13 (Thái Ất), tốn 500 LN |
+| **Class Passive** | Mỗi class có passive riêng tăng theo cảnh giới |
+| **Party Bonus** | Party 4 người đủ 4 class = +15% toàn bộ stat (Combo bonus) |
+| **Class Gear** | Một số gear chỉ dùng được bởi class cụ thể |
+| **PVP Balance** | Kiếm Tu > Y Tu > Pháp Tu > Thể Tu > Kiếm Tu (tương khắc) |
 
 ### 2.2 Tu Vi & Level
 

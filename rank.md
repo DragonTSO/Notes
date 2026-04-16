@@ -10,73 +10,73 @@
 
 | # | Rank | Tên Hiển Thị | Giá (Xu) | Màu Tag |
 |---|------|-------------|----------|---------|
-| 1 | **Linh Đồng** | `&7[Linh Đồng]` | 50,000 Xu | &7 Xám |
-| 2 | **Linh Sĩ** | `&a[Linh Sĩ]` | 100,000 Xu | &a Xanh lá |
-| 3 | **Linh Tướng** | `&2[Linh Tướng]` | 200,000 Xu | &2 Xanh đậm |
-| 4 | **Linh Vương** | `&b[Linh Vương]` | 500,000 Xu | &b Xanh dương |
-| 5 | **Linh Hoàng** | `&3[Linh Hoàng]` | 1,000,000 Xu | &3 Cyan đậm |
-| 6 | **Linh Đế** | `&d[Linh Đế]` | 2,000,000 Xu | &d Hồng |
-| 7 | **Linh Tôn** | `&5[Linh Tôn]` | 5,000,000 Xu | &5 Tím |
-| 8 | **Linh Thánh** | `&6[Linh Thánh]` | 10,000,000 Xu | &6 Vàng |
-| 9 | **Linh Thần** | `&c[Linh Thần]` | 25,000,000 Xu | &c Đỏ |
-| 10 | **Linh Tổ** | `&4&l[Linh Tổ]` | 50,000,000 Xu | &4&l Đỏ đậm Bold |
+| 1 | **Thanh Vân** | `&7[Thanh Vân]` | 50,000 Xu | &7 Xám |
+| 2 | **Tử Hà** | `&a[Tử Hà]` | 100,000 Xu | &a Xanh lá |
+| 3 | **Huyền Thiên** | `&2[Huyền Thiên]` | 200,000 Xu | &2 Xanh đậm |
+| 4 | **Kim Quang** | `&b[Kim Quang]` | 500,000 Xu | &b Xanh dương |
+| 5 | **Ngọc Hoàng** | `&3[Ngọc Hoàng]` | 1,000,000 Xu | &3 Cyan đậm |
+| 6 | **Thiên Mệnh** | `&d[Thiên Mệnh]` | 2,000,000 Xu | &d Hồng |
+| 7 | **Thần Vương** | `&5[Thần Vương]` | 5,000,000 Xu | &5 Tím |
+| 8 | **Cửu Thiên** | `&6[Cửu Thiên]` | 10,000,000 Xu | &6 Vàng |
+| 9 | **Hồng Hoang** | `&c[Hồng Hoang]` | 25,000,000 Xu | &c Đỏ |
+| 10 | **Vô Cực** | `&4&l[Vô Cực]` | 50,000,000 Xu | &4&l Đỏ đậm Bold |
 
 ---
 
 ## Quyền Lợi Chi Tiết
 
-### Rank 1: Linh Đồng (50K Xu)
+### Rank 1: Thanh Vân (50K Xu)
 
 | Quyền Lợi | Chi Tiết |
 |-----------|---------|
-| Tag chat | `&7[Linh Đồng]` trước tên |
+| Tag chat | `&7[Thanh Vân]` trước tên |
 | Homes | 3 home (mặc định: 1) |
 | Tu Vi bonus | +5% Tu Vi từ mọi nguồn |
 | Linh Quặng drop | +3% drop rate |
 | AFK Tu Tập | Không bị kick AFK 30 phút |
-| Kit | `/kit linhdong` — mỗi ngày: 16 steak, 1 Iron Pickaxe |
+| Kit | `/kit thanhvan` — mỗi ngày: 16 steak, 1 Iron Pickaxe |
 | Lệnh | `/hat`, `/nick` |
 
 ---
 
-### Rank 2: Linh Sĩ (100K Xu)
+### Rank 2: Tử Hà (100K Xu)
 
 | Quyền Lợi | Chi Tiết |
 |-----------|---------|
-| Tag chat | `&a[Linh Sĩ]` |
+| Tag chat | `&a[Tử Hà]` |
 | Homes | 5 home |
 | Tu Vi bonus | +8% Tu Vi |
 | Linh Quặng drop | +5% drop rate |
 | Linh Dược drop | +3% drop rate |
 | AFK Tu Tập | Không bị kick AFK 1 giờ |
-| Kit | `/kit linhsi` — mỗi ngày: 32 steak, 1 Diamond Pickaxe |
+| Kit | `/kit tuha` — mỗi ngày: 32 steak, 1 Diamond Pickaxe |
 | Lệnh | `/back`, `/enderchest` |
 | Dungeon | -10% phí Linh Thạch vào dungeon |
 
 ---
 
-### Rank 3: Linh Tướng (200K Xu)
+### Rank 3: Huyền Thiên (200K Xu)
 
 | Quyền Lợi | Chi Tiết |
 |-----------|---------|
-| Tag chat | `&2[Linh Tướng]` |
+| Tag chat | `&2[Huyền Thiên]` |
 | Homes | 8 home |
 | Tu Vi bonus | +12% Tu Vi |
 | Linh Quặng drop | +8% drop rate |
 | Linh Dược drop | +5% drop rate |
 | AFK Tu Tập | Không bị kick AFK 2 giờ |
 | Pet EXP | +10% Pet EXP |
-| Kit | `/kit linhtuong` — mỗi ngày: 64 steak, 1 Diamond Set |
+| Kit | `/kit huyenthien` — mỗi ngày: 64 steak, 1 Diamond Set |
 | Lệnh | `/fly` (chỉ trên đảo), `/heal` (CD 5 phút) |
 | Dungeon | -15% phí, +5% drop rate dungeon |
 
 ---
 
-### Rank 4: Linh Vương (500K Xu)
+### Rank 4: Kim Quang (500K Xu)
 
 | Quyền Lợi | Chi Tiết |
 |-----------|---------|
-| Tag chat | `&b[Linh Vương]` |
+| Tag chat | `&b[Kim Quang]` |
 | Homes | 12 home |
 | Tu Vi bonus | +15% Tu Vi |
 | Linh Quặng drop | +12% drop rate |
@@ -84,18 +84,18 @@
 | AFK Tu Tập | Không giới hạn AFK |
 | Pet EXP | +15% Pet EXP |
 | Sell bonus | +10% giá bán NPC shop |
-| Kit | `/kit linhvuong` — mỗi ngày: 1 Crate Key thường |
+| Kit | `/kit kimquang` — mỗi ngày: 1 Crate Key thường |
 | Lệnh | `/fix` (sửa item, CD 1 giờ), `/craft` |
 | Dungeon | -20% phí, +8% drop rate |
 | Đặc biệt | Particle effect khi đi bộ |
 
 ---
 
-### Rank 5: Linh Hoàng (1M Xu)
+### Rank 5: Ngọc Hoàng (1M Xu)
 
 | Quyền Lợi | Chi Tiết |
 |-----------|---------|
-| Tag chat | `&3[Linh Hoàng]` |
+| Tag chat | `&3[Ngọc Hoàng]` |
 | Homes | 15 home |
 | Tu Vi bonus | +20% Tu Vi |
 | Linh Quặng drop | +15% drop rate |
@@ -103,18 +103,18 @@
 | Tu Tập bonus | Khu Linh Mạch +15% Tu Vi/phút |
 | Pet EXP | +20% Pet EXP |
 | Sell bonus | +15% giá bán NPC |
-| Kit | `/kit linhhoang` — mỗi ngày: 2 Crate Key + 500 Linh Thạch |
+| Kit | `/kit ngochoang` — mỗi ngày: 2 Crate Key + 500 Linh Thạch |
 | Lệnh | `/fix all`, `/feed` (no CD) |
 | Dungeon | -25% phí, +10% drop, CD vào dungeon giảm 20% |
 | Đặc biệt | Custom join message, aura effect |
 
 ---
 
-### Rank 6: Linh Đế (2M Xu)
+### Rank 6: Thiên Mệnh (2M Xu)
 
 | Quyền Lợi | Chi Tiết |
 |-----------|---------|
-| Tag chat | `&d[Linh Đế]` |
+| Tag chat | `&d[Thiên Mệnh]` |
 | Homes | 20 home |
 | Tu Vi bonus | +25% Tu Vi |
 | Linh Quặng drop | +20% drop rate |
@@ -123,7 +123,7 @@
 | Pet EXP | +25% Pet EXP |
 | Pet Fusion | +10% tỷ lệ thành công fusion |
 | Sell bonus | +20% giá bán NPC |
-| Kit | `/kit linhde` — mỗi ngày: 3 Crate Key + 1,000 LS + 1 Exp Bottle (Tu Vi) |
+| Kit | `/kit thienmenh` — mỗi ngày: 3 Crate Key + 1,000 LS + 1 Exp Bottle (Tu Vi) |
 | Lệnh | `/fly` (mọi nơi trừ dungeon), `/pweather`, `/ptime` |
 | Dungeon | -30% phí, +12% drop |
 | Cường Hóa | -5% tỷ lệ thất bại cường hóa |
@@ -131,11 +131,11 @@
 
 ---
 
-### Rank 7: Linh Tôn (5M Xu)
+### Rank 7: Thần Vương (5M Xu)
 
 | Quyền Lợi | Chi Tiết |
 |-----------|---------|
-| Tag chat | `&5[Linh Tôn]` |
+| Tag chat | `&5[Thần Vương]` |
 | Homes | 25 home |
 | Tu Vi bonus | +30% Tu Vi |
 | Linh Quặng drop | +25% drop rate |
@@ -144,7 +144,7 @@
 | Pet EXP | +30% Pet EXP |
 | Pet Fusion | +15% tỷ lệ fusion |
 | Sell bonus | +25% giá bán NPC |
-| Kit | `/kit linhton` — mỗi ngày: 5 Crate Key + 2,000 LS + 2 Exp Bottle |
+| Kit | `/kit thanvuong` — mỗi ngày: 5 Crate Key + 2,000 LS + 2 Exp Bottle |
 | Lệnh | `/enchant` (giới hạn), `/skull` |
 | Dungeon | -35% phí, +15% drop, prioritize queue |
 | Cường Hóa | -10% tỷ lệ thất bại |
@@ -153,11 +153,11 @@
 
 ---
 
-### Rank 8: Linh Thánh (10M Xu)
+### Rank 8: Cửu Thiên (10M Xu)
 
 | Quyền Lợi | Chi Tiết |
 |-----------|---------|
-| Tag chat | `&6[Linh Thánh]` |
+| Tag chat | `&6[Cửu Thiên]` |
 | Homes | 30 home |
 | Tu Vi bonus | +35% Tu Vi |
 | Linh Quặng drop | +30% drop rate |
@@ -166,7 +166,7 @@
 | Pet EXP | +35% Pet EXP, thêm 1 Pet Slot (tổng 4 base) |
 | Pet Fusion | +20% tỷ lệ fusion |
 | Sell bonus | +30% giá bán NPC |
-| Kit | `/kit linhthanh` — mỗi ngày: 8 Crate Key + 5,000 LS + 1 Đột Phá Đan nhỏ |
+| Kit | `/kit cuuthien` — mỗi ngày: 8 Crate Key + 5,000 LS + 1 Đột Phá Đan nhỏ |
 | Dungeon | -40% phí, +18% drop, skip queue |
 | Cường Hóa | -15% tỷ lệ thất bại, Bảo Hộ Phù miễn phí 1 lần/ngày |
 | Nhập Thần | +15% bonus stats |
@@ -174,11 +174,11 @@
 
 ---
 
-### Rank 9: Linh Thần (25M Xu)
+### Rank 9: Hồng Hoang (25M Xu)
 
 | Quyền Lợi | Chi Tiết |
 |-----------|---------|
-| Tag chat | `&c[Linh Thần]` |
+| Tag chat | `&c[Hồng Hoang]` |
 | Homes | 40 home |
 | Tu Vi bonus | +40% Tu Vi |
 | Linh Quặng drop | +35% drop rate |
@@ -188,7 +188,7 @@
 | Pet Fusion | +25% tỷ lệ fusion |
 | Pet hồi sinh | 30s (gốc 60s) |
 | Sell bonus | +35% giá bán NPC |
-| Kit | `/kit linhthan` — mỗi ngày: 12 Crate Key + 10,000 LS + 2 Đột Phá Đan |
+| Kit | `/kit honghoang` — mỗi ngày: 12 Crate Key + 10,000 LS + 2 Đột Phá Đan |
 | Dungeon | -45% phí, +22% drop, skip queue, 1 free revive/run |
 | Cường Hóa | -20% thất bại, 2 Bảo Hộ Phù/ngày |
 | Nhập Thần | +20% bonus stats |
@@ -197,11 +197,11 @@
 
 ---
 
-### Rank 10: Linh Tổ (50M Xu) — **RANK TỐI THƯỢNG**
+### Rank 10: Vô Cực (50M Xu) — **RANK TỐI THƯỢNG**
 
 | Quyền Lợi | Chi Tiết |
 |-----------|---------|
-| Tag chat | `&4&l[Linh Tổ]` (Bold Đỏ Đậm) |
+| Tag chat | `&4&l[Vô Cực]` (Bold Đỏ Đậm) |
 | Homes | **Không giới hạn** |
 | Tu Vi bonus | **+50% Tu Vi** từ mọi nguồn |
 | Linh Quặng drop | **+40% drop rate** |
@@ -211,13 +211,13 @@
 | Pet Fusion | +30% tỷ lệ fusion |
 | Pet hồi sinh | **15s** (gốc 60s) |
 | Sell bonus | **+40% giá bán NPC** |
-| Kit | `/kit linhto` — mỗi ngày: 20 Crate Key + 20,000 LS + 3 Đột Phá Đan + 1 Rare Crate Key |
+| Kit | `/kit vocuc` — mỗi ngày: 20 Crate Key + 20,000 LS + 3 Đột Phá Đan + 1 Rare Crate Key |
 | Dungeon | **-50% phí, +25% drop**, skip queue, 2 free revive/run |
 | Cường Hóa | **-25% thất bại**, 3 Bảo Hộ Phù/ngày |
 | Nhập Thần | **+25% bonus stats**, mở khóa Advanced Infusion |
 | Skill | +15% Skill DMG, -15% Skill CD |
 | Đặc biệt | **Dragon aura**, custom nameplate + title, custom join/leave message, exclusive cosmetic set |
-| **Exclusive** | Truy cập **Linh Tổ Shop** — mua item exclusive chỉ dành cho rank 10 |
+| **Exclusive** | Truy cập **Vô Cực Shop** — mua item exclusive chỉ dành cho rank 10 |
 
 ---
 
@@ -225,16 +225,16 @@
 
 | Rank | Xu | Tu Vi% | Quặng% | Dược% | Dungeon Drop% | Cường Hóa |
 |------|----|--------|--------|-------|---------------|-----------|
-| 1. Linh Đồng | 50K | +5% | +3% | — | — | — |
-| 2. Linh Sĩ | 100K | +8% | +5% | +3% | — | — |
-| 3. Linh Tướng | 200K | +12% | +8% | +5% | +5% | — |
-| 4. Linh Vương | 500K | +15% | +12% | +8% | +8% | — |
-| 5. Linh Hoàng | 1M | +20% | +15% | +10% | +10% | — |
-| 6. Linh Đế | 2M | +25% | +20% | +12% | +12% | -5% fail |
-| 7. Linh Tôn | 5M | +30% | +25% | +15% | +15% | -10% fail |
-| 8. Linh Thánh | 10M | +35% | +30% | +18% | +18% | -15% fail |
-| 9. Linh Thần | 25M | +40% | +35% | +20% | +22% | -20% fail |
-| 10. Linh Tổ | 50M | **+50%** | **+40%** | +25% | **+25%** | **-25% fail** |
+| 1. Thanh Vân | 50K | +5% | +3% | — | — | — |
+| 2. Tử Hà | 100K | +8% | +5% | +3% | — | — |
+| 3. Huyền Thiên | 200K | +12% | +8% | +5% | +5% | — |
+| 4. Kim Quang | 500K | +15% | +12% | +8% | +8% | — |
+| 5. Ngọc Hoàng | 1M | +20% | +15% | +10% | +10% | — |
+| 6. Thiên Mệnh | 2M | +25% | +20% | +12% | +12% | -5% fail |
+| 7. Thần Vương | 5M | +30% | +25% | +15% | +15% | -10% fail |
+| 8. Cửu Thiên | 10M | +35% | +30% | +18% | +18% | -15% fail |
+| 9. Hồng Hoang | 25M | +40% | +35% | +20% | +22% | -20% fail |
+| 10. Vô Cực | 50M | **+50%** | **+40%** | +25% | **+25%** | **-25% fail** |
 
 ---
 

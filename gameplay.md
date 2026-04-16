@@ -122,52 +122,67 @@ Hệ thống tu luyện gồm **19 Đại Cảnh Giới**, chia thành **3 Đạ
 
 ### 2.2 Hệ Thống Class (Nghề Tu Luyện)
 
-Khi đạt **Luyện Khí** (Cảnh Giới 2), người chơi chọn **1 trong 4 Class**:
+Khi đạt **Luyện Khí** (Cảnh Giới 2), người chơi chọn **1 trong 5 Class**:
 
 | Class | Tên | Vai Trò | Vũ Khí Chính | Stat Chính |
 |-------|-----|---------|-------------|-----------|
 | ⚔️ | **Kiếm Tu** (Sword Cultivator) | Melee DPS | Kiếm, Đao | ATK, Crit |
 | 🔮 | **Pháp Tu** (Spell Cultivator) | Magic DPS / CC | Pháp Bảo, Staff | Skill DMG, SPD |
 | 🛡️ | **Thể Tu** (Body Cultivator) | Tank / Brawler | Quyền, Thương | DEF, HP |
-| 💚 | **Y Tu** (Healer Cultivator) | Support / Healer | Phù, Cung | Heal, Buff |
+| 💚 | **Y Tu** (Healer Cultivator) | Support / Healer | Phù, Trượng | Heal, Buff |
+| 🗡️ | **Ám Tu** (Shadow Cultivator) | Assassin / Burst | Đoản Đao, Ám Khí | Crit, SPD |
 
-#### Class Skills (Mỗi class có skill tree riêng)
+#### Class Skills (Mỗi class có 5 skill riêng)
 
 **⚔️ Kiếm Tu — `Sát thương bùng nổ, combo nhanh`**
 
-| Tầng | Skill | Hiệu Ứng | CD |
-|------|-------|-----------|----|
-| T1 | Phong Kiếm Trảm | 150 DMG, 3 combo liên tiếp | 5s |
-| T2 | Vạn Kiếm Quy Tông | 500 DMG AoE, xuyên giáp 30% | 15s |
-| T3 | Kiếm Khí Tung Hoành | 1,500 DMG cone, crit +50% 5s | 30s |
-| Ultimate | Nhất Kiếm Phá Thiên | 10,000 DMG single, ignore DEF | 120s |
+| # | Skill | Hiệu Ứng | CD | Unlock |
+|---|-------|-----------|----|--------|
+| 1 | Phong Kiếm Trảm | 150 DMG, 3 combo liên tiếp | 5s | CG 2 |
+| 2 | Kiếm Khí Phóng | 300 DMG ranged, xuyên mob | 8s | CG 3 |
+| 3 | Vạn Kiếm Quy Tông | 800 DMG AoE, xuyên giáp 30% | 15s | CG 5 |
+| 4 | Kiếm Khí Tung Hoành | 2,000 DMG cone, crit +50% 5s | 30s | CG 8 |
+| 5 | **Nhất Kiếm Phá Thiên** (Ult) | 10,000 DMG single target, ignore DEF | 120s | CG 10 |
 
 **🔮 Pháp Tu — `AoE damage, crowd control`**
 
-| Tầng | Skill | Hiệu Ứng | CD |
-|------|-------|-----------|----|
-| T1 | Hỏa Cầu Thuật | 120 DMG AoE 3 block | 6s |
-| T2 | Băng Phong Bão | 400 DMG AoE + Freeze 2s | 12s |
-| T3 | Lôi Đình Vạn Quân | 1,200 DMG AoE rộng + Stun 3s | 25s |
-| Ultimate | Thiên Địa Pháp Tướng | Transform 15s: +200% Skill DMG, AoE x2 | 150s |
+| # | Skill | Hiệu Ứng | CD | Unlock |
+|---|-------|-----------|----|--------|
+| 1 | Hỏa Cầu Thuật | 120 DMG AoE 3 block | 6s | CG 2 |
+| 2 | Băng Phong Bão | 400 DMG AoE + Freeze 2s | 12s | CG 3 |
+| 3 | Lôi Đình Vạn Quân | 1,200 DMG AoE rộng + Stun 3s | 20s | CG 5 |
+| 4 | Ngũ Hành Luân Chuyển | 1,800 DMG + random debuff (burn/freeze/stun) | 25s | CG 8 |
+| 5 | **Thiên Địa Pháp Tướng** (Ult) | Transform 15s: +200% Skill DMG, AoE x2 | 150s | CG 10 |
 
-**🛡️ Thể Tu — `Tanky, taunt, phản dame`**
+**🛡️ Thể Tu — `Tanky, taunt, phản damage`**
 
-| Tầng | Skill | Hiệu Ứng | CD |
-|------|-------|-----------|----|
-| T1 | Thạch Bì Thuật | +50% DEF 8s, giảm DMG nhận 20% | 10s |
-| T2 | Bá Vương Quyền | 300 DMG + Knockback + Taunt 3s | 12s |
-| T3 | Bất Động Minh Vương | +100% DEF, phản 30% DMG 6s | 25s |
-| Ultimate | Kim Cang Bất Hoại | Bất tử 8s + phản 50% DMG + AoE Taunt | 180s |
+| # | Skill | Hiệu Ứng | CD | Unlock |
+|---|-------|-----------|----|--------|
+| 1 | Thạch Bì Thuật | +50% DEF 8s, giảm DMG nhận 20% | 10s | CG 2 |
+| 2 | Bá Vương Quyền | 400 DMG + Knockback + Taunt 3s | 12s | CG 3 |
+| 3 | Thiết Bích | Shield 500HP + phản 20% DMG 6s | 18s | CG 5 |
+| 4 | Bất Động Minh Vương | +100% DEF, phản 40% DMG 6s, AoE Taunt | 25s | CG 8 |
+| 5 | **Kim Cang Bất Hoại** (Ult) | Bất tử 8s + phản 50% DMG + Taunt toàn bộ | 180s | CG 10 |
 
 **💚 Y Tu — `Heal, buff team, cleanse`**
 
-| Tầng | Skill | Hiệu Ứng | CD |
-|------|-------|-----------|----|
-| T1 | Linh Dược Thuật | Heal 200 HP cho 1 target | 6s |
-| T2 | Sinh Cơ Quyết | HoT 50HP/s 10s cho cả party | 15s |
-| T3 | Tịnh Hóa | Cleanse debuff + Shield 500HP toàn party | 20s |
-| Ultimate | Luân Hồi Mộc | Rez tất cả ally chết gần đó + Full heal party | 240s |
+| # | Skill | Hiệu Ứng | CD | Unlock |
+|---|-------|-----------|----|--------|
+| 1 | Linh Dược Thuật | Heal 200 HP cho 1 target | 6s | CG 2 |
+| 2 | Sinh Cơ Quyết | HoT 50HP/s 10s cho cả party | 15s | CG 3 |
+| 3 | Linh Khí Hộ Thể | Shield 400HP + ATK +15% toàn party 8s | 18s | CG 5 |
+| 4 | Tịnh Hóa | Cleanse debuff + Shield 800HP toàn party | 20s | CG 8 |
+| 5 | **Luân Hồi Mộc** (Ult) | Rez tất cả ally + Full heal party + Immune 3s | 240s | CG 10 |
+
+**🗡️ Ám Tu — `Burst damage, stealth, critical`**
+
+| # | Skill | Hiệu Ứng | CD | Unlock |
+|---|-------|-----------|----|--------|
+| 1 | Ám Ảnh Bộ | Tàng hình 5s, đòn tiếp theo +100% DMG | 10s | CG 2 |
+| 2 | Độc Nhẫn | 250 DMG + Poison 5s (50 DMG/s) | 8s | CG 3 |
+| 3 | Ám Sát | Teleport sau lưng target + 1,500 DMG (x2 từ tàng hình) | 15s | CG 5 |
+| 4 | Vạn Ám Thiên La | 2,000 DMG AoE + Blind 3s + Slow 50% | 25s | CG 8 |
+| 5 | **Tử Thần Giáng Lâm** (Ult) | Mark target 10s: mọi đòn crit + 8,000 bonus DMG cuối | 150s | CG 10 |
 
 #### Quy Tắc Class
 
@@ -176,10 +191,9 @@ Khi đạt **Luyện Khí** (Cảnh Giới 2), người chơi chọn **1 trong 4
 | **Chọn Class** | Tại Cảnh Giới 2 (Luyện Khí), chọn qua NPC `/class` |
 | **Chuyển Class** | Được chuyển tại CG 9 (Độ Kiếp) và CG 13 (Thái Ất), tốn 500 LN |
 | **Class Passive** | Mỗi class có passive riêng tăng theo cảnh giới |
-| **Party Bonus** | Party 4 người đủ 4 class = +15% toàn bộ stat (Combo bonus) |
+| **Party Bonus** | Party 5 người đủ 5 class = +20% toàn bộ stat (Ngũ Hành bonus) |
 | **Class Gear** | Một số gear chỉ dùng được bởi class cụ thể |
-| **PVP Balance** | Kiếm Tu > Y Tu > Pháp Tu > Thể Tu > Kiếm Tu (tương khắc) |
-
+| **Tương Khắc** | Kiếm > Y > Ám > Pháp > Thể > Kiếm (vòng tương khắc) |
 ### 2.2 Tu Vi & Level
 
 #### Tu Vi (Tu Luyện Kinh Nghiệm) — Hệ Thống CHÍNH

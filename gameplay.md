@@ -321,28 +321,18 @@ Khi Tu Vi đạt mốc yêu cầu, người chơi có thể **đột phá** lên
 #### Công Thức Tính Thực Lực
 
 ```
-THỰC LỰC = (ATK × 3) + (DEF × 2) + (HP × 0.3)
-           + (SPD × 50) + (CRIT_RATE × 100) + (LUCK × 80)
-           + Gear_Score
-           + Nhập_Thần_Score
-           + Pet_Score
-           + Skill_Score
-           + Title_Bonus
-           + Tu_Vi_Bonus
+THỰC LỰC = Gear_Score + Nhập_Thần_Score + Pet_Score + Cảnh_Giới_Bonus + (Tu_Vi ÷ 1000)
 ```
 
-#### Nguồn Đóng Góp Thực Lực
+| Thành Phần | Cách Tính | Ví Dụ |
+|------------|-----------|-------|
+| **Gear_Score** | Tổng điểm từ set giáp + vũ khí đang mặc (tier x cường hóa) | Cực Phẩm Set +10 = ~15,000 |
+| **Nhập_Thần_Score** | Tổng chỉ số đã nhập thần (ATK + DEF + HP + SPD + CRIT + LUCK) | 500 ATK + 300 DEF = ~800 |
+| **Pet_Score** | Tổng điểm từ tất cả pet đang mang (rarity x level) | Legendary Lv100 = ~5,000 |
+| **Cảnh_Giới_Bonus** | Bonus cố định khi đột phá cảnh giới | Tiên Nhân = +50,000 |
+| **Tu_Vi ÷ 1000** | Tu Vi tích lũy chia 1000 | 50M Tu Vi = +50,000 |
 
-| Nguồn | Đóng Góp | Ví Dụ |
-|-------|----------|-------|
-| **Tu Vi** | Tu Vi ÷ 100 | 1M Tu Vi = 10,000 điểm |
-| **Trang Bị** (Gear) | Theo tier + cường hóa | Cực Phẩm Set +10 = ~15,000 |
-| **Nhập Thần** | Tổng chỉ số đã nhập × hệ số | 500 ATK nhập = 1,500 |
-| **Pet** | Rarity + Level | Legendary Lv100 = ~5,000 |
-| **Skill** | Số skill + level skill | 4 skill max = ~3,000 |
-| **Danh Hiệu** | Mỗi danh hiệu có điểm riêng | Tiên Nhân = +5,000 |
-| **Cảnh Giới** | Bonus cố định khi đột phá | Kim Đan = +3,000 |
-
+> **Ví dụ tính:** Gear 15K + Nhập Thần 800 + Pet 5K + Cảnh Giới (Kim Đan) 3K + Tu Vi (100K/1000) 100 = **Thực Lực: 23,900**
 #### Hiển Thị Thực Lực
 
 | Vị Trí | Cách Hiển Thị |
@@ -1242,30 +1232,27 @@ Ngày 90: ★ Endgame chase — Perfection, rankings
 ### A. Công Thức Thực Lực (Chi Tiết)
 
 ```
-THỰC LỰC = (ATK × 3) + (DEF × 2) + (HP × 0.3)
-           + (SPD% × 50) + (CRIT_RATE% × 100) + (LUCK% × 80)
-           + Gear_Score
-           + Nhập_Thần_Score
-           + Pet_Score
-           + Skill_Score
-           + Title_Bonus
-           + (Level × 5)
-           + Cảnh_Giới_Bonus
+THỰC LỰC = Gear_Score + Nhập_Thần_Score + Pet_Score + Cảnh_Giới_Bonus + (Tu_Vi ÷ 1000)
 
 --- GEAR SCORE ---
-Gear_Score = ∑(Tier_Base × Enhancement_Multiplier) cho mỗi trang bị
+Gear_Score = Tổng(Tier_Base x Enhancement_Multiplier) cho mỗi trang bị đang mặc
   Tier Base: Phàm=50, Hạ=150, Trung=400, Thượng=1000, Cực=2500, Tiên=5000, Thần=10000
-  Enhancement: +1=×1.1, +5=×1.5, +10=×2.5, +15=×4.0
+  Enhancement: +1=x1.1, +5=x1.5, +10=x2.5, +15=x4.0
 
 --- NHẬP THẦN SCORE ---
-Nhập_Thần_Score = (ATK_nhập × 3) + (DEF_nhập × 2) + (HP_nhập × 0.3) + ...
+Nhập_Thần_Score = Tổng chỉ số 6 ô nhập thần (ATK + DEF + HP + SPD + CRIT + LUCK)
+
+--- PET SCORE ---
+Pet_Score = Tổng(Rarity_Base x Pet_Level / 10) cho mỗi pet đang mang
+  Rarity: Common=100, Uncommon=300, Rare=800, Epic=2000, Legendary=5000, Mythic=12000
 
 --- CẢNH GIỚI BONUS ---
-Phàm Nhân=0, Luyện Khí=200, Trúc Cơ=600, Kim Đan=1500,
-Nguyên Anh=3000, Hóa Thần=6000, Luyện Hư=12000,
-Đại Thừa=25000, Tiên Nhân=50000
+Phàm Nhân=0, Luyện Khí=200, Trúc Cơ=600, Kim Đan=1500, Nguyên Anh=3000,
+Hóa Thần=6000, Luyện Hư=12000, Đại Thừa=25000, Độ Kiếp=40000,
+Tiên Nhân=60000, Thiên Tiên=90000, Kim Tiên=130000, Thái Ất=180000,
+Đại La=250000, Chuẩn Thánh=350000, Thánh Nhân=500000,
+Thiên Đế=700000, Đạo Tổ=1000000, Hồng Mông=1500000
 ```
-
 ### B. Bảng Tỉ Lệ Drop Dungeon Chi Tiết
 
 | Item | T1-2 | T3-4 | T5-6 | T7-8 | T9-10 |

@@ -513,9 +513,8 @@ Sử dụng **MMOItems** plugin:
 │   ┌─────────┐   Bỏ item vào ô → Xác nhận         │
 │   │  ITEM   │   → Item bị tiêu hủy                │
 │   │  ⬇️     │   → Chỉ số cộng vĩnh viễn vào ô   │
-│   └─────────┘                                     │
+│   └────────┘                                     │
 └───────────────────────────────────────────────────────┘
-```
 
 Người chơi mở GUI Nhập Thần (qua NPC hoặc `/nhapthan`), đặt item vào ô tương ứng, xác nhận → item bị **tiêu hủy vĩnh viễn** và chỉ số được cộng vào nhân vật.
 
@@ -625,11 +624,72 @@ Sử dụng **TurtlePet** plugin:
 | **Pet Slot** | Tối đa 3 slot (mở theo cảnh giới) |
 | **Pet Level** | 1-100, lên level bằng cách mang theo farm/dungeon |
 | **Pet Evolution** | Ở level 50 và 100, pet tiến hóa hình dạng & buff mạnh hơn |
-| **Pet Skill** | Mỗi pet có 1-3 skill riêng (tự động trigger) |
+| **Pet Skill** | Mỗi pet có 1-3 skill — **cả Passive (tự động) & Active (chủ động cast)** |
 | **Pet Fusion** | Hy sinh 3 pet cùng rarity → 1 pet rarity cao hơn (60% thành công) |
 | **Pet Food** | Craft từ Linh Dược trên đảo → tăng EXP pet |
+| **Auto-Attack** | Pet **tự động tấn công** MythicMobs lân cận khi chủ chiến đấu |
+| **Skill Cast** | Người chơi **chủ động xả skill pet** bằng hotkey `F` hoặc Pet GUI |
 
-### 7.3 Pet Buffs Theo Loại
+### 7.3 Pet Chiến Đấu (Combat AI)
+
+> [!IMPORTANT]
+> **Pet tự động đi đánh MythicMobs gần đó!** Khi chủ chiến đấu hoặc có mob trong phạm vi 15 block, pet tự lao vào tấn công.
+
+**Hành vi AI:**
+- Chủ vào vùng có MythicMobs (15 block) → Pet tự target mob gần nhất
+- Auto-attack liên tục (DMG theo pet stat)
+- Xả **Passive Skill** tự động khi hết CD
+- Chủ nhấn **hotkey F** → Pet xả **Active Skill** (mạnh hơn, CD dài)
+- Pet chết → Hồi sinh sau 60s (VIP: 30s, hoặc Pet Food hồi ngay)
+- Pet HP thấp → Tự lùi về gần chủ, hồi HP dần
+
+| Thông Số | Giá Trị |
+|----------|---------|
+| Phạm vi detect mob | 15 blocks |
+| Phạm vi tấn công | 2-5 blocks (tùy loại) |
+| Pet DMG | Base + (Pet Level x hệ số rarity) |
+| Pet HP | 50 - 5,000 (theo rarity + level) |
+| Hồi sinh | 60s (VIP: 30s) |
+| Chế độ | Passive / Aggressive / Defensive (GUI) |
+
+### 7.4 Pet Skills (Kỹ Năng Linh Thú)
+
+**Passive Skills (Tự Động):**
+
+| Skill | Pet | Hiệu Ứng | CD |
+|-------|-----|-----------|-----|
+| Nanh Độc | Sói Linh | Gây Poison 3s | 10s |
+| Khiên Băng | Băng Long Con | Chặn 1 đòn cho chủ | 30s |
+| Hỏa Tức | Hỏa Kỳ Lân | AoE lửa 3 block, 50-200 DMG | 15s |
+| Hồi Phục | Phượng Hoàng Con | Heal chủ 10% HP | 20s |
+| Combo Strike | Hắc Báo | 3 đòn liên tiếp, +20% DMG/đòn | 12s |
+| Lôi Kích | Long Vương | AoE sét 5 block, stun 1.5s | 25s |
+
+**Active Skills (Nhấn F để xả):**
+
+| Skill | Pet | Hiệu Ứng | CD | Unlock |
+|-------|-----|-----------|-----|--------|
+| Gầm Chiến | Sói Linh | Buff ATK +20% cho chủ 10s | 60s | Lv30 |
+| Long Tức | Băng Long Con | Phun băng cone, freeze 3s | 45s | Lv50 |
+| Phượng Vũ | Phượng Hoàng | AoE lửa rộng, 500-2K DMG | 60s | Lv50 |
+| Thiên Lôi | Long Vương | Sét diện rộng, 1K-5K DMG | 90s | Lv70 |
+| Hỗn Nguyên Phá | Hỗn Nguyên Thú | Ultimate toàn mob, 3K-10K | 180s | Lv100 |
+| Thần Hộ | Kỳ Lân Thần | Bất tử 5s + heal full HP | 300s | Lv100 |
+
+> Mang 3 pet = 3 Active Skill khác nhau → combo build đa dạng
+
+**Scale theo Rarity:**
+
+| Rarity | Passive | Active | DMG x |
+|--------|---------|--------|-------|
+| Common | 1 | 0 | x0.5 |
+| Uncommon | 1 | 1 (Lv30) | x0.8 |
+| Rare | 2 | 1 (Lv30) | x1.0 |
+| Epic | 2 | 1 (Lv50) | x1.5 |
+| Legendary | 3 | 2 (Lv50+Lv70) | x2.0 |
+| Mythic | 3 | 2 (Lv50+Lv100) | x3.0 |
+
+### 7.5 Pet Buffs Theo Loại
 
 | Loại Pet | Buff Chính | Tốt Cho |
 |----------|-----------|---------|

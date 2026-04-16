@@ -106,8 +106,8 @@ Tu Vi là **đại lượng tích lũy vĩnh viễn**, KHÔNG bao giờ mất. M
 
 | Hoạt Động | Tu Vi/Lần | Giới Hạn |
 |-----------|-----------|----------|
-| Đào khoáng sản Linh Quặng | 5-50 | Không giới hạn |
-| Thu hoạch Linh Dược (farm) | 10-80 | Không giới hạn |
+| Nhận **Linh Quặng** (mine ore trên đảo) | 5-50 /quặng | Không giới hạn |
+| Thu hoạch **Linh Dược** (farm cây trên đảo) | 10-80 /cây | Không giới hạn |
 | Hoàn thành Dungeon | 200-5,000 | **Không giới hạn** |
 | Giết Boss Dungeon | 500-10,000 | **Không giới hạn** |
 | Quest hàng ngày | 100-500 | 5 quest/ngày |
@@ -117,6 +117,38 @@ Tu Vi là **đại lượng tích lũy vĩnh viễn**, KHÔNG bao giờ mất. M
 | Nhập Thần (bonus Tu Vi) | 50-500 | Theo item nhập |
 
 > Tu Vi tích lũy liên tục → khi đạt mốc cảnh giới → thanh Tu Vi **phát sáng** → có thể đột phá
+
+**📦 Linh Quặng — Drop từ Mine Ore trên Đảo:**
+
+Khi đào ore từ cobble generator / ore generator trên đảo, có **% rơi ra Linh Quặng**:
+
+| Ore Đào | % Drop Linh Quặng | Loại Quặng | Tu Vi Nhận |
+|---------|-------------------|------------|------------|
+| Cobblestone | 2% | Phàm Quặng | +5 |
+| Coal Ore | 5% | Phàm Quặng | +5 |
+| Iron Ore | 8% | Hạ Quặng | +10 |
+| Gold Ore | 12% | Trung Quặng | +20 |
+| Diamond Ore | 20% | Thượng Quặng | +35 |
+| Emerald Ore | 25% | Cực Quặng | +50 |
+| Ancient Debris | 35% | Tiên Quặng | +80 |
+
+> Ore tier từ generator tăng theo **Island Tier** (xem section 3)
+> VIP có bonus % drop Linh Quặng (+5% đến +40%)
+
+**🌿 Linh Dược — Thu Hoạch Cây Farm trên Đảo:**
+
+Trồng và thu hoạch cây trên đảo sẽ nhận **Linh Dược** (100% khi thu hoạch):
+
+| Cây Trồng | Linh Dược Nhận | Tu Vi | Thời Gian Mọc |
+|-----------|---------------|-------|---------------|
+| Linh Thảo (Wheat) | 1 Linh Dược Thường | +10 | 10 phút |
+| Hỏa Liên (Nether Wart) | 1 Linh Dược Hỏa | +20 | 30 phút |
+| Băng Tâm Thảo (Carrot) | 1 Linh Dược Băng | +25 | 45 phút |
+| Tử Linh Chi (Beetroot) | 1 Linh Dược Tử | +40 | 2 giờ |
+| Thiên Niên Sâm (Chorus) | 1 Linh Dược Thiên | +80 | 8 giờ |
+
+> Linh Dược dùng để: tạo Tu Vi, craft Đan Dược (buff), craft Pet Food, craft nguyên liệu Cường Hóa
+> Mở thêm loại cây mới theo **Cảnh Giới** (xem section 13)
 
 #### Level (1-1000) — Hệ Thống PHỤ
 

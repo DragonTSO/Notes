@@ -112,7 +112,7 @@ Tu Vi là **đại lượng tích lũy vĩnh viễn**, KHÔNG bao giờ mất. M
 | Giết Boss Dungeon | 500-10,000 | **Không giới hạn** |
 | Quest hàng ngày | 100-500 | 5 quest/ngày |
 | Quest tuần | 1,000-3,000 | 3 quest/tuần |
-| AFK tu luyện (online) | 10/phút | 8 giờ/ngày |
+| **Tu Tập** (/tutap tại khu Linh Mạch) | 20-200/phút | Không giới hạn |
 | PVP thắng | 50-200 | 20 trận/ngày |
 | Nhập Thần (bonus Tu Vi) | 50-500 | Theo item nhập |
 
@@ -149,6 +149,29 @@ Trồng và thu hoạch cây trên đảo sẽ nhận **Linh Dược** (100% khi
 
 > Linh Dược dùng để: tạo Tu Vi, craft Đan Dược (buff), craft Pet Food, craft nguyên liệu Cường Hóa
 > Mở thêm loại cây mới theo **Cảnh Giới** (xem section 13)
+
+**🧘 Tu Tập — Hấp Thụ Linh Mạch (AFK Tu Vi):**
+
+Người chơi đến **khu vực Linh Mạch** (warp) và sử dụng lệnh `/tutap` để ngồi thiền, hấp thụ linh khí từ Linh Mạch để tăng Tu Vi.
+
+| Khu Linh Mạch | Vị Trí | Tu Vi/Phút | Cảnh Giới YC | Đặc Biệt |
+|---------------|--------|------------|-------------|-----------|
+| **Phàm Giới Linh Mạch** | /warp tutap1 | 20/phút | Phàm Nhân | Miễn phí |
+| **Thanh Phong Linh Mạch** | /warp tutap2 | 50/phút | Luyện Khí | 50 LS/giờ |
+| **Vân Hải Linh Mạch** | /warp tutap3 | 100/phút | Kim Đan | 200 LS/giờ |
+| **Thiên Đỉnh Linh Mạch** | /warp tutap4 | 200/phút | Hóa Thần | 500 LS/giờ |
+| **VIP Linh Mạch** | /warp tutapvip | 150/phút | VIP 3+ | Miễn phí, x1.5 bonus |
+
+**Cơ chế `/tutap`:**
+- Gõ `/tutap` tại khu Linh Mạch → Nhân vật **ngồi thiền** (animation)
+- Tu Vi tự động cộng mỗi phút khi online tại khu vực
+- **Phải ở trong khu vực** — ra khỏi vùng = ngừng nhận Tu Vi
+- **Không cần thao tác** — AFK thoải mái, nhưng phải online
+- **Combo với VIP**: VIP nhận thêm bonus Tu Vi khi tu tập (+10% đến +50%)
+- **Combo với Pet**: Mang pet Hỗ Trợ → +20% Tu Vi khi tu tập
+
+> **Tâm lý:** Người chơi bận có thể AFK tu tập để không bị tụt lại
+> Khu cao cấp tốn Linh Thạch → tiêu hao currency → VIP miễn phí → hút máu
 
 #### Level (1-1000) — Hệ Thống PHỤ
 

@@ -107,7 +107,7 @@ Tu Vi là **đại lượng tích lũy vĩnh viễn**, KHÔNG bao giờ mất. M
 | Hoạt Động | Tu Vi/Lần | Giới Hạn |
 |-----------|-----------|----------|
 | Nhận **Linh Quặng** (mine ore trên đảo) | 5-50 /quặng | Không giới hạn |
-| Thu hoạch **Linh Dược** (farm cây trên đảo) | 10-80 /cây | Không giới hạn |
+| Thu hoạch **Linh Dược** (% drop khi crop cây vanilla) | 2-25 /lần drop | Không giới hạn |
 | Hoàn thành Dungeon | 200-5,000 | **Không giới hạn** |
 | Giết Boss Dungeon | 500-10,000 | **Không giới hạn** |
 | Quest hàng ngày | 100-500 | 5 quest/ngày |
@@ -137,18 +137,24 @@ Khi đào ore từ cobble generator / ore generator trên đảo, có **% rơi r
 
 **🌿 Linh Dược — Thu Hoạch Cây Farm trên Đảo:**
 
-Trồng và thu hoạch cây trên đảo sẽ nhận **Linh Dược** (100% khi thu hoạch):
+Sử dụng **cây vanilla bình thường** trên đảo. Khi thu hoạch crop có **% tỉ lệ rớt Linh Dược** (thấp hơn mine ore):
 
-| Cây Trồng | Linh Dược Nhận | Tu Vi | Thời Gian Mọc |
-|-----------|---------------|-------|---------------|
-| Linh Thảo (Wheat) | 1 Linh Dược Thường | +10 | 10 phút |
-| Hỏa Liên (Nether Wart) | 1 Linh Dược Hỏa | +20 | 30 phút |
-| Băng Tâm Thảo (Carrot) | 1 Linh Dược Băng | +25 | 45 phút |
-| Tử Linh Chi (Beetroot) | 1 Linh Dược Tử | +40 | 2 giờ |
-| Thiên Niên Sâm (Chorus) | 1 Linh Dược Thiên | +80 | 8 giờ |
+| Cây Vanilla | % Drop Linh Dược | Tu Vi Nhận | Ghi Chú |
+|-------------|-------------------|------------|---------|
+| Wheat | 3% | +3 | Dễ farm, số lượng bù |
+| Carrot | 4% | +5 | Dễ farm |
+| Potato | 4% | +5 | Dễ farm |
+| Beetroot | 6% | +8 | Drop rate cao hơn |
+| Melon (slice) | 2% | +2 | Mỗi slice tính riêng |
+| Pumpkin | 8% | +10 | Auto-farm friendly |
+| Sugar Cane | 3% | +4 | Cao tầng, auto-farm |
+| Nether Wart | 10% | +15 | Khó farm hơn |
+| Chorus Fruit | 15% | +25 | End game crop |
+| Cocoa Beans | 5% | +6 | Trung bình |
 
-> Linh Dược dùng để: tạo Tu Vi, craft Đan Dược (buff), craft Pet Food, craft nguyên liệu Cường Hóa
-> Mở thêm loại cây mới theo **Cảnh Giới** (xem section 13)
+> **Farm cho Tu Vi ít hơn Mine ore** — Mine ore là nguồn Tu Vi chính từ đảo
+> Linh Dược dùng để: craft Đan Dược (buff), craft Pet Food, craft nguyên liệu Cường Hóa
+> VIP bonus +3% đến +15% drop Linh Dược
 
 **🧘 Tu Tập — Hấp Thụ Linh Mạch (AFK Tu Vi):**
 

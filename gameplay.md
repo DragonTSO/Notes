@@ -321,7 +321,7 @@ Khi Tu Vi đạt mốc yêu cầu, người chơi có thể **đột phá** lên
 #### Công Thức Tính Thực Lực
 
 ```
-THỰC LỰC = Gear_Score + Nhập_Thần_Score + Pet_Score + Cảnh_Giới_Bonus + (Tu_Vi ÷ 1000)
+THỰC LỰC = Gear_Score + Nhập_Thần_Score + Pet_Score + Cảnh_Giới_Bonus + (Tu_Vi ÷ 200)
 ```
 
 | Thành Phần | Cách Tính | Ví Dụ |
@@ -330,9 +330,9 @@ THỰC LỰC = Gear_Score + Nhập_Thần_Score + Pet_Score + Cảnh_Giới_Bonu
 | **Nhập_Thần_Score** | Tổng chỉ số đã nhập thần (ATK + DEF + HP + SPD + CRIT + LUCK) | 500 ATK + 300 DEF = ~800 |
 | **Pet_Score** | Tổng điểm từ tất cả pet đang mang (rarity x level) | Legendary Lv100 = ~5,000 |
 | **Cảnh_Giới_Bonus** | Bonus cố định khi đột phá cảnh giới | Tiên Nhân = +50,000 |
-| **Tu_Vi ÷ 1000** | Tu Vi tích lũy chia 1000 | 50M Tu Vi = +50,000 |
+| **Tu_Vi ÷ 200** | Tu Vi tích lũy chia 1000 | 50M Tu Vi = +250,000 |
 
-> **Ví dụ tính:** Gear 15K + Nhập Thần 800 + Pet 5K + Cảnh Giới (Kim Đan) 3K + Tu Vi (100K/1000) 100 = **Thực Lực: 23,900**
+> **Ví dụ tính:** Gear 15K + Nhập Thần 800 + Pet 5K + Cảnh Giới (Kim Đan) 3K + Tu Vi (100K/200) 500 = **Thực Lực: 24,300**
 #### Hiển Thị Thực Lực
 
 | Vị Trí | Cách Hiển Thị |
@@ -1232,7 +1232,7 @@ Ngày 90: ★ Endgame chase — Perfection, rankings
 ### A. Công Thức Thực Lực (Chi Tiết)
 
 ```
-THỰC LỰC = Gear_Score + Nhập_Thần_Score + Pet_Score + Cảnh_Giới_Bonus + (Tu_Vi ÷ 1000)
+THỰC LỰC = Gear_Score + Nhập_Thần_Score + Pet_Score + Cảnh_Giới_Bonus + (Tu_Vi ÷ 200)
 
 --- GEAR SCORE ---
 Gear_Score = Tổng(Tier_Base x Enhancement_Multiplier) cho mỗi trang bị đang mặc

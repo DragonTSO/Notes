@@ -7,22 +7,23 @@
 
 ## Tổng Quan 5 Class
 
-| # | Class | Vai Trò | Vũ Khí Chính | Stat Chính | Màu |
-|---|-------|---------|-------------|-----------|-----|
-| Lv 1     | ⚔️ **Kiếm Tu** | Melee DPS | Kiếm, Đao | ATK, Crit | &c Đỏ |
-| Lv 30    | 🔮 **Pháp Tu** | Magic DPS / CC | Pháp Bảo, Staff | Skill DMG, SPD | &5 Tím |
-| Lv 60    | 🛡️ **Thể Tu** | Tank / Brawler | Quyền, Thương | DEF, HP | &6 Vàng |
-| Lv 100   | 💚 **Y Tu** | Support / Healer | Phù, Trượng | Heal, Buff | &a Xanh lá |
-| 5 | 🗡️ **Ám Tu** | Assassin / Burst | Đoản Đao, Ám Khí | Crit, SPD | &8 Xám |
+| # | Class | Ngũ Hành | Vai Trò | Vũ Khí Chính | Stat Chính | Màu |
+|---|-------|----------|---------|-------------|-----------|-----|
+| 1 | ⚔️ **Kiếm Tôn** | 🟡 **Kim** | Melee DPS | Kiếm, Đao | ATK, Crit | &e Vàng/&c Đỏ |
+| 2 | 🔮 **Vạn Pháp** | 🔴 **Hỏa** | Magic DPS / CC | Pháp Bảo, Staff | Skill DMG, SPD | &c Đỏ/&5 Tím |
+| 3 | 🛡️ **Bá Thể** | 🟤 **Thổ** | Tank / Brawler | Quyền, Thương | DEF, HP | &6 Cam |
+| 4 | 💚 **Dược Tiên** | 🟢 **Mộc** | Support / Healer | Phù, Trượng | Heal, Buff | &a Xanh lá |
+| 5 | 🗡️ **Ảnh Sát** | 🔵 **Thủy** | Assassin / Burst | Đoản Đao, Ám Khí | Crit, SPD | &b Xanh lam |
 
 ---
 
-## ⚔️ CLASS 1: KIẾM TU (Sword Cultivator)
+## ⚔️ CLASS 1: Kiếm Tôn (Sword Cultivator)
 
 > *"Một kiếm phá vạn pháp"*
 
 ### Mô Tả
-Kiếm Tu là con đường tu luyện tập trung vào **kiếm thuật**, sử dụng kiếm khí để tấn công với sát thương bùng nổ. Kiếm Tu giỏi trong combat 1v1, combo nhanh, và burst damage cao. Là class được yêu thích nhất cho PVP và speed-clear dungeon.
+**Thuộc Tính: 🟡 Hệ Kim**
+Kiếm Tôn là con đường tu luyện tập trung vào **kiếm thuật** sắc bén của hệ Kim, sử dụng kiếm khí để tấn công với sát thương bùng nổ. Kiếm Tôn giỏi trong combat 1v1, combo nhanh, và burst damage cao. Là class được yêu thích nhất cho PVP và speed-clear dungeon.
 
 ### Base Stats (Lv1 → Lv100)
 
@@ -143,12 +144,13 @@ CD: 120s | Mana: 200
 
 ---
 
-## 🔮 CLASS 2: PHÁP TU (Spell Cultivator)
+## 🔮 CLASS 2: Vạn Pháp (Spell Cultivator)
 
 > *"Ngũ hành tương sinh, vạn pháp quy nguyên"*
 
 ### Mô Tả
-Pháp Tu tu luyện theo con đường **pháp thuật**, sử dụng ngũ hành (Kim, Mộc, Thủy, Hỏa, Thổ) để tấn công diện rộng và khống chế kẻ địch. Là class mạnh nhất trong clear mob AoE và crowd control, nhưng yếu trong 1v1.
+**Thuộc Tính: 🔴 Hệ Hỏa**
+Vạn Pháp tu luyện theo con đường **pháp thuật** bùng nổ của hệ Hỏa (kết hợp các nguyên tố khác), sát thương diện rộng và khống chế kẻ địch. Là class mạnh nhất trong clear mob AoE và crowd control, nhưng yếu trong 1v1.
 
 ### Base Stats (Lv1 → Lv100)
 
@@ -280,12 +282,13 @@ CD: 150s | Mana: 250
 
 ---
 
-## 🛡️ CLASS 3: THỂ TU (Body Cultivator)
+## 🛡️ CLASS 3: Bá Thể (Body Cultivator)
 
 > *"Lấy thân thể làm khí mãnh, toàn thân đều là vũ khí"*
 
 ### Mô Tả
-Thể Tu tu luyện **thể xác**, biến cơ thể thành vũ khí và lá chắn. Tank tốt nhất, có thể chịu đòn cho đồng đội, taunt mob, và phản dame. Không gây nhiều sát thương nhưng cực kỳ khó chết.
+**Thuộc Tính: 🟤 Hệ Thổ**
+Bá Thể tu luyện **thể xác** vững chãi như đại địa của hệ Thổ, biến cơ thể thành vũ khí và lá chắn. Tank tốt nhất, có thể chịu đòn cho đồng đội, taunt mob, và phản dame. Không gây nhiều sát thương nhưng cực kỳ khó chết.
 
 ### Base Stats (Lv1 → Lv100)
 
@@ -409,12 +412,13 @@ CD: 180s | Mana: 200
 
 ---
 
-## 💚 CLASS 4: Y TU (Healer Cultivator)
+## 💚 CLASS 4: Dược Tiên (Healer Cultivator)
 
 > *"Cứu nhân tế thế, Linh Dược diệu thủ"*
 
 ### Mô Tả
-Y Tu tu luyện theo con đường **y thuật**, sử dụng linh dược và linh khí để chữa thương, buff đồng đội, và cleanse debuff. Là class không thể thiếu trong party dungeon, đặc biệt dungeon cấp cao.
+**Thuộc Tính: 🟢 Hệ Mộc**
+Dược Tiên tu luyện theo con đường **y thuật** và sinh mệnh của hệ Mộc, sử dụng linh dược và linh khí để chữa thương, buff đồng đội, và cleanse debuff. Là class không thể thiếu trong party dungeon, đặc biệt dungeon cấp cao.
 
 ### Base Stats (Lv1 → Lv100)
 
@@ -538,12 +542,13 @@ CD: 240s | Mana: 300
 
 ---
 
-## 🗡️ CLASS 5: ÁM TU (Shadow Cultivator)
+## 🗡️ CLASS 5: Ảnh Sát (Shadow Cultivator)
 
 > *"Ẩn trong bóng tối, một击 tất sát"*
 
 ### Mô Tả
-Ám Tu tu luyện **ám thuật**, sống trong bóng tối và tấn công bất ngờ. Class có burst damage cao nhất trong game, có thể tàng hình và one-shot target. Yếu điểm là máu thấp, dễ chết nếu bị phát hiện.
+**Thuộc Tính: 🔵 Hệ Thủy**
+Ảnh Sát tu luyện **ám thuật** tĩnh lặng và lạnh lẽo của hệ Thủy, sống trong bóng tối và tấn công bất ngờ. Class có burst damage cao nhất trong game, có thể tàng hình và one-shot target. Yếu điểm là máu thấp, dễ chết nếu bị phát hiện.
 
 ### Base Stats (Lv1 → Lv100)
 
@@ -687,22 +692,41 @@ CD: 150s | Mana: 200
 | 4 class | +15% toàn stat |
 | **5 class (đủ Ngũ Hành)** | **+20% toàn stat + 10% Drop Rate** |
 
-### Tương Khắc (PVP)
+### Tương Khắc Ngũ Hành (PVP & PVE)
+
+Hệ thống Class gắn liền với quy luật Ngũ Hành, tạo ra vòng tuần hoàn tương khắc và tương sinh rõ rệt:
+
+#### ⚔️ Vòng Tương Khắc
+Class đánh vào hệ mình Khắc sẽ được lợi thế lớn, và bị bất lợi khi đánh hệ Khắc mình.
 
 ```
-⚔️ Kiếm Tu ──▶ 💚 Y Tu ──▶ 🗡️ Ám Tu ──▶ 🔮 Pháp Tu ──▶ 🛡️ Thể Tu ──▶ ⚔️ Kiếm Tu
-   (chém)        (trị)        (ám sát)       (pháp)         (đấm)        (chém)
-
-Class KHẮC target: +15% DMG dealt, -10% DMG received
-Class BỊ KHẮC: -15% DMG dealt, +10% DMG received
+🟡 KIM (Kiếm Tôn) ──▶ Khắc ──▶ 🟢 MỘC (Dược Tiên)
+🟢 MỘC (Dược Tiên)    ──▶ Khắc ──▶ 🟤 THỔ (Bá Thể)
+🟤 THỔ (Bá Thể)  ──▶ Khắc ──▶ 🔵 THỦY (Ảnh Sát)
+🔵 THỦY (Ảnh Sát)  ──▶ Khắc ──▶ 🔴 HỎA (Vạn Pháp)
+🔴 HỎA (Vạn Pháp) ──▶ Khắc ──▶ 🟡 KIM (Kiếm Tôn)
 ```
+
+**Hiệu ứng Tương Khắc:**
+- **Đánh Class Bị Khắc**: Sát thương gây ra **+15%**, bỏ qua 10% Phòng thủ.
+- **Bị Class Khắc đánh**: Sát thương nhận vào **+10%**.
+
+#### ♻️ Vòng Tương Sinh (Ngũ Hành Trận)
+Khi các Class trong cùng Party đứng gần nhau (phạm vi 15 blocks), nếu kích hoạt thuộc tính tương sinh sẽ nhận được Aura cộng hưởng đặc biệt:
+
+- **Kim sinh Thủy (Kiếm Tôn + Ảnh Sát)**: Tăng 10% Tốc độ di chuyển và 5% Crit Rate.
+- **Thủy sinh Mộc (Ảnh Sát + Dược Tiên)**: Tăng 15% Hiệu quả Heal và +5 Mana/s.
+- **Mộc sinh Hỏa (Dược Tiên + Vạn Pháp)**: Tăng 10% Skill DMG, giảm 5% Cooldown.
+- **Hỏa sinh Thổ (Vạn Pháp + Bá Thể)**: Tăng 10% DEF toàn Party.
+- **Thổ sinh Kim (Bá Thể + Kiếm Tôn)**: Tăng 10% ATK, đòn đánh giảm 5% DEF kẻ địch.
 
 ### Class Gear (Trang Bị Riêng)
 
 | Class | Gear Exclusive | Bonus |
 |-------|---------------|-------|
-| ⚔️ Kiếm Tu | Kiếm Tiên, Đao Linh | +20% Crit DMG |
-| 🔮 Pháp Tu | Pháp Bảo Tiên, Staff Cổ | +20% Skill DMG |
-| 🛡️ Thể Tu | Giáp Huyền Thiết, Quyền Bao | +20% DEF |
-| 💚 Y Tu | Trượng Linh, Phù Tiên | +20% Heal Power |
-| 🗡️ Ám Tu | Đoản Đao Ám, Ám Khí Tiên | +20% Crit Rate |
+| ⚔️ Kiếm Tôn | Kiếm Tiên, Đao Linh | +20% Crit DMG |
+| 🔮 Vạn Pháp | Pháp Bảo Tiên, Staff Cổ | +20% Skill DMG |
+| 🛡️ Bá Thể | Giáp Huyền Thiết, Quyền Bao | +20% DEF |
+| 💚 Dược Tiên | Trượng Linh, Phù Tiên | +20% Heal Power |
+| 🗡️ Ảnh Sát | Đoản Đao Ám, Ám Khí Tiên | +20% Crit Rate |
+

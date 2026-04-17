@@ -680,8 +680,21 @@ CD: 150s | Mana: 200
 |----------|---------|
 | **Chọn Class** | Tại Cảnh Giới 2 (Luyện Khí), qua NPC hoặc `/class` |
 | **Chuyển Class** | Tại CG 9 (Độ Kiếp) và CG 13 (Thái Ất), tốn 500 Linh Ngọc |
-| **Reset Skill** | 200 Linh Ngọc mỗi lần reset skill level |
+| **Reset/Tẩy Điểm**| 200 Linh Ngọc mỗi lần reset skill hoặc tẩy điểm tiềm năng |
 | **Skill Point** | Nhận 1 Skill Point mỗi 10 level, dùng để lên skill |
+| **Stat Point**  | Nhận 1 Điểm Tiềm Năng mỗi cấp, dùng để cộng chỉ số tự do |
+
+### Điểm Tiềm Năng (Stat Points)
+
+Người chơi dùng Stat Point để tùy biến chỉ số nhân vật qua lệnh `/stats`:
+
+| Tiềm Năng (Stats) | Tác Dụng Mỗi 1 Điểm | Class Hưởng Lợi Nhất |
+|-------------------|---------------------|----------------------|
+| 🗡️ **Lực Đạo (STR)** | +2 ATK, +0.1% Phá Giáp | **Kiếm Tôn**, Bá Thể |
+| 🔮 **Linh Lực (INT)**  | +2 Skill DMG, +10 Max Mana | **Vạn Pháp**, Dược Tiên |
+| 🩸 **Khí Huyết (VIT)** | +15 Max HP, +1 DEF | **Bá Thể**, Tất cả |
+| ⚡ **Thân Pháp (AGI)** | +1 SPD, +0.1% Crit Rate, +0.1% Dodge | **Ảnh Sát**, Kiếm Tôn |
+| 👁️ **Thần Thức (SPR)** | +1.5% Heal Power, +2 Mana/s | **Dược Tiên** |
 
 ### Party Bonus (Ngũ Hành)
 

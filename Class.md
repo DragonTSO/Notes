@@ -7,13 +7,13 @@
 
 ## Tổng Quan 5 Class
 
-| # | Class | Ngũ Hành | Vai Trò | Vũ Khí Chính | Stat Chính | Màu |
-|---|-------|----------|---------|-------------|-----------|-----|
-| 1 | ⚔️ **Kiếm Tôn** | 🟡 **Kim** | Melee DPS | Kiếm, Đao | ATK, Crit | &e Vàng/&c Đỏ |
-| 2 | 🔮 **Vạn Pháp** | 🔴 **Hỏa** | Magic DPS / CC | Pháp Bảo, Staff | Skill DMG, SPD | &c Đỏ/&5 Tím |
-| 3 | 🛡️ **Bá Thể** | 🟤 **Thổ** | Tank / Brawler | Quyền, Thương | DEF, HP | &6 Cam |
-| 4 | 💚 **Dược Tiên** | 🟢 **Mộc** | Support / Healer | Phù, Trượng | Heal, Buff | &a Xanh lá |
-| 5 | 🗡️ **Ảnh Sát** | 🔵 **Thủy** | Assassin / Burst | Đoản Đao, Ám Khí | Crit, SPD | &b Xanh lam |
+| # | Class | Ngũ Hành | Độ Khó | Vai Trò | Vũ Khí Chính |
+|---|-------|----------|--------|---------|-------------|
+| 1 | ⚔️ **Kiếm Tôn** | 🟡 **Kim** | ⭐⭐ (Dễ) | Melee DPS | Kiếm, Đao |
+| 2 | 🔮 **Vạn Pháp** | 🔴 **Hỏa** | ⭐⭐⭐ (Vừa) | Magic DPS/CC | Pháp Bảo, Trượng |
+| 3 | 🛡️ **Bá Thể** | 🟤 **Thổ** | ⭐ (Rất Dễ) | Tank / Brawler | Quyền, Thương |
+| 4 | 💚 **Dược Tiên** | 🟢 **Mộc** | ⭐⭐⭐ (Vừa) | Support/Healer | Phù, Trượng |
+| 5 | 🗡️ **Ảnh Sát** | 🔵 **Thủy** | ⭐⭐⭐⭐⭐ (Khó) | Assassin / Burst | Đoản Đao, Ám Khí |
 
 ---
 
@@ -22,7 +22,7 @@
 > *"Một kiếm phá vạn pháp"*
 
 ### Mô Tả
-**Thuộc Tính: 🟡 Hệ Kim**
+**Thuộc Tính: 🟡 Hệ Kim | Độ Khó: ⭐⭐ (Dễ)**
 Kiếm Tôn là con đường tu luyện tập trung vào **kiếm thuật** sắc bén của hệ Kim, sử dụng kiếm khí để tấn công với sát thương bùng nổ. Kiếm Tôn giỏi trong combat 1v1, combo nhanh, và burst damage cao. Là class được yêu thích nhất cho PVP và speed-clear dungeon.
 
 ### Base Stats (Lv1 → Lv100)
@@ -149,7 +149,7 @@ CD: 120s | Mana: 200
 > *"Ngũ hành tương sinh, vạn pháp quy nguyên"*
 
 ### Mô Tả
-**Thuộc Tính: 🔴 Hệ Hỏa**
+**Thuộc Tính: 🔴 Hệ Hỏa | Độ Khó: ⭐⭐⭐ (Trung Bình)**
 Vạn Pháp tu luyện theo con đường **pháp thuật** bùng nổ của hệ Hỏa (kết hợp các nguyên tố khác), sát thương diện rộng và khống chế kẻ địch. Là class mạnh nhất trong clear mob AoE và crowd control, nhưng yếu trong 1v1.
 
 ### Base Stats (Lv1 → Lv100)
@@ -287,7 +287,7 @@ CD: 150s | Mana: 250
 > *"Lấy thân thể làm khí mãnh, toàn thân đều là vũ khí"*
 
 ### Mô Tả
-**Thuộc Tính: 🟤 Hệ Thổ**
+**Thuộc Tính: 🟤 Hệ Thổ | Độ Khó: ⭐ (Rất Dễ)**
 Bá Thể tu luyện **thể xác** vững chãi như đại địa của hệ Thổ, biến cơ thể thành vũ khí và lá chắn. Tank tốt nhất, có thể chịu đòn cho đồng đội, taunt mob, và phản dame. Không gây nhiều sát thương nhưng cực kỳ khó chết.
 
 ### Base Stats (Lv1 → Lv100)
@@ -417,7 +417,7 @@ CD: 180s | Mana: 200
 > *"Cứu nhân tế thế, Linh Dược diệu thủ"*
 
 ### Mô Tả
-**Thuộc Tính: 🟢 Hệ Mộc**
+**Thuộc Tính: 🟢 Hệ Mộc | Độ Khó: ⭐⭐⭐ (Trung Bình)**
 Dược Tiên tu luyện theo con đường **y thuật** và sinh mệnh của hệ Mộc, sử dụng linh dược và linh khí để chữa thương, buff đồng đội, và cleanse debuff. Là class không thể thiếu trong party dungeon, đặc biệt dungeon cấp cao.
 
 ### Base Stats (Lv1 → Lv100)
@@ -547,7 +547,7 @@ CD: 240s | Mana: 300
 > *"Ẩn trong bóng tối, một击 tất sát"*
 
 ### Mô Tả
-**Thuộc Tính: 🔵 Hệ Thủy**
+**Thuộc Tính: 🔵 Hệ Thủy | Độ Khó: ⭐⭐⭐⭐⭐ (Khó)**
 Ảnh Sát tu luyện **ám thuật** tĩnh lặng và lạnh lẽo của hệ Thủy, sống trong bóng tối và tấn công bất ngờ. Class có burst damage cao nhất trong game, có thể tàng hình và one-shot target. Yếu điểm là máu thấp, dễ chết nếu bị phát hiện.
 
 ### Base Stats (Lv1 → Lv100)

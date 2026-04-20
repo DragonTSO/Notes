@@ -11,27 +11,27 @@
 
 | # | Rank | Giá (Xu) | Màu Tag | Tu Vi | Quặng | Dungeon |
 |---|------|----------|---------|-------|-------|---------|
-| 0 | **Phàm Nhân** | Miễn phí | &7 Xám | — | — | — |
-| 1 | **Thanh Vân** | 50,000 | &f Trắng | +3% | +2% | — |
-| 2 | **Tử Hà** | 100,000 | &a Xanh lá | +6% | +4% | +2% |
-| 3 | **Huyền Thiên** | 200,000 | &2 Xanh đậm | +10% | +7% | +4% |
-| 4 | **Kim Quang** | 500,000 | &b Cyan | +14% | +10% | +6% |
-| 5 | **Ngọc Hoàng** | 1,000,000 | &3 Cyan đậm | +18% | +14% | +9% |
-| 6 | **Thiên Mệnh** | 2,000,000 | &d Hồng | +23% | +18% | +12% |
-| 7 | **Thần Vương** | 5,000,000 | &5 Tím | +28% | +22% | +15% |
-| 8 | **Cửu Thiên** | 10,000,000 | &6 Vàng | +34% | +27% | +19% |
-| 9 | **Hồng Hoang** | 25,000,000 | &c Đỏ | +42% | +33% | +23% |
-| 10 | **Vô Cực** | 50,000,000 | &4&l Đỏ Bold | **+50%** | **+40%** | **+28%** |
+| 0 | **VIP0** | Miễn phí | &7 Xám | — | — | — |
+| 1 | **VIP1** | 50,000 | &f Trắng | +3% | +2% | — |
+| 2 | **VIP2** | 100,000 | &a Xanh lá | +6% | +4% | +2% |
+| 3 | **VIP3** | 200,000 | &2 Xanh đậm | +10% | +7% | +4% |
+| 4 | **VIP4** | 500,000 | &b Cyan | +14% | +10% | +6% |
+| 5 | **VIP5** | 1,000,000 | &3 Cyan đậm | +18% | +14% | +9% |
+| 6 | **VIP6** | 2,000,000 | &d Hồng | +23% | +18% | +12% |
+| 7 | **VIP7** | 5,000,000 | &5 Tím | +28% | +22% | +15% |
+| 8 | **VIP8** | 10,000,000 | &6 Vàng | +34% | +27% | +19% |
+| 9 | **VIP9** | 25,000,000 | &c Đỏ | +42% | +33% | +23% |
+| 10 | **VIP10** | 50,000,000 | &4&l Đỏ Bold | **+50%** | **+40%** | **+28%** |
 
 ---
 
-## Rank 0: Phàm Nhân (Mặc Định — Miễn Phí)
+## Rank 0: VIP0 (Mặc Định — Miễn Phí)
 
 > ⚠️ Đây là rank mặc định khi mới vào server. **Không có bất kỳ bonus nào.**
 
-| Hạng Mục | Phàm Nhân (bạn) | Thanh Vân (50K Xu) |
+| Hạng Mục | VIP0 (bạn) | VIP1 (50K Xu) |
 |----------|-----------------|-------------------|
-| Tag chat | Không có tag | `&f[Thanh Vân]` ✨ |
+| Tag chat | Không có tag | `&f[VIP1]` ✨ |
 | Homes | 1 home | 3 home |
 | Tu Vi bonus | 0% | **+3%** |
 | Linh Quặng | 0% bonus | **+2%** drop |
@@ -45,64 +45,64 @@
 
 ---
 
-## Rank 1: Thanh Vân (50K Xu)
+## Rank 1: VIP1 (50K Xu)
 
 | Quyền Lợi | Chi Tiết |
 |-----------|---------|
-| Tag chat | `&f[Thanh Vân]` trước tên |
+| Tag chat | `&f[VIP1]` trước tên |
 | Homes | 3 home |
 | Tu Vi bonus | +3% Tu Vi từ mọi nguồn |
 | Linh Quặng drop | +2% drop rate |
 | AFK Tu Tập | Không bị kick AFK 30 phút |
-| Kit | `/kit thanhvan` — mỗi ngày: 16 steak, 1 Iron Pickaxe |
+| Kit | `/kit vip1` — mỗi ngày: 16 steak, 1 Iron Pickaxe |
 | Lệnh | `/hat`, `/nick` |
 
-> 🔺 Lên **Tử Hà** chỉ thêm 50K Xu → được thêm: +3% Tu Vi, +2% Quặng, `/back`, `/enderchest`
+> 🔺 Lên **VIP2** chỉ thêm 50K Xu → được thêm: +3% Tu Vi, +2% Quặng, `/back`, `/enderchest`
 
 ---
 
-## Rank 2: Tử Hà (100K Xu)
+## Rank 2: VIP2 (100K Xu)
 
-| Quyền Lợi | Chi Tiết | So với Thanh Vân |
+| Quyền Lợi | Chi Tiết | So với VIP1 |
 |-----------|---------|-----------------|
-| Tag chat | `&a[Tử Hà]` | Màu xanh lá ✨ |
+| Tag chat | `&a[VIP2]` | Màu xanh lá ✨ |
 | Homes | 5 home | +2 home |
 | Tu Vi bonus | +6% Tu Vi | **+3%** |
 | Linh Quặng drop | +4% drop rate | **+2%** |
 | Linh Dược drop | +2% drop rate | **MỚI** |
 | AFK Tu Tập | Không bị kick AFK 1 giờ | +30 phút |
-| Kit | `/kit tuha` — 32 steak, 1 Diamond Pickaxe | Upgrade kit |
+| Kit | `/kit vip2` — 32 steak, 1 Diamond Pickaxe | Upgrade kit |
 | Lệnh | `/back`, `/enderchest` | **MỚI** |
 | Dungeon | +2% drop rate | **MỚI** |
 
-> 🔺 Lên **Huyền Thiên** thêm 100K Xu → `/fly` trên đảo, +Pet EXP, dungeon drop tốt hơn
+> 🔺 Lên **VIP3** thêm 100K Xu → `/fly` trên đảo, +Pet EXP, dungeon drop tốt hơn
 
 ---
 
-## Rank 3: Huyền Thiên (200K Xu)
+## Rank 3: VIP3 (200K Xu)
 
-| Quyền Lợi | Chi Tiết | So với Tử Hà |
+| Quyền Lợi | Chi Tiết | So với VIP2 |
 |-----------|---------|-------------|
-| Tag chat | `&2[Huyền Thiên]` | Xanh đậm ✨ |
+| Tag chat | `&2[VIP3]` | Xanh đậm ✨ |
 | Homes | 8 home | +3 home |
 | Tu Vi bonus | +10% Tu Vi | **+4%** |
 | Linh Quặng drop | +7% drop rate | **+3%** |
 | Linh Dược drop | +4% drop rate | **+2%** |
 | AFK Tu Tập | Không bị kick AFK 2 giờ | +1 giờ |
 | Pet EXP | +8% Pet EXP | **MỚI** |
-| Kit | `/kit huyenthien` — 64 steak, Diamond Set | Upgrade kit |
+| Kit | `/kit vip3` — 64 steak, Diamond Set | Upgrade kit |
 | Lệnh | `/fly` (chỉ trên đảo), `/heal` (CD 5 phút) | **FLY MỚI** 🔥 |
 | Dungeon | +4% drop, -10% phí vào | **+2%**, phí giảm |
 
-> 🔺 Lên **Kim Quang** thêm 300K Xu → AFK vô hạn, sell bonus, `/fix`, particle effect
+> 🔺 Lên **VIP4** thêm 300K Xu → AFK vô hạn, sell bonus, `/fix`, particle effect
 
 ---
 
-## Rank 4: Kim Quang (500K Xu)
+## Rank 4: VIP4 (500K Xu)
 
-| Quyền Lợi | Chi Tiết | So với Huyền Thiên |
+| Quyền Lợi | Chi Tiết | So với VIP3 |
 |-----------|---------|-------------------|
-| Tag chat | `&b[Kim Quang]` | Cyan sáng ✨ |
+| Tag chat | `&b[VIP4]` | Cyan sáng ✨ |
 | Homes | 12 home | +4 home |
 | Tu Vi bonus | +14% Tu Vi | **+4%** |
 | Linh Quặng drop | +10% drop rate | **+3%** |
@@ -110,20 +110,20 @@
 | AFK Tu Tập | **Không giới hạn AFK** | **VÔ HẠN** 🔥 |
 | Pet EXP | +12% Pet EXP | **+4%** |
 | Sell bonus | +8% giá bán NPC | **MỚI** |
-| Kit | `/kit kimquang` — 1 Crate Key thường/ngày | Crate Key! |
+| Kit | `/kit vip4` — 1 Crate Key thường/ngày | Crate Key! |
 | Lệnh | `/fix` (CD 1 giờ), `/craft` | **MỚI** |
 | Dungeon | +6% drop, -15% phí | **+2%** |
 | Đặc biệt | Particle effect khi đi bộ | **MỚI** ✨ |
 
-> 🔺 Lên **Ngọc Hoàng** thêm 500K Xu → Tu Tập bonus, `/fix all`, aura, dungeon CD giảm
+> 🔺 Lên **VIP5** thêm 500K Xu → Tu Tập bonus, `/fix all`, aura, dungeon CD giảm
 
 ---
 
-## Rank 5: Ngọc Hoàng (1M Xu)
+## Rank 5: VIP5 (1M Xu)
 
-| Quyền Lợi | Chi Tiết | So với Kim Quang |
+| Quyền Lợi | Chi Tiết | So với VIP4 |
 |-----------|---------|-----------------|
-| Tag chat | `&3[Ngọc Hoàng]` | Cyan đậm ✨ |
+| Tag chat | `&3[VIP5]` | Cyan đậm ✨ |
 | Homes | 15 home | +3 home |
 | Tu Vi bonus | +18% Tu Vi | **+4%** |
 | Linh Quặng drop | +14% drop rate | **+4%** |
@@ -131,20 +131,20 @@
 | Tu Tập bonus | Khu Linh Mạch +10% Tu Vi/phút | **MỚI** 🔥 |
 | Pet EXP | +16% Pet EXP | **+4%** |
 | Sell bonus | +12% giá bán NPC | **+4%** |
-| Kit | `/kit ngochoang` — 2 Crate Key + 300 LS/ngày | +1 Key, +LS |
+| Kit | `/kit vip5` — 2 Crate Key + 300 LS/ngày | +1 Key, +LS |
 | Lệnh | `/fix all`, `/feed` (no CD) | **UPGRADE** |
 | Dungeon | +9% drop, -20% phí, CD giảm 15% | **+3%**, CD giảm |
 | Đặc biệt | Custom join message, aura effect | **MỚI** ✨ |
 
-> 🔺 Lên **Thiên Mệnh** thêm 1M Xu → `/fly` mọi nơi, Pet Fusion bonus, cường hóa bảo vệ
+> 🔺 Lên **VIP6** thêm 1M Xu → `/fly` mọi nơi, Pet Fusion bonus, cường hóa bảo vệ
 
 ---
 
-## Rank 6: Thiên Mệnh (2M Xu)
+## Rank 6: VIP6 (2M Xu)
 
-| Quyền Lợi | Chi Tiết | So với Ngọc Hoàng |
+| Quyền Lợi | Chi Tiết | So với VIP5 |
 |-----------|---------|------------------|
-| Tag chat | `&d[Thiên Mệnh]` | Hồng ✨ |
+| Tag chat | `&d[VIP6]` | Hồng ✨ |
 | Homes | 20 home | +5 home |
 | Tu Vi bonus | +23% Tu Vi | **+5%** 🔥 |
 | Linh Quặng drop | +18% drop rate | **+4%** |
@@ -153,21 +153,21 @@
 | Pet EXP | +20% Pet EXP | **+4%** |
 | Pet Fusion | +8% tỷ lệ thành công | **MỚI** 🔥 |
 | Sell bonus | +16% giá bán NPC | **+4%** |
-| Kit | `/kit thienmenh` — 3 Crate Key + 800 LS + 1 Tu Vi Đan | Upgrade |
+| Kit | `/kit vip6` — 3 Crate Key + 800 LS + 1 Tu Vi Đan | Upgrade |
 | Lệnh | `/fly` (mọi nơi trừ dungeon), `/pweather`, `/ptime` | **FLY MỌI NƠI** 🔥 |
 | Dungeon | +12% drop, -25% phí | **+3%** |
 | Cường Hóa | -3% tỷ lệ thất bại | **MỚI** |
 | Đặc biệt | Pet hồi sinh: 50s (gốc 60s) | **-10s** |
 
-> 🔺 Lên **Thần Vương** thêm 3M Xu → VIP Linh Mạch, Nhập Thần bonus, wing cosmetic
+> 🔺 Lên **VIP7** thêm 3M Xu → VIP Linh Mạch, Nhập Thần bonus, wing cosmetic
 
 ---
 
-## Rank 7: Thần Vương (5M Xu)
+## Rank 7: VIP7 (5M Xu)
 
-| Quyền Lợi | Chi Tiết | So với Thiên Mệnh |
+| Quyền Lợi | Chi Tiết | So với VIP6 |
 |-----------|---------|------------------|
-| Tag chat | `&5[Thần Vương]` | Tím ✨ |
+| Tag chat | `&5[VIP7]` | Tím ✨ |
 | Homes | 25 home | +5 home |
 | Tu Vi bonus | +28% Tu Vi | **+5%** |
 | Linh Quặng drop | +22% drop rate | **+4%** |
@@ -176,21 +176,21 @@
 | Pet EXP | +25% Pet EXP | **+5%** |
 | Pet Fusion | +12% tỷ lệ fusion | **+4%** |
 | Sell bonus | +20% giá bán NPC | **+4%** |
-| Kit | `/kit thanvuong` — 5 Crate Key + 1,500 LS + 2 Tu Vi Đan | Upgrade |
+| Kit | `/kit vip7` — 5 Crate Key + 1,500 LS + 2 Tu Vi Đan | Upgrade |
 | Dungeon | +15% drop, -30% phí, priority queue | **+3%** |
 | Cường Hóa | -6% tỷ lệ thất bại | **-3%** |
 | Nhập Thần | +8% bonus stats khi nhập thần | **MỚI** 🔥 |
 | Đặc biệt | Custom title color, wing cosmetic | **MỚI** ✨ |
 
-> 🔺 Lên **Cửu Thiên** thêm 5M Xu → thêm Pet Slot, Bảo Hộ Phù free, halo cosmetic
+> 🔺 Lên **VIP8** thêm 5M Xu → thêm Pet Slot, Bảo Hộ Phù free, halo cosmetic
 
 ---
 
-## Rank 8: Cửu Thiên (10M Xu)
+## Rank 8: VIP8 (10M Xu)
 
-| Quyền Lợi | Chi Tiết | So với Thần Vương |
+| Quyền Lợi | Chi Tiết | So với VIP7 |
 |-----------|---------|------------------|
-| Tag chat | `&6[Cửu Thiên]` | Vàng ✨ |
+| Tag chat | `&6[VIP8]` | Vàng ✨ |
 | Homes | 30 home | +5 home |
 | Tu Vi bonus | +34% Tu Vi | **+6%** 🔥 |
 | Linh Quặng drop | +27% drop rate | **+5%** |
@@ -200,21 +200,21 @@
 | Pet Slot | Thêm 1 Pet Slot (tổng 4 base) | **MỚI** 🔥 |
 | Pet Fusion | +16% tỷ lệ fusion | **+4%** |
 | Sell bonus | +25% giá bán NPC | **+5%** |
-| Kit | `/kit cuuthien` — 8 Crate Key + 3,000 LS + 1 Đột Phá Đan nhỏ | **Đột Phá Đan!** |
+| Kit | `/kit vip8` — 8 Crate Key + 3,000 LS + 1 Đột Phá Đan nhỏ | **Đột Phá Đan!** |
 | Dungeon | +19% drop, -35% phí, skip queue | **+4%** |
 | Cường Hóa | -10% thất bại, 1 Bảo Hộ Phù/ngày | **BẢO HỘ FREE** 🔥 |
 | Nhập Thần | +12% bonus stats | **+4%** |
 | Đặc biệt | Halo cosmetic, pet glow effect | **MỚI** ✨ |
 
-> 🔺 Lên **Hồng Hoang** thêm 15M Xu → Skill buff, pet hồi sinh nhanh, 2 Bảo Hộ Phù/ngày
+> 🔺 Lên **VIP9** thêm 15M Xu → Skill buff, pet hồi sinh nhanh, 2 Bảo Hộ Phù/ngày
 
 ---
 
-## Rank 9: Hồng Hoang (25M Xu)
+## Rank 9: VIP9 (25M Xu)
 
-| Quyền Lợi | Chi Tiết | So với Cửu Thiên |
+| Quyền Lợi | Chi Tiết | So với VIP8 |
 |-----------|---------|-----------------|
-| Tag chat | `&c[Hồng Hoang]` | Đỏ ✨ |
+| Tag chat | `&c[VIP9]` | Đỏ ✨ |
 | Homes | 40 home | +10 home |
 | Tu Vi bonus | +42% Tu Vi | **+8%** 🔥 |
 | Linh Quặng drop | +33% drop rate | **+6%** |
@@ -224,22 +224,22 @@
 | Pet Fusion | +20% tỷ lệ fusion | **+4%** |
 | Pet hồi sinh | 35s (gốc 60s) | **-25s** 🔥 |
 | Sell bonus | +30% giá bán NPC | **+5%** |
-| Kit | `/kit honghoang` — 12 Crate Key + 8,000 LS + 2 Đột Phá Đan | **x2 Đan** |
+| Kit | `/kit vip9` — 12 Crate Key + 8,000 LS + 2 Đột Phá Đan | **x2 Đan** |
 | Dungeon | +23% drop, -40% phí, 1 free revive/run | **FREE REVIVE** 🔥 |
 | Cường Hóa | -15% thất bại, 2 Bảo Hộ Phù/ngày | **+1 Phù** |
 | Nhập Thần | +17% bonus stats | **+5%** |
 | Skill | +8% Skill DMG, -8% Skill CD | **MỚI** 🔥 |
 | Đặc biệt | Lightning aura, trail particles | **MỚI** ✨ |
 
-> 🔺 Lên **Vô Cực** thêm 25M Xu → +50% Tu Vi, Dragon aura, exclusive shop, bất bại
+> 🔺 Lên **VIP10** thêm 25M Xu → +50% Tu Vi, Dragon aura, exclusive shop, bất bại
 
 ---
 
-## Rank 10: Vô Cực (50M Xu) — **RANK TỐI THƯỢNG** 👑
+## Rank 10: VIP10 (50M Xu) — **RANK TỐI THƯỢNG** 👑
 
-| Quyền Lợi | Chi Tiết | So với Hồng Hoang |
+| Quyền Lợi | Chi Tiết | So với VIP9 |
 |-----------|---------|------------------|
-| Tag chat | `&4&l[Vô Cực]` (Bold Đỏ Đậm) | **BOLD** 👑 |
+| Tag chat | `&4&l[VIP10]` (Bold Đỏ Đậm) | **BOLD** 👑 |
 | Homes | **Không giới hạn** | **∞** 🔥 |
 | Tu Vi bonus | **+50% Tu Vi** | **+8%** |
 | Linh Quặng drop | **+40% drop rate** | **+7%** |
@@ -249,13 +249,13 @@
 | Pet Fusion | +25% tỷ lệ fusion | **+5%** |
 | Pet hồi sinh | **15s** (gốc 60s) | **-20s** 🔥 |
 | Sell bonus | **+40% giá bán NPC** | **+10%** |
-| Kit | `/kit vocuc` — 20 Crate Key + 15,000 LS + 3 Đột Phá Đan + 1 Rare Key | **RARE KEY** |
+| Kit | `/kit vip10` — 20 Crate Key + 15,000 LS + 3 Đột Phá Đan + 1 Rare Key | **RARE KEY** |
 | Dungeon | **+28% drop, -50% phí**, 2 free revive/run | **+5%**, +1 revive |
 | Cường Hóa | **-20% thất bại**, 3 Bảo Hộ Phù/ngày | **+1 Phù** |
 | Nhập Thần | **+22% bonus stats**, Advanced Infusion | **+5%** |
 | Skill | +12% Skill DMG, -12% Skill CD | **+4%** |
 | Đặc biệt | **Dragon aura**, custom nameplate, join/leave msg | **DRAGON** 🐉 |
-| **Exclusive** | **Vô Cực Shop** — item exclusive chỉ rank 10 | **MỚI** 👑 |
+| **Exclusive** | **VIP10 Shop** — item exclusive chỉ rank 10 | **MỚI** 👑 |
 
 ---
 
@@ -265,17 +265,17 @@
 
 | Rank | Giá | Chênh Lệch | Tu Vi | Quặng | Dungeon | Tính Năng Mới Hot |
 |------|-----|-----------|-------|-------|---------|-------------------|
-| 0. Phàm Nhân | 0 | — | 0% | 0% | 0% | ❌ Không có gì |
-| 1. Thanh Vân | 50K | 50K | +3% | +2% | 0% | Tag, 3 home, kit |
-| 2. Tử Hà | 100K | +50K | +6% | +4% | +2% | `/back`, `/enderchest` |
-| 3. Huyền Thiên | 200K | +100K | +10% | +7% | +4% | **`/fly` đảo** 🔥 |
-| 4. Kim Quang | 500K | +300K | +14% | +10% | +6% | **AFK vô hạn**, `/fix` |
-| 5. Ngọc Hoàng | 1M | +500K | +18% | +14% | +9% | Tu Tập bonus, aura |
-| 6. Thiên Mệnh | 2M | +1M | +23% | +18% | +12% | **`/fly` mọi nơi** 🔥 |
-| 7. Thần Vương | 5M | +3M | +28% | +22% | +15% | **VIP Linh Mạch**, Nhập Thần |
-| 8. Cửu Thiên | 10M | +5M | +34% | +27% | +19% | **+1 Pet Slot**, Bảo Hộ Phù |
-| 9. Hồng Hoang | 25M | +15M | +42% | +33% | +23% | **Free revive**, Skill buff |
-| 10. Vô Cực | 50M | +25M | **+50%** | **+40%** | **+28%** | **Dragon aura**, Exclusive Shop 👑 |
+| VIP0 | 0 | — | 0% | 0% | 0% | ❌ Không có gì |
+| VIP1 | 50K | 50K | +3% | +2% | 0% | Tag, 3 home, kit |
+| VIP2 | 100K | +50K | +6% | +4% | +2% | `/back`, `/enderchest` |
+| VIP3 | 200K | +100K | +10% | +7% | +4% | **`/fly` đảo** 🔥 |
+| VIP4 | 500K | +300K | +14% | +10% | +6% | **AFK vô hạn**, `/fix` |
+| VIP5 | 1M | +500K | +18% | +14% | +9% | Tu Tập bonus, aura |
+| VIP6 | 2M | +1M | +23% | +18% | +12% | **`/fly` mọi nơi** 🔥 |
+| VIP7 | 5M | +3M | +28% | +22% | +15% | **VIP Linh Mạch**, Nhập Thần |
+| VIP8 | 10M | +5M | +34% | +27% | +19% | **+1 Pet Slot**, Bảo Hộ Phù |
+| VIP9 | 25M | +15M | +42% | +33% | +23% | **Free revive**, Skill buff |
+| VIP10 | 50M | +25M | **+50%** | **+40%** | **+28%** | **Dragon aura**, Exclusive Shop 👑 |
 
 ---
 
@@ -286,18 +286,18 @@
 
 | Pain Point | Rank Giải Quyết | Người Chơi Nghĩ |
 |-----------|----------------|-----------------|
-| Bị kick AFK | Rank 1 (30 phút) → Rank 4 (vô hạn) | "50K Xu thôi mà, AFK thoải mái" |
-| Không fly được | Rank 3 (fly đảo) → Rank 6 (fly mọi nơi) | "Thêm chút nữa là fly thoải mái" |
+| Bị kick AFK | VIP1 (30 phút) → VIP4 (vô hạn) | "50K Xu thôi mà, AFK thoải mái" |
+| Không fly được | VIP3 (fly đảo) → VIP6 (fly mọi nơi) | "Thêm chút nữa là fly thoải mái" |
 | Drop rate thấp | Mỗi rank +2-4% | "Thêm 3% nữa là farm nhanh hơn nhiều" |
-| Cường hóa thất bại | Rank 6 bắt đầu giảm | "Rank cao hơn = ít mất đồ hơn" |
-| Pet chết lâu hồi sinh | Rank 6 (50s) → Rank 10 (15s) | "Rank cao pet gần như bất tử" |
-| Dungeon khó | Free revive từ Rank 9 | "Có revive = clear được boss khó" |
+| Cường hóa thất bại | VIP6 bắt đầu giảm | "Rank cao hơn = ít mất đồ hơn" |
+| Pet chết lâu hồi sinh | VIP6 (50s) → VIP10 (15s) | "Rank cao pet gần như bất tử" |
+| Dungeon khó | Free revive từ VIP9 | "Có revive = clear được boss khó" |
 
 ---
 
 ## Ghi Chú
 
 > **Rank mua vĩnh viễn**, không hết hạn
-> Mua rank cao hơn: chỉ trả **phần chênh lệch** (VD: Rank 3 → Rank 4 = 500K - 200K = **300K Xu**)
+> Mua rank cao hơn: chỉ trả **phần chênh lệch** (VD: VIP3 → VIP4 = 500K - 200K = **300K Xu**)
 > Xu kiếm từ: `/naptien`, Quest, PVP, Vote, Event
 > Tất cả bonus **cộng dồn** với buff từ Cảnh Giới và Dungeon

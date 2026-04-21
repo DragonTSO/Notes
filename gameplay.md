@@ -117,8 +117,56 @@ Hệ thống tu luyện gồm **19 Đại Cảnh Giới**, chia thành **3 Đạ
 | 18 | **Đạo Tổ** (Dao Ancestor) | 50,000,000,000 | 600,000,000 | Đạo Cảnh | Toàn bộ skill max |
 | 19 | **Hồng Mông** (Primordial Chaos) | 100,000,000,000 | 1,000,000,000 | Tất cả | Danh hiệu tối thượng |
 
-> **Tầng nhỏ** (Sơ Kỳ → Viên Mãn) là các mốc Tu Vi trung gian trong mỗi cảnh giới.
-> Ví dụ: Luyện Khí cần 5K Tu Vi → Sơ Kỳ (5K), Trung Kỳ (8K), Hậu Kỳ (12K), Đỉnh Phong (18K), Viên Mãn (23K) → Đủ 25K = sẵn sàng đột phá Trúc Cơ.
+#### Hệ Thống Tầng Nhỏ (5 Bậc Mỗi Cảnh Giới)
+
+> [!IMPORTANT]
+> Mỗi Đại Cảnh Giới có **5 tầng nhỏ**: **Sơ Kỳ → Trung Kỳ → Hậu Kỳ → Đỉnh Phong → Viên Mãn**.
+> Tầng nhỏ là các **mốc Tu Vi trung gian** trong khoảng Tu Vi của cảnh giới đó.
+> Khi đạt **Viên Mãn** và tích đủ Tu Vi cảnh giới tiếp → sẵn sàng **Đột Phá** lên Đại Cảnh Giới mới.
+>
+> **Ví dụ:** Luyện Khí bắt đầu ở 5K Tu Vi → Sơ Kỳ (5K), Trung Kỳ (8K), Hậu Kỳ (12K), Đỉnh Phong (18K), Viên Mãn (23K) → Đủ 25K = đột phá Trúc Cơ.
+
+##### 🟢 PHÀM GIỚI — Tầng Nhỏ Chi Tiết
+
+| # | Cảnh Giới | Sơ Kỳ | Trung Kỳ | Hậu Kỳ | Đỉnh Phong | Viên Mãn | Đột Phá → |
+|---|-----------|--------|----------|---------|------------|----------|-----------|
+| 1 | **Phàm Nhân** | 0 | 500 | 1,200 | 2,500 | 4,000 | 5,000 → Luyện Khí |
+| 2 | **Luyện Khí** | 5,000 | 8,000 | 12,000 | 18,000 | 23,000 | 25,000 → Trúc Cơ |
+| 3 | **Trúc Cơ** | 25,000 | 35,000 | 50,000 | 75,000 | 92,000 | 100,000 → Kim Đan |
+| 4 | **Kim Đan** | 100,000 | 135,000 | 185,000 | 260,000 | 325,000 | 350,000 → Nguyên Anh |
+| 5 | **Nguyên Anh** | 350,000 | 450,000 | 580,000 | 780,000 | 930,000 | 1,000,000 → Hóa Thần |
+| 6 | **Hóa Thần** | 1,000,000 | 1,300,000 | 1,700,000 | 2,300,000 | 2,800,000 | 3,000,000 → Luyện Hư |
+| 7 | **Luyện Hư** | 3,000,000 | 3,800,000 | 4,800,000 | 6,200,000 | 7,500,000 | 8,000,000 → Đại Thừa |
+
+##### 🔵 TIÊN GIỚI — Tầng Nhỏ Chi Tiết
+
+| # | Cảnh Giới | Sơ Kỳ | Trung Kỳ | Hậu Kỳ | Đỉnh Phong | Viên Mãn | Đột Phá → |
+|---|-----------|--------|----------|---------|------------|----------|-----------|
+| 8 | **Đại Thừa** | 8,000,000 | 10,000,000 | 13,000,000 | 16,500,000 | 19,000,000 | 20,000,000 → Độ Kiếp |
+| 9 | **Độ Kiếp** | 20,000,000 | 25,000,000 | 32,000,000 | 40,000,000 | 47,000,000 | 50,000,000 → Tiên Nhân |
+| 10 | **Tiên Nhân** | 50,000,000 | 62,000,000 | 78,000,000 | 100,000,000 | 115,000,000 | 120,000,000 → Thiên Tiên |
+| 11 | **Thiên Tiên** | 120,000,000 | 150,000,000 | 190,000,000 | 245,000,000 | 285,000,000 | 300,000,000 → Kim Tiên |
+| 12 | **Kim Tiên** | 300,000,000 | 370,000,000 | 460,000,000 | 570,000,000 | 660,000,000 | 700,000,000 → Thái Ất |
+| 13 | **Thái Ất** | 700,000,000 | 840,000,000 | 1,000,000,000 | 1,250,000,000 | 1,430,000,000 | 1,500,000,000 → Đại La |
+
+##### 🟣 THẦN GIỚI — Tầng Nhỏ Chi Tiết
+
+| # | Cảnh Giới | Sơ Kỳ | Trung Kỳ | Hậu Kỳ | Đỉnh Phong | Viên Mãn | Đột Phá → |
+|---|-----------|--------|----------|---------|------------|----------|-----------|
+| 14 | **Đại La** | 1,500,000,000 | 1,850,000,000 | 2,300,000,000 | 2,900,000,000 | 3,350,000,000 | 3,500,000,000 → Chuẩn Thánh |
+| 15 | **Chuẩn Thánh** | 3,500,000,000 | 4,300,000,000 | 5,400,000,000 | 6,700,000,000 | 7,600,000,000 | 8,000,000,000 → Thánh Nhân |
+| 16 | **Thánh Nhân** | 8,000,000,000 | 10,000,000,000 | 13,000,000,000 | 16,500,000,000 | 19,000,000,000 | 20,000,000,000 → Thiên Đế |
+| 17 | **Thiên Đế** | 20,000,000,000 | 25,000,000,000 | 32,000,000,000 | 42,000,000,000 | 48,000,000,000 | 50,000,000,000 → Đạo Tổ |
+| 18 | **Đạo Tổ** | 50,000,000,000 | 60,000,000,000 | 72,000,000,000 | 88,000,000,000 | 96,000,000,000 | 100,000,000,000 → Hồng Mông |
+| 19 | **Hồng Mông** | 100,000,000,000 | 130,000,000,000 | 180,000,000,000 | 280,000,000,000 | 450,000,000,000 | ∞ (Cực Đỉnh) |
+
+> [!NOTE]
+> **Quy luật tầng nhỏ:**
+> - Khoảng cách Tu Vi giữa các tầng **tăng dần** (Sơ Kỳ → Trung Kỳ dễ, Đỉnh Phong → Viên Mãn khó nhất)
+> - Tầng nhỏ **ảnh hưởng đến yêu cầu Dungeon** — một số Dungeon yêu cầu cảnh giới + tầng nhỏ cụ thể (VD: Dungeon T2 cần Luyện Khí **Hậu Kỳ**)
+> - Mỗi lần lên tầng nhỏ → hiệu ứng **"Đột Phá Tiểu Cảnh Giới"** (animation nhẹ + thông báo chat)
+> - Tầng nhỏ hiển thị trên thanh thông tin: `[Luyện Khí — Đỉnh Phong]`
+> - **Hồng Mông** (CG 19) không có đột phá tiếp — các tầng nhỏ mở rộng vô hạn để endgame player tiếp tục cày
 
 ### 2.2 Hệ Thống Class (Nghề Tu Luyện)
 
@@ -283,36 +331,143 @@ Level tăng **tự động** song song khi cày Tu Vi (cứ X Tu Vi = +1 Level).
 - Đóng góp vào Thực Lực (Level × 5)
 - **KHÔNG** quyết định cảnh giới — chỉ Tu Vi mới quyết định
 
-### 2.3 Đột Phá Cảnh Giới (Breakthrough)
+### 2.3 Đột Phá Cảnh Giới (Breakthrough) — Thiên Lôi Kiếp ⚡
 
-Khi Tu Vi đạt mốc yêu cầu, người chơi có thể **đột phá** lên cảnh giới mới:
+Khi đủ điều kiện, người chơi kích hoạt đột phá → trời giáng **Thiên Lôi Kiếp** (sét) xuống người chơi. Sống sót qua Kiếp Lôi = đột phá thành công!
 
-> **Điều kiện đột phá:**
-> 1. ✅ Tích đủ **Tu Vi** yêu cầu (thanh Tu Vi đầy)
+#### 2.3.1 Đột Phá Đại Cảnh Giới (Lên cảnh giới mới)
+
+> **Điều kiện đột phá Đại Cảnh Giới:**
+> 1. ✅ Tích đủ **Tu Vi** yêu cầu (đạt mốc Viên Mãn + đủ Tu Vi cảnh giới tiếp)
 > 2. ✅ Đạt **Thực Lực** tối thiểu
 > 3. ✅ Thu thập **Đột Phá Đan** (vật phẩm drop từ Dungeon hoặc craft)
-> 4. ✅ Đánh bại **Boss Thiên Kiếp** (solo boss instance)
+> 4. ✅ Vượt qua **Thiên Lôi Kiếp** (số tia sét tăng theo cảnh giới)
+
+**⚡ Cơ chế Thiên Lôi Kiếp (Đại Cảnh Giới):**
 
 ```
-   TU VI ████████████████████░░░░  85% → Chưa đủ đột phá
+┌─────────────────────────────────────────────────────────────┐
+│                ⚡ THIÊN LÔI KIẾP ⚡                          │
+│                                                             │
+│   Kích hoạt đột phá → Trời tối, sấm rền                   │
+│   → Tia sét lần lượt giáng xuống người chơi                │
+│   → Số tia sét & DMG tăng theo cảnh giới cao hơn           │
+│   → Giữa mỗi tia sét: 2-3 giây nghỉ                       │
+│                                                             │
+│   Phàm Giới:  ⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡ (10 tia, nhẹ)                │
+│   Tiên Giới:  ⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡ (18 tia, mạnh)    │
+│   Thần Giới:  ⚡⚡⚡⚡⚡⚡⚡...⚡⚡⚡⚡⚡⚡⚡ (36 tia, hủy diệt!) │
+│                                                             │
+│   ✅ Sống sót hết tia sét → Đột phá THÀNH CÔNG             │
+│   💀 Chết giữa chừng     → Đột phá THẤT BẠI               │
+│                                                             │
+│   ⚠️ Có TỈ LỆ THÀNH CÔNG — nếu fail roll                  │
+│      → tia sét gây x2 DMG → gần như chắc chắn chết         │
+└─────────────────────────────────────────────────────────────┘
+```
+
+**Thiên Lôi Kiếp chi tiết từng Cảnh Giới:**
+
+| # | Đột Phá Lên | Số Tia Sét | DMG / Tia | Tổng DMG (Roll OK) | DMG Fail Roll (x2) | Tỉ Lệ |
+|---|-------------|-----------|-----------|--------------------|--------------------|--------|
+| 2 | **Luyện Khí** | 10 tia | 3 ❤ | 30 ❤ | 60 ❤ | 95% |
+| 3 | **Trúc Cơ** | 10 tia | 3 ❤ | 30 ❤ | 60 ❤ | 95% |
+| 4 | **Kim Đan** | 12 tia | 3 ❤ | 36 ❤ | 72 ❤ | 90% |
+| 5 | **Nguyên Anh** | 12 tia | 3.5 ❤ | 42 ❤ | 84 ❤ | 85% |
+| 6 | **Hóa Thần** | 14 tia | 4 ❤ | 56 ❤ | 112 ❤ | 80% |
+| 7 | **Luyện Hư** | 14 tia | 4 ❤ | 56 ❤ | 112 ❤ | 75% |
+| 8 | **Đại Thừa** | 18 tia | 4.5 ❤ | 81 ❤ | 162 ❤ | 70% |
+| 9 | **Độ Kiếp** | 18 tia | 5 ❤ | 90 ❤ | 180 ❤ | 65% |
+| 10 | **Tiên Nhân** | 21 tia | 5 ❤ | 105 ❤ | 210 ❤ | 60% |
+| 11 | **Thiên Tiên** | 21 tia | 5.5 ❤ | 115.5 ❤ | 231 ❤ | 55% |
+| 12 | **Kim Tiên** | 24 tia | 6 ❤ | 144 ❤ | 288 ❤ | 50% |
+| 13 | **Thái Ất** | 24 tia | 6 ❤ | 144 ❤ | 288 ❤ | 45% |
+| 14 | **Đại La** | 27 tia | 6.5 ❤ | 175.5 ❤ | 351 ❤ | 40% |
+| 15 | **Chuẩn Thánh** | 27 tia | 7 ❤ | 189 ❤ | 378 ❤ | 35% |
+| 16 | **Thánh Nhân** | 30 tia | 7 ❤ | 210 ❤ | 420 ❤ | 30% |
+| 17 | **Thiên Đế** | 30 tia | 7.5 ❤ | 225 ❤ | 450 ❤ | 28% |
+| 18 | **Đạo Tổ** | 33 tia | 8 ❤ | 264 ❤ | 528 ❤ | 25% |
+| 19 | **Hồng Mông** | 36 tia | 8 ❤ | 288 ❤ | 576 ❤ | 20% |
+
+> [!IMPORTANT]
+> **Cách hoạt động tỉ lệ:**
+> - Khi kích hoạt đột phá, hệ thống **roll tỉ lệ** ngay lập tức
+> - **Roll thành công** → tia sét gây DMG bình thường (cột "DMG / Tia") → chuẩn bị gear tốt là sống
+> - **Roll thất bại** → tia sét gây **x2 DMG** → tổng DMG khổng lồ → gần như chắc chắn chết
+> - Người chơi **KHÔNG biết** roll thành công hay thất bại → phải buff, potion, gear DEF để đề phòng
+> - **Cảnh giới càng cao → cần max HP & DEF càng lớn** mới chịu nổi Kiếp Lôi dù roll thành công
+> - Ví dụ: Đột phá Hồng Mông cần sống sót **288 ❤ tổng DMG** (36 tia × 8 ❤) → cần hàng trăm HP + giáp Thần Phẩm!
+
+**Hiệu ứng Thiên Lôi Kiếp:**
+- Trời chuyển tối (thời tiết thunder) trong bán kính 50 block
+- Sét đánh có particle effect đặc biệt (sét màu tím/vàng tùy đại giới)
+- Sound effect tiếng sấm rền
+- Người chơi xung quanh thấy được sét → tạo **event cộng đồng**
+- Broadcast chat: `⚡ [Tên] đang vượt Thiên Lôi Kiếp để đột phá [Cảnh Giới]!`
+- Thành công: `✨ [Tên] đã vượt Kiếp Lôi, đột phá thành công [Cảnh Giới]!`
+- Thất bại: `💀 [Tên] không chống nổi Thiên Lôi, đột phá thất bại...`
+
+```
    TU VI █████████████████████████ 100% → ✅ Sẵn sàng đột phá!
    
-   Điều kiện khác:
+   Điều kiện:
    ✅ Thực Lực: 8,500 / 8,000 (đủ)
    ✅ Đột Phá Đan: 3/3 (đủ)
-   ⬜ Boss Thiên Kiếp: Chưa đánh → [VÀO BOSS]
+   ✅ Tu Vi: Viên Mãn (đủ)
+   
+   ⚡ [BẮT ĐẦU THIÊN LÔI KIẾP] ⚡
+   → Chuẩn bị: Uống potion, mang gear tốt, buff HP!
 ```
 
-**Boss Thiên Kiếp** scale theo cảnh giới, sử dụng MythicMobs:
-- Phàm Nhân → Luyện Khí (5K Tu Vi): Boss `ThienKiep_LuyenKhi` (HP: 500, DMG: 10)
-- Kim Đan → Nguyên Anh (350K Tu Vi): Boss `ThienKiep_NguyenAnh` (HP: 50,000, DMG: 200)
-- Đại Thừa → Tiên Nhân (50M Tu Vi): Boss `ThienKiep_TienNhan` (HP: 5,000,000, DMG: 2,000)
+#### 2.3.2 Đột Phá Tầng Nhỏ (Tiểu Cảnh Giới)
 
-**Thất bại khi đột phá:**
-- Mất 50% Đột Phá Đan đã sử dụng
-- Cooldown 1 giờ trước khi thử lại
-- **KHÔNG** mất Tu Vi hoặc trang bị
-- Tu Vi vẫn giữ nguyên, chỉ cần thu thập lại Đan và thử lại Boss
+Khi Tu Vi đạt mốc tầng nhỏ tiếp theo (VD: Sơ Kỳ → Trung Kỳ), người chơi tự động hoặc kích hoạt đột phá tầng nhỏ:
+
+**⚡ Cơ chế Tiểu Lôi Kiếp (Tầng Nhỏ):**
+
+| Tầng Nhỏ | Số Tia Sét | DMG / Tia | Tổng DMG | Tỉ Lệ Thành Công |
+|----------|-----------|-----------|----------|-------------------|
+| Sơ Kỳ → Trung Kỳ | 3 tia | 1 ❤ (2 HP) | 3 ❤ | **100%** |
+| Trung Kỳ → Hậu Kỳ | 3 tia | 1.5 ❤ (3 HP) | 4.5 ❤ | **100%** |
+| Hậu Kỳ → Đỉnh Phong | 4 tia | 1.5 ❤ (3 HP) | 6 ❤ | **100%** |
+| Đỉnh Phong → Viên Mãn | 5 tia | 2 ❤ (4 HP) | 10 ❤ | **100%** |
+
+> [!NOTE]
+> **Đột phá tầng nhỏ luôn 100% thành công** — chỉ cần không chết là được.
+> Với HP mặc định 20 (10 ❤), hầu hết người chơi sẽ sống dễ dàng.
+> Đây là **trải nghiệm thị giác** hơn là thử thách thực sự — tạo cảm giác "tu luyện" mỗi lần lên tầng.
+
+**So sánh Đại Cảnh Giới vs Tầng Nhỏ:**
+
+| | Đại Cảnh Giới | Tầng Nhỏ |
+|---|---------------|----------|
+| **Số tia sét** | 10 tia | 3-5 tia |
+| **DMG / tia** | 3 ❤ (hoặc 6 ❤ nếu fail roll) | 1-2 ❤ |
+| **Tỉ lệ thành công** | 25% - 95% (tùy CG) | **100%** |
+| **Có thể chết?** | ✅ Rất có thể | ❌ Gần như không |
+| **Broadcast chat** | ✅ Toàn server | 💬 Chỉ gần 30 block |
+| **Yêu cầu Đột Phá Đan** | ✅ Cần | ❌ Không cần |
+| **Cooldown thất bại** | 1 giờ | Không có |
+| **Hiệu ứng** | Trời tối, sấm lớn | Sét nhẹ, particle nhỏ |
+
+#### 2.3.3 Thất Bại Đột Phá Đại Cảnh Giới
+
+Khi **chết** trong Thiên Lôi Kiếp (Đại Cảnh Giới):
+- 💀 Người chơi **hồi sinh** tại spawn point
+- Mất **50% Đột Phá Đan** đã sử dụng
+- Cooldown **1 giờ** trước khi thử lại
+- **KHÔNG** mất Tu Vi — Tu Vi vẫn giữ nguyên
+- **KHÔNG** mất trang bị hay Linh Thạch
+- Tu Vi vẫn ở mốc Viên Mãn, chỉ cần thu thập lại Đan và thử lại
+
+> [!TIP]
+> **Chiến thuật vượt Thiên Lôi Kiếp:**
+> - 🧪 Uống **Hồi Phục Đan** (heal pot) trước khi bắt đầu → tăng max HP
+> - 🛡️ Mặc **giáp DEF cao** → giảm DMG từ sét
+> - 💚 Mang **Pet Y Tu** → tự heal giữa các tia sét
+> - 🔮 Sử dụng **Hộ Thể Phù** (talisman) → chặn 1-2 tia sét
+> - 💎 VIP có **Thiên Lôi Hộ Phù** → giảm 20% DMG sét (shop VIP)
+> - 👥 **Không thể nhờ người khác heal** — đây là solo tribulation!
 
 ### 2.4 Hệ Thống Thực Lực (戰力 — Combat Power)
 

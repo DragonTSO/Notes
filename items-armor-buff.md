@@ -2,6 +2,18 @@
 
 > Mỗi tier có **nhiều biến thể** theo hướng chơi
 
+### ⭐ Hệ Thống Sao & Level
+
+| Tier | ★ Sao | Lv YC (MMOCore) | CG YC |
+|------|-------|-----------------|-------|
+| ⬜ Phàm Phẩm | ★☆☆☆☆☆ | Lv 1-20 | Phàm Nhân |
+| 🟢 Hạ Phẩm | ★★☆☆☆☆ | Lv 21-60 | Luyện Khí |
+| 🔵 Trung Phẩm | ★★★☆☆☆ | Lv 61-150 | Trúc Cơ |
+| 🟣 Thượng Phẩm | ★★★★☆☆ | Lv 151-280 | Kim Đan |
+| 🟡 Cực Phẩm | ★★★★★☆ | Lv 281-400 | Nguyên Anh |
+| 🔴 Tiên Phẩm | ★★★★★★ | Lv 401-550 | Hóa Thần |
+| 🌈 Thần Phẩm | ★★★★★★+ | Lv 551+ | Đại Thừa+ |
+
 ---
 
 ## 1. ARMOR (Giáp) — Set 4 mảnh

@@ -2,6 +2,20 @@
 
 > Mỗi tier có **nhiều biến thể** theo hướng chơi: 🔴Crit, 🟢Lifesteal, 🔵AoE, 🟡Speed, 🟣Tank
 
+### ⭐ Hệ Thống Sao & Level
+
+| Tier | ★ Sao | Lv YC (MMOCore) | CG YC |
+|------|-------|-----------------|-------|
+| ⬜ Phàm Phẩm | ★☆☆☆☆☆ | Lv 1-20 | Phàm Nhân |
+| 🟢 Hạ Phẩm | ★★☆☆☆☆ | Lv 21-60 | Luyện Khí |
+| 🔵 Trung Phẩm | ★★★☆☆☆ | Lv 61-150 | Trúc Cơ |
+| 🟣 Thượng Phẩm | ★★★★☆☆ | Lv 151-280 | Kim Đan |
+| 🟡 Cực Phẩm | ★★★★★☆ | Lv 281-400 | Nguyên Anh |
+| 🔴 Tiên Phẩm | ★★★★★★ | Lv 401-550 | Hóa Thần |
+| 🌈 Thần Phẩm | ★★★★★★+ | Lv 551+ | Đại Thừa+ |
+
+> Mỗi item hiển thị **★ Sao** trong lore. Cùng tier có thể có item ★ cao hơn (Boss drop, Bí Cảnh).
+
 ---
 
 ## 1. Kiếm (Sword) — Class: Kiếm Tôn

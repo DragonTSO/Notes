@@ -102,29 +102,30 @@
 ### Mob Thường
 | Mob | HP | DMG | Skill | Số lượng |
 |-----|-----|-----|-------|---------|
-| Băng Tinh Linh | 800 | 50 | Đóng Băng (freeze 2s) | 12-15 |
-| Tuyết Nhân | 1,200 | 60 | Ném Tuyết (ranged slow 60% 3s), Giáp Băng (+30% DEF) | 6-10 |
-| Băng Lang | 700 | 55 | Hú Băng (AoE slow), Nanh Băng (2x DMG + freeze 1s) | 8-12 |
-| Hàn Quỷ | 900 | 45 | Hàn Khí (aura -20% ATK SPD gần 4 block) | 6-8 |
+| Băng Tinh Linh | 1,800 | 95 | Đóng Băng (freeze 2.5s), Băng Châm (ranged 80 DMG) | 15-20 |
+| Tuyết Nhân | 2,800 | 120 | Ném Tuyết (ranged slow 70% 4s), Giáp Băng (+40% DEF), Tuyết Lở (AoE 5 block 150 DMG) | 8-12 |
+| Băng Lang | 1,600 | 110 | Hú Băng (AoE slow 60%), Nanh Băng (2.5x DMG + freeze 2s), Bầy Đàn (+15% ATK mỗi Băng Lang gần) | 10-15 |
+| Hàn Quỷ | 2,200 | 100 | Hàn Khí (aura -30% ATK SPD gần 5 block), Hàn Băng Thuẫn (shield 400 HP khi dưới 50% HP) | 8-10 |
 
 ### Elite Mob
 | Mob | HP | DMG | Skill |
 |-----|-----|-----|-------|
-| Băng Giáp Tướng | 5,000 | 100 | Băng Phong Bão (AoE 8 block, freeze 3s + 150 DMG), Băng Giáp (shield 800 HP) |
+| Băng Giáp Tướng | 12,000 | 200 | Băng Phong Bão (AoE 10 block, freeze 3s + 300 DMG), Băng Giáp (shield 2,000 HP + phản 10% DMG), Băng Trụ Trận (summon 3 trụ băng chặn đường) |
 
 ### 👑 Boss: Băng Long
 | Stat | Giá Trị |
 |------|---------|
-| HP | 25,000 |
-| DMG | 140 |
-| DEF | 50 |
-| Speed | 1.5 |
+| HP | 80,000 |
+| DMG | 280 |
+| DEF | 80 |
+| Speed | 1.6 |
 
 **Skills:**
-1. **Long Tức** — Cone 12 block, 250 DMG + freeze 3s (CD 15s)
-2. **Băng Trụ** — Summon 4 trụ băng AoE, mỗi trụ 100 DMG/s (CD 20s)
-3. **Hàn Băng Giáp** — Shield 3,000 HP + phản 15% DMG 8s (CD 30s)
-4. **Tuyệt Đối Không Độ** *(Phase 2 - dưới 30% HP)* — Toàn map freeze 2s, 300 DMG AoE, +40% ATK SPD
+1. **Long Tức Băng Hà** — Cone 15 block, 500 DMG + freeze 3s + slow 50% thêm 5s (CD 12s)
+2. **Băng Trụ Trận** — Summon 6 trụ băng AoE, mỗi trụ 180 DMG/s, chặn di chuyển (CD 18s)
+3. **Hàn Băng Giáp** — Shield 8,000 HP + phản 20% DMG 10s + heal 3% HP/s (CD 25s)
+4. **Tuyệt Đối Không Độ** *(Phase 2 - dưới 30% HP)* — Toàn map freeze 3s, 600 DMG AoE, +50% ATK SPD, tất cả mob còn sống được +30% ATK
+5. **Băng Hà Kỷ Nguyên** *(Phase 3 - dưới 10% HP)* — Liên tục AoE freeze 1s mỗi 3s, Long Tức CD giảm 50%
 
 ---
 
@@ -134,29 +135,30 @@
 ### Mob Thường
 | Mob | HP | DMG | Skill | Số lượng |
 |-----|-----|-----|-------|---------|
-| Huyết Tộc Lính | 1,200 | 70 | Hút Máu (heal 30% DMG dealt) | 15-20 |
-| Huyết Bức | 1,800 | 85 | Huyết Trảm (3 combo), Huyết Giáp (+25% DEF) | 6-10 |
-| Huyết Pháp Sư | 1,000 | 60 | Huyết Cầu (ranged 120 DMG), Huyết Thuẫn (shield ally 500 HP) | 4-6 |
-| Huyết Dơi | 600 | 50 | Bay + Bổ Nhào (dash 8 block), Siêu Âm (confusion 3s) | 10-15 |
+| Huyết Tộc Lính | 3,000 | 140 | Hút Máu (heal 40% DMG dealt), Huyết Cuồng (+20% ATK khi ally chết) | 18-25 |
+| Huyết Bức | 4,500 | 170 | Huyết Trảm (5 combo 100 DMG mỗi), Huyết Giáp (+35% DEF), Huyết Nộ (berserk dưới 40% HP: +60% ATK) | 8-12 |
+| Huyết Pháp Sư | 2,500 | 120 | Huyết Cầu (ranged 250 DMG), Huyết Thuẫn (shield ally 1,200 HP), Huyết Hồi (heal ally 300 HP/s 3s) | 5-8 |
+| Huyết Dơi | 1,500 | 100 | Bay + Bổ Nhào (dash 10 block, 200 DMG), Siêu Âm (confusion 4s + blind 2s) | 12-18 |
 
 ### Elite Mob
 | Mob | HP | DMG | Skill |
 |-----|-----|-----|-------|
-| Huyết Tộc Công Tước | 8,000 | 130 | Huyết Vũ (AoE rain 8s), Huyết Phệ (grab + drain 200 HP/s 3s), Triệu Hồi 4 Huyết Dơi |
+| Huyết Tộc Công Tước | 20,000 | 260 | Huyết Vũ (AoE rain 10s, 100 DMG/s), Huyết Phệ (grab + drain 400 HP/s 3s), Triệu Hồi 6 Huyết Dơi, Bất Tử (hồi sinh 1 lần với 30% HP) |
 
 ### 👑 Boss: Huyết Tộc Chúa
 | Stat | Giá Trị |
 |------|---------|
-| HP | 50,000 |
-| DMG | 180 |
-| DEF | 65 |
-| Speed | 1.6 |
+| HP | 120,000 |
+| DMG | 350 |
+| DEF | 100 |
+| Speed | 1.8 |
 
 **Skills:**
-1. **Huyết Nguyệt** — Chuyển trời đỏ, toàn mob +30% ATK 15s (CD 40s)
-2. **Huyết Toàn** — AoE 10 block, 300 DMG + heal bản thân 5% max HP (CD 15s)
-3. **Bóng Tối Bao Phủ** — Darkness toàn dungeon 5s + summon 6 Huyết Tộc Lính (CD 30s)
-4. **Vĩnh Cửu Huyết Tộc** *(Phase 2 - dưới 35% HP)* — Hút máu mọi đòn (heal 50% DMG dealt), +30% SPD, immune knockback
+1. **Huyết Nguyệt** — Chuyển trời đỏ, toàn mob +50% ATK 15s + heal toàn mob 20% HP (CD 35s)
+2. **Huyết Toàn** — AoE 12 block, 600 DMG + heal bản thân 8% max HP + lifesteal 50% (CD 12s)
+3. **Bóng Tối Bao Phủ** — Darkness toàn dungeon 6s + summon 8 Huyết Tộc Lính + blind toàn party 3s (CD 28s)
+4. **Huyết Tế** — Hy sinh 50% mob còn sống → heal boss 15% HP mỗi mob (CD 45s, dùng 1 lần)
+5. **Vĩnh Cửu Huyết Tộc** *(Phase 2 - dưới 30% HP)* — Hút máu mọi đòn (heal 60% DMG dealt), +50% SPD, immune knockback + CC, Huyết Toàn CD giảm 50%
 
 ---
 
@@ -166,29 +168,31 @@
 ### Mob Thường
 | Mob | HP | DMG | Skill | Số lượng |
 |-----|-----|-----|-------|---------|
-| Lôi Linh | 1,800 | 90 | Phóng Điện (chain 3 target, 60 DMG mỗi) | 12-15 |
-| Lôi Ưng | 1,500 | 100 | Bay + Bổ Nhào Sét (dash + stun 1.5s) | 6-10 |
-| Lôi Nguyên Tố | 2,500 | 80 | Lôi Cầu (AoE 4 block, 150 DMG), Phân Thân (split thành 2 khi chết, 50% HP) | 4-6 |
-| Điện Quang Thú | 2,000 | 110 | Sét Đánh (random target, 200 DMG) | 6-8 |
+| Lôi Linh | 4,500 | 180 | Phóng Điện (chain 5 target, 120 DMG mỗi), Lôi Cầu Tự Dẫn (homing 200 DMG) | 15-18 |
+| Lôi Ưng | 3,800 | 200 | Bay + Bổ Nhào Sét (dash + stun 2s + 250 DMG), Sét Lông (ranged AoE 3 block) | 8-12 |
+| Lôi Nguyên Tố | 6,000 | 160 | Lôi Cầu (AoE 6 block, 300 DMG), Phân Thân (split thành 3 khi chết, 40% HP mỗi), Lôi Thuẫn (shield 1,000 HP) | 5-8 |
+| Điện Quang Thú | 5,000 | 220 | Sét Đánh (random target, 400 DMG + stun 1s), Tĩnh Điện (aura 100 DMG/s gần 3 block) | 6-10 |
 
 ### Elite Mob
 | Mob | HP | DMG | Skill |
 |-----|-----|-----|-------|
-| Lôi Đế Tướng | 12,000 | 160 | Vạn Lôi Quy Tông (AoE 12 block, 300 DMG + stun 2s), Lôi Giáp (immune CC 10s) |
+| Lôi Đế Tướng | 30,000 | 320 | Vạn Lôi Quy Tông (AoE 15 block, 600 DMG + stun 3s), Lôi Giáp (immune CC 10s + phản 20% DMG dạng sét), Lôi Triệu Hoán (summon 3 Lôi Linh mỗi 20s) |
 
 ### 👑 Boss: Lôi Thú
 | Stat | Giá Trị |
 |------|---------|
-| HP | 100,000 |
-| DMG | 220 |
-| DEF | 80 |
-| Speed | 1.8 |
+| HP | 250,000 |
+| DMG | 450 |
+| DEF | 120 |
+| Speed | 2.0 |
 
 **Skills:**
-1. **Thiên Lôi** — 5 tia sét random, mỗi tia 250 DMG + stun 1s (CD 12s)
-2. **Lôi Đình Trận** — Vùng sét AoE 10 block, 150 DMG/s 5s (CD 20s)
-3. **Điện Từ Trường** — Kéo tất cả player vào giữa + 400 DMG AoE (CD 25s)
-4. **Cửu Thiên Lôi Kiếp** *(Phase 2 - dưới 30% HP)* — 9 tia sét liên tiếp toàn map, mỗi tia 200 DMG, +60% ATK SPD
+1. **Thiên Lôi** — 8 tia sét random, mỗi tia 500 DMG + stun 1.5s, 2 tia sẽ track player (CD 10s)
+2. **Lôi Đình Trận** — Vùng sét AoE 12 block, 300 DMG/s 6s + stun mỗi giây (CD 18s)
+3. **Điện Từ Trường** — Kéo tất cả player vào giữa + 800 DMG AoE + disarm 3s (CD 22s)
+4. **Lôi Giáp Thiên Thần** — Shield 25,000 HP, trong thời gian shield mọi đòn đánh phản 200 sét DMG (CD 30s)
+5. **Cửu Thiên Lôi Kiếp** *(Phase 2 - dưới 25% HP)* — 12 tia sét liên tiếp toàn map, mỗi tia 350 DMG + stun, +80% ATK SPD, immune CC
+6. **Lôi Đế Giáng Thế** *(Phase 3 - dưới 10% HP)* — Sét liên tục random mỗi 2s (300 DMG), boss +100% DMG
 
 ---
 
@@ -198,126 +202,142 @@
 ### Mob Thường
 | Mob | HP | DMG | Skill | Số lượng |
 |-----|-----|-----|-------|---------|
-| Độc Trùng | 2,500 | 100 | Phun Độc (poison 8s, 30 DMG/s) | 15-20 |
-| Độc Nhện Hoàng | 3,500 | 120 | Tơ Độc (slow 70% + poison), Ổ Trứng (spawn 3 Độc Trùng khi chết) | 4-6 |
-| Độc Yêu | 3,000 | 130 | Độc Vụ (AoE cloud 6 block 8s, 50 DMG/s) | 6-8 |
-| Hủ Thực Trùng | 2,000 | 90 | Ăn Mòn (-20% DEF target 10s) | 8-12 |
+| Độc Trùng | 6,000 | 200 | Phun Độc (poison 10s, 60 DMG/s), Bầy Đàn (3+ gần nhau → +40% ATK) | 18-25 |
+| Độc Nhện Hoàng | 8,500 | 250 | Tơ Độc (slow 80% + poison 50 DMG/s), Ổ Trứng (spawn 5 Độc Trùng khi chết), Tơ Bẫy (root 3s) | 5-8 |
+| Độc Yêu | 7,000 | 270 | Độc Vụ (AoE cloud 8 block 10s, 100 DMG/s), Độc Giáp (-30% DMG vật lý), Phun Axit (ignore 40% DEF) | 6-10 |
+| Hủ Thực Trùng | 5,000 | 180 | Ăn Mòn (-35% DEF target 15s, stack 3 lần), Nuốt Chửng (grab + 300 DMG/s 2s) | 10-15 |
 
 ### Elite Mob
 | Mob | HP | DMG | Skill |
 |-----|-----|-----|-------|
-| Vạn Độc Vương | 18,000 | 200 | Vạn Độc Quy Nguyên (5 loại poison stack), Độc Long Quyển (AoE 15 block 400 DMG) |
+| Vạn Độc Vương | 45,000 | 400 | Vạn Độc Quy Nguyên (5 loại poison stack, 80 DMG/s mỗi loại), Độc Long Quyển (AoE 15 block 800 DMG), Tái Sinh Độc (hồi sinh 1 lần 40% HP + poison AoE) |
 
 ### 👑 Boss: Độc Tôn
 | Stat | Giá Trị |
 |------|---------|
-| HP | 200,000 |
-| DMG | 280 |
-| DEF | 100 |
-| Speed | 1.4 |
+| HP | 500,000 |
+| DMG | 550 |
+| DEF | 150 |
+| Speed | 1.6 |
 
 **Skills:**
-1. **Vạn Độc Trận** — Toàn map poison cloud 8s, 80 DMG/s (CD 25s)
-2. **Thiên La Địa Võng** — 8 tơ độc trap, chạm = root 3s + 350 DMG (CD 18s)
-3. **Độc Hóa** — Biến 1 player thành bomb 5s, hết → AoE 6 block 500 DMG (CD 30s)
-4. **Cực Độc Thể** *(Phase 2 - dưới 25% HP)* — Immune poison, phản 30% DMG dạng poison, +50% DMG
+1. **Vạn Độc Trận** — Toàn map poison cloud 10s, 150 DMG/s + slow 30% (CD 20s)
+2. **Thiên La Địa Võng** — 12 tơ độc trap, chạm = root 4s + 700 DMG + poison 10s (CD 15s)
+3. **Độc Hóa** — Biến 1 player thành bomb 4s, hết → AoE 8 block 1,000 DMG + poison toàn party 5s (CD 25s)
+4. **Độc Vương Phun Xạ** — Cone 12 block, 800 DMG + stack 3 poison (CD 12s)
+5. **Cực Độc Thể** *(Phase 2 - dưới 25% HP)* — Immune poison, phản 40% DMG dạng poison, +70% DMG, mọi đòn đánh gây thêm poison
+6. **Vạn Độc Quy Tông** *(Phase 3 - dưới 10% HP)* — Toàn map 200 DMG/s liên tục, boss +100% ATK SPD, phải DPS race
 
 ---
 
-## Tầng 8 — Long Cốt Mộ 🐉
+## Tầng 8 — Long Cốt Mộ 🐉 ⚠️ TRYHARD
 **CG:** Nguyên Anh Hậu Kỳ | **Thực Lực:** 100,000 | **Mob Lv:** 380-600
+
+> ⚠️ **TRYHARD ZONE** — Từ tầng này trở đi, 1 sai lầm = wipe. Yêu cầu party phối hợp chặt chẽ.
 
 ### Mob Thường
 | Mob | HP | DMG | Skill | Số lượng |
 |-----|-----|-----|-------|---------|
-| Cốt Long Binh | 4,000 | 150 | Xương Đạn (ranged 3 phát), Tái Tạo (hồi 10% HP mỗi 10s) | 10-15 |
-| Thi Long | 6,000 | 180 | Long Vĩ (AoE sweep 6 block), Long Tức Mini (cone 100 DMG + burn) | 4-6 |
-| U Linh Long | 3,500 | 130 | Xuyên Tường (teleport), Hồn Trảm (ignore 50% DEF) | 6-8 |
-| Long Nha Thú | 5,000 | 160 | Nanh Long (crit 2.5x), Lớp Vảy (+50% DEF dưới 30% HP) | 4-6 |
+| Cốt Long Binh | 15,000 | 350 | Xương Đạn (ranged 5 phát, 200 DMG mỗi), Tái Tạo (hồi 5% HP mỗi 5s), Cốt Giáp (+30% DEF) | 12-18 |
+| Thi Long | 22,000 | 420 | Long Vĩ (AoE sweep 8 block, 500 DMG + knockback), Long Tức Mini (cone 350 DMG + burn 8s), Phi Long (dash 10 block) | 5-8 |
+| U Linh Long | 12,000 | 300 | Xuyên Tường (teleport mỗi 5s), Hồn Trảm (ignore 60% DEF, 600 DMG), Tàng Hình (invisible 3s khi dưới 50% HP) | 8-10 |
+| Long Nha Thú | 18,000 | 380 | Nanh Long (crit 3x, 800 DMG), Lớp Vảy (+60% DEF dưới 30% HP), Cuồng Nộ (berserk +100% ATK dưới 20% HP) | 5-8 |
 
 ### Elite Mob
 | Mob | HP | DMG | Skill |
 |-----|-----|-----|-------|
-| Cốt Long Tướng | 30,000 | 250 | Long Hống (AoE stun 3s), Cốt Long Giáp (shield 5,000 HP + thorns 25%), Triệu Hồi 4 Cốt Long Binh |
+| Cốt Long Tướng | 80,000 | 550 | Long Hống (AoE stun 3s toàn map), Cốt Long Giáp (shield 15,000 HP + thorns 35%), Triệu Hồi 6 Cốt Long Binh, Long Hỏa (AoE burn 200 DMG/s 5s) |
 
 ### 👑 Boss: Cổ Long
 | Stat | Giá Trị |
 |------|---------|
-| HP | 500,000 |
-| DMG | 350 |
-| DEF | 130 |
-| Speed | 1.6 |
+| HP | 1,500,000 |
+| DMG | 700 |
+| DEF | 200 |
+| Speed | 1.8 |
 
 **Skills:**
-1. **Long Hống Cửu Thiên** — AoE toàn map, 500 DMG + stun 2s + fear 3s (CD 30s)
-2. **Long Tức Hủy Diệt** — Cone 15 block, 800 DMG + burn 8s (CD 15s)
-3. **Cổ Long Giác Tỉnh** — Summon 2 Thi Long + shield 20,000 HP 10s (CD 40s)
-4. **Vạn Long Quy Tông** *(Phase 2 - dưới 20% HP)* — Bay lên, 3 đợt Long Tức toàn map, mỗi đợt 600 DMG
+1. **Long Hống Cửu Thiên** — AoE toàn map, 1,000 DMG + stun 3s + fear 4s (CD 25s) — **PHẢI né bằng cách đứng sau trụ**
+2. **Long Tức Hủy Diệt** — Cone 18 block, 1,500 DMG + burn 10s (200 DMG/s) — **ONE-SHOT nếu không có DEF buff** (CD 12s)
+3. **Cổ Long Giác Tỉnh** — Summon 3 Thi Long + shield 40,000 HP 12s + heal 5% HP/s trong shield (CD 35s) — **Phải phá shield ngay!**
+4. **Long Cốt Trận** — 8 cột xương bao quanh, thu nhỏ arena dần trong 10s, player chạm cột = 800 DMG (CD 30s)
+5. **Vạn Long Quy Tông** *(Phase 2 - dưới 25% HP)* — Bay lên, 5 đợt Long Tức toàn map, mỗi đợt 1,000 DMG, +80% ATK SPD
+6. **Cổ Long Chân Thân** *(Phase 3 - dưới 10% HP)* — Transform lớn x2, HP regen 2%/s, mọi skill CD giảm 60%, Long Tức 360° liên tục — **DPS CHECK: phải hạ trong 30s**
 
 ---
 
-## Tầng 9 — Tiên Phế Đô ✨
+## Tầng 9 — Tiên Phế Đô ✨ ⚠️ TRYHARD
 **CG:** Hóa Thần | **Thực Lực:** 200,000 | **Mob Lv:** 450-750
+
+> ⚠️ **EXTREME** — Boss có one-shot mechanic. Party PHẢI có healer + tank.
 
 ### Mob Thường
 | Mob | HP | DMG | Skill | Số lượng |
 |-----|-----|-----|-------|---------|
-| Đọa Tiên Binh | 6,000 | 200 | Tiên Kiếm (3 combo + bleed), Phi Hành (teleport sau lưng) | 10-12 |
-| Tiên Phế Pháp Sư | 5,000 | 180 | Tiên Thuật (AoE 8 block 300 DMG), Tiên Thuẫn (party shield 2,000 HP) | 4-6 |
-| Tà Tiên Thú | 8,000 | 220 | Tiên Khí Pháo (ranged 400 DMG), Cuồng Bạo (+80% ATK dưới 20% HP) | 4-6 |
-| Linh Hồn Tiên | 4,000 | 150 | Hồn Khống (confusion 5s), Hồn Phệ (drain 100 HP/s 3s) | 6-8 |
+| Đọa Tiên Binh | 25,000 | 450 | Tiên Kiếm (5 combo 300 DMG mỗi + bleed 100/s 5s), Phi Hành (teleport sau lưng mỗi 8s), Tiên Khí Bộc Phát (+50% ATK 5s sau teleport) | 12-16 |
+| Tiên Phế Pháp Sư | 20,000 | 380 | Tiên Thuật (AoE 10 block 600 DMG), Tiên Thuẫn (shield ally 5,000 HP), Tiên Hồi (heal ally 1,000 HP/s 3s) — **Phải giết trước!** | 5-8 |
+| Tà Tiên Thú | 30,000 | 500 | Tiên Khí Pháo (ranged homing 800 DMG), Cuồng Bạo (+120% ATK dưới 20% HP), Tiên Thể (immune magic 5s CD 20s) | 4-6 |
+| Linh Hồn Tiên | 15,000 | 320 | Hồn Khống (confusion 6s + reverse controls), Hồn Phệ (drain 300 HP/s 4s), Hồn Bạo (chết → AoE 10 block 1,000 DMG) | 8-10 |
 
 ### Elite Mob
 | Mob | HP | DMG | Skill |
 |-----|-----|-----|-------|
-| Đọa Tiên Tướng | 50,000 | 320 | Tiên Kiếm Vạn Hoa (20 kiếm khí random, 200 DMG mỗi), Đọa Tiên Giáng (teleport + AoE 600 DMG), Tiên Kết Giới (immune 5s) |
+| Đọa Tiên Tướng | 120,000 | 650 | Tiên Kiếm Vạn Hoa (30 kiếm khí, 400 DMG mỗi), Đọa Tiên Giáng (teleport + AoE 1,200 DMG), Tiên Kết Giới (immune 8s + heal 10% HP), Triệu Hồi 4 Đọa Tiên Binh |
 
 ### 👑 Boss: Đọa Tiên
 | Stat | Giá Trị |
 |------|---------|
-| HP | 1,000,000 |
-| DMG | 450 |
-| DEF | 170 |
-| Speed | 2.0 |
+| HP | 5,000,000 |
+| DMG | 900 |
+| DEF | 250 |
+| Speed | 2.2 |
 
 **Skills:**
-1. **Tiên Kiếm Vạn Hoa** — 30 kiếm khí bay random toàn map, mỗi kiếm 300 DMG (CD 20s)
-2. **Thiên Phạt** — Cột sáng từ trời, target 1 player, 1,200 DMG (CD 12s, dodge bằng di chuyển 3s)
-3. **Đọa Lạc Kết Giới** — Nhốt 1 player 8s, phải phá 10,000 HP shield để cứu (CD 35s)
-4. **Tiên Ma Chuyển Hóa** *(Phase 2 - dưới 25% HP)* — Transform, +100% DMG, HP regen 1%/s, tất cả skill CD giảm 50%
+1. **Tiên Kiếm Vạn Hoa** — 50 kiếm khí bay random toàn map, mỗi kiếm 600 DMG (CD 15s) — **Phải liên tục dodge**
+2. **Thiên Phạt** — Cột sáng từ trời, target 1 player, 3,000 DMG — **INSTANT KILL** nếu không dodge trong 2s (CD 10s)
+3. **Đọa Lạc Kết Giới** — Nhốt 1 player 6s, phải phá 30,000 HP shield để cứu, hết thời gian = **INSTANT KILL** (CD 30s)
+4. **Tiên Diệt** — AoE toàn map 1,500 DMG + silence 4s (không dùng skill) + disarm 4s (CD 20s)
+5. **Tiên Ma Chuyển Hóa** *(Phase 2 - dưới 30% HP)* — Transform, +150% DMG, HP regen 2%/s, tất cả skill CD giảm 60%
+6. **Thiên Đạo Phán Quyết** *(Phase 3 - dưới 15% HP)* — Mỗi 8s chọn random 1 player → Thiên Phạt (3,000 DMG), đồng thời Tiên Kiếm Vạn Hoa liên tục
+7. **Cáo Chung** *(Enrage - dưới 5% HP)* — +300% DMG, immune CC, AoE 2,000 DMG mỗi 5s — **MUST KILL IN 20s**
 
 ---
 
-## Tầng 10 — Hỗn Nguyên Giới 🌀
+## Tầng 10 — Hỗn Nguyên Giới 🌀 ☠️ TRYHARD ULTIMATE
 **CG:** Luyện Hư | **Thực Lực:** 400,000 | **Mob Lv:** 580-1000
+
+> ☠️ **ULTIMATE TRYHARD** — Dungeon khó nhất server. Tỉ lệ clear dự kiến: <5%. Yêu cầu party 4 người tối ưu gear + chiến thuật.
 
 ### Mob Thường
 | Mob | HP | DMG | Skill | Số lượng |
 |-----|-----|-----|-------|---------|
-| Hỗn Nguyên Thể | 10,000 | 280 | Hỗn Độn Chưởng (AoE 300 DMG + random debuff), Phân Liệt (split 2 khi chết, 40% HP) | 8-12 |
-| Hư Không Thú | 12,000 | 300 | Không Gian Cắt (ignore DEF, 400 DMG), Dịch Chuyển (teleport random) | 4-6 |
-| Hỗn Nguyên Pháp Sư | 8,000 | 250 | Hỗn Nguyên Pháo (homing 500 DMG), Thời Gian Chậm (slow toàn party 50% 5s) | 4-6 |
-| Nguyên Tố Thể | 15,000 | 200 | Nguyên Tố Bùng Nổ (chết → AoE 8 block 600 DMG), Hấp Thụ (immune 1 element) | 3-5 |
+| Hỗn Nguyên Thể | 40,000 | 550 | Hỗn Độn Chưởng (AoE 500 DMG + random debuff từ 5 loại), Phân Liệt (split 3 khi chết, 30% HP mỗi, các clone cũng split 1 lần nữa) | 8-12 |
+| Hư Không Thú | 50,000 | 600 | Không Gian Cắt (ignore DEF, 800 DMG), Dịch Chuyển (teleport mỗi 4s), Không Gian Xoắn (swap vị trí 2 player) | 4-6 |
+| Hỗn Nguyên Pháp Sư | 35,000 | 480 | Hỗn Nguyên Pháo (homing 1,000 DMG), Thời Gian Dừng (freeze 1 player 3s CD 15s), Không Gian Méo (reverse controls toàn party 4s) | 4-6 |
+| Nguyên Tố Thể | 60,000 | 400 | Nguyên Tố Bùng Nổ (chết → AoE 10 block 1,500 DMG — **MUST KILL FROM RANGE**), Hấp Thụ (immune 2 element), Nguyên Tố Hồi (heal nearby mob 5%/s) | 3-5 |
 
 ### Elite Mob
 | Mob | HP | DMG | Skill |
 |-----|-----|-----|-------|
-| Hỗn Nguyên Đế Tướng | 80,000 | 400 | Hỗn Nguyên Vạn Hóa (random copy 1 boss skill từ tầng 1-9), Không Gian Giam Cầm (root toàn party 3s), Hỗn Nguyên Giáp (shield 15,000 HP + phản 30% DMG) |
+| Hỗn Nguyên Đế Tướng | 200,000 | 800 | Hỗn Nguyên Vạn Hóa (random copy 2 boss skill từ tầng 1-9 cùng lúc), Không Gian Giam Cầm (root toàn party 4s + 500 DMG/s), Hỗn Nguyên Giáp (shield 40,000 HP + phản 40% DMG), Tái Sinh (hồi sinh 1 lần 50% HP) |
 
 ### 👑 Boss: Hỗn Nguyên Thú
 | Stat | Giá Trị |
 |------|---------|
-| HP | 3,000,000 |
-| DMG | 600 |
-| DEF | 220 |
-| Speed | 2.2 |
+| HP | **10,000,000** |
+| DMG | 1,200 |
+| DEF | 350 |
+| Speed | 2.5 |
 
 **Skills:**
-1. **Hỗn Nguyên Nhất Kích** — Single target, 2,000 DMG (CD 10s, phải dodge)
-2. **Hỗn Độn Vạn Hóa** — Random 1 trong 5 nguyên tố (Hỏa AoE / Băng freeze / Lôi stun / Độc poison / Huyết drain), 800 DMG (CD 15s)
-3. **Không Gian Sụp Đổ** — Thu nhỏ arena 50%, player ngoài vùng nhận 500 DMG/s 8s (CD 35s)
-4. **Hồng Mông Sơ Phán** *(Phase 2 - dưới 20% HP)* — 3 phase liên tiếp: ① AoE toàn map 1,000 DMG ② Summon 2 Hỗn Nguyên Đế Tướng ③ Berserk +200% DMG, -50% DEF
-5. **Tái Sinh** *(1 lần duy nhất dưới 5% HP)* — Hồi 15% HP, immune 5s, reset tất cả cooldown
+1. **Hỗn Nguyên Nhất Kích** — Single target, **5,000 DMG** — **INSTANT KILL** nếu không tank/shield (CD 8s, phải dodge 1.5s window)
+2. **Hỗn Độn Vạn Hóa** — Random 2 trong 5 nguyên tố **cùng lúc** (Hỏa AoE 1,200 / Băng freeze 4s / Lôi stun 3s / Độc 200/s 8s / Huyết drain 500/s 4s), (CD 12s)
+3. **Không Gian Sụp Đổ** — Thu nhỏ arena 60%, player ngoài vùng nhận 1,000 DMG/s, kéo dài 10s (CD 30s)
+4. **Hồng Mong Thận Lực** — Summon 2 Hỗn Nguyên Đế Tướng + shield boss 100,000 HP 15s — **Phải phá shield trước khi hết** (CD 40s)
+5. **Hồng Mông Sơ Phán** *(Phase 2 - dưới 50% HP)* — 3 phase liên tiếp: ① AoE toàn map 2,000 DMG ② Summon 3 Đế Tướng ③ Berserk +150% DMG. **Repeats mỗi 60s**
+6. **Từ Diệt** *(Phase 3 - dưới 25% HP)* — Mỗi 6s chọn 1 player → **5,000 DMG nuke**, đồng thời Hỗn Độn Vạn Hóa liên tục, boss +100% ATK SPD
+7. **Tái Sinh Hỗn Nguyên** *(1 lần - dưới 10% HP)* — Hồi 25% HP, immune 8s, reset tất cả cooldown, heal toàn mob còn sống full HP
+8. **Hủy Diệt Cuối Cùng** *(Enrage - dưới 5% HP)* — +500% DMG, AoE 3,000 DMG mỗi 4s toàn map — **KILL IN 15s OR WIPE**
 
 ---
 
@@ -328,13 +348,13 @@
 | 1 | Sói Vương | 2K | 50 | 10 | Triệu hồi bầy, đơn giản |
 | 2 | Quỷ Hồn | 5K | 70 | 20 | Tàng hình, hút máu |
 | 3 | Viêm Ma | 12K | 100 | 35 | AoE lửa, tái sinh |
-| 4 | Băng Long | 25K | 140 | 50 | Freeze toàn map, shield mạnh |
-| 5 | Huyết Tộc Chúa | 50K | 180 | 65 | Lifesteal, buff đàn |
-| 6 | Lôi Thú | 100K | 220 | 80 | Sét random, CC mạnh |
-| 7 | Độc Tôn | 200K | 280 | 100 | Poison toàn map, biến player thành bomb |
-| 8 | Cổ Long | 500K | 350 | 130 | Multi-phase breath, summon |
-| 9 | Đọa Tiên | 1M | 450 | 170 | Kiếm khí, nhốt player |
-| 10 | Hỗn Nguyên Thú | 3M | 600 | 220 | Random nguyên tố, thu nhỏ arena, tái sinh |
+| 4 | Băng Long | **80K** | **280** | 80 | Freeze toàn map, 3 phase, shield khủng |
+| 5 | Huyết Tộc Chúa | **120K** | **350** | 100 | Lifesteal 60%, Huyết Tế heal, 2 phase |
+| 6 | Lôi Thú | **250K** | **450** | 120 | 8 sét track, 3 phase, disarm |
+| 7 | Độc Tôn | **500K** | **550** | 150 | Poison 150/s, bomb player, DPS race |
+| 8 ⚠️ | Cổ Long | **1.5M** | **700** | 200 | ONE-SHOT breath, DPS check 30s, 3 phase |
+| 9 ⚠️ | Đọa Tiên | **5M** | **900** | 250 | INSTANT KILL, 7 skills, enrage 20s |
+| 10 ☠️ | Hỗn Nguyên Thú | **10M** | **1,200** | 350 | 8 skills, tái sinh, WIPE 15s enrage |
 
 ## 📈 Scaling Party (Mob HP)
 

@@ -27,7 +27,7 @@
 17. [💰 Hệ Thống Nạp Tiền & VIP (Monetization)](#17-hệ-thống-nạp-tiền--vip)
 18. [🧠 Chiến Lược Hút Máu Tâm Lý](#18-chiến-lược-hút-máu-tâm-lý)
 
-> **Note:** Section 6 bao gồm hệ thống **Nhập Thần** (6.4) — hy sinh item để tăng chỉ số vĩnh viễn.
+> **Note:** Section 6 bao gồm hệ thống **Nhập Thần** (6.4) — hy sinh item để tăng chỉ số vĩnh viễn, và **Thức Tỉnh Nhập Thần** (6.5) — awakening passive với 10 loại & phẩm chất S/A/B/C.
 
 ---
 
@@ -869,6 +869,162 @@ Mỗi ô có **giới hạn chỉ số tối đa**, tăng theo cảnh giới:
 > - **Biến gear trash thành giá trị**: trúng gear yếu từ dungeon? Nhập thần!
 > - **VIP cày nhiều dungeon = nhiều gear = nhập thần nhanh hơn** → Hút máu tự nhiên
 > - **Nhập Thần Đan từ shop** = skip grind bằng tiền → Monetization
+
+---
+
+### 6.5 Hệ Thống Thức Tỉnh Nhập Thần (神入覺醒 — Divine Awakening)
+
+> [!IMPORTANT]
+> **Thức Tỉnh Nhập Thần** là hệ thống **passive vĩnh viễn** — mỗi người chơi được **thức tỉnh 1 trong 10 loại Nhập Thần** khi đạt Cảnh Giới 3 (Trúc Cơ). Loại Nhập Thần được **random** với **phẩm chất S / A / B / C** quyết định sức mạnh. Đây KHÁC với Nhập Thần (6.4) — 6.4 là hy sinh item, 6.5 là awakening passive cá nhân.
+
+#### 6.5.1 Cơ Chế Thức Tỉnh
+
+```
+┌──────────────────────────────────────────────────────────┐
+│              ⚡ THỨC TỈNH NHẬP THẦN ⚡                    │
+│                                                          │
+│   Điều kiện: Đạt Cảnh Giới 3 (Trúc Cơ)                 │
+│   Kích hoạt: NPC "Thần Sư" hoặc /nhapthan_thucthinh    │
+│                                                          │
+│   → Hiệu ứng cinematic (trời tối, particle xoáy)       │
+│   → Random 1/10 loại Nhập Thần                         │
+│   → Random phẩm chất: S (5%) / A (15%) / B (35%) / C (45%) │
+│   → Kết quả VĨNH VIỄN — không thể thay đổi loại       │
+│   → Phẩm chất CÓ THỂ nâng cấp (xem 6.5.4)            │
+│                                                          │
+│   🎲 "Số mệnh của ngươi đã được định đoạt..."          │
+└──────────────────────────────────────────────────────────┘
+```
+
+#### 6.5.2 Mười Loại Nhập Thần
+
+| # | Tên Nhập Thần | Biểu Tượng | Chỉ Số Chính | Mô Tả Lore |
+|---|---------------|------------|-------------|-------------|
+| 1 | **Tốc Chiến Thần** | ⏱️ | Giảm CD Skill | Thần linh tốc độ — skill hồi nhanh hơn, combo liên tục |
+| 2 | **Hộ Thể Thần** | 🛡️ | Phòng Thủ (DEF) | Thần linh phòng ngự — thân thể cứng như kim cương |
+| 3 | **Cuồng Công Thần** | ⚔️ | Công Kích (ATK) | Thần linh chiến đấu — mỗi đòn đánh mang sức mạnh hủy diệt |
+| 4 | **Bạo Kích Thần** | 🎯 | Tỉ lệ chí mạng skill | Thần linh chính xác — skill luôn tìm đúng điểm yếu |
+| 5 | **Diệt Sát Thần** | 💀 | Sát thương chí mạng skill | Thần linh hủy diệt — chí mạng gây sát thương kinh hoàng |
+| 6 | **Tật Phong Thần** | 💨 | Tốc độ chạy (SPD) | Thần linh gió — di chuyển nhanh như tia chớp |
+| 7 | **Linh Nguyên Thần** | 🔮 | Mana tối đa | Thần linh linh lực — nguồn mana gần như vô tận |
+| 8 | **Sinh Mệnh Thần** | ❤️ | Max HP + HP Regen | Thần linh sinh mệnh — sức sống mãnh liệt, tự hồi phục |
+| 9 | **Hấp Huyết Thần** | 🩸 | Hút máu (Lifesteal) | Thần linh hấp huyết — mỗi đòn đánh hồi sinh lực |
+| 10 | **Thiên Mệnh Thần** | 🌟 | Drop Rate + EXP Bonus | Thần linh may mắn — vận khí trời cho, drop hiếm hơn |
+
+#### 6.5.3 Chỉ Số Theo Phẩm Chất (S / A / B / C)
+
+Phẩm chất quyết định **mức chỉ số** nhận được. Phẩm chất cao = buff mạnh hơn đáng kể:
+
+| # | Nhập Thần | Chỉ Số | C (45%) | B (35%) | A (15%) | S (5%) |
+|---|-----------|--------|---------|---------|---------|--------|
+| 1 | ⏱️ Tốc Chiến | Giảm CD Skill | -5% | -10% | -18% | -25% |
+| 2 | 🛡️ Hộ Thể | +DEF | +50 | +120 | +250 | +400 |
+| 3 | ⚔️ Cuồng Công | +ATK | +30 | +80 | +180 | +300 |
+| 4 | 🎯 Bạo Kích | +Skill Crit Rate | +5% | +12% | +22% | +35% |
+| 5 | 💀 Diệt Sát | +Skill Crit DMG | +15% | +35% | +65% | +100% |
+| 6 | 💨 Tật Phong | +SPD | +8% | +15% | +25% | +35% |
+| 7 | 🔮 Linh Nguyên | +Max Mana | +100 | +250 | +500 | +800 |
+| 8 | ❤️ Sinh Mệnh | +Max HP / +HP Regen | +200 HP, +1/s | +500 HP, +3/s | +1,000 HP, +6/s | +1,800 HP, +10/s |
+| 9 | 🩸 Hấp Huyết | +Lifesteal % | +3% | +6% | +10% | +15% |
+| 10 | 🌟 Thiên Mệnh | +Drop Rate / +EXP | +5% / +5% | +10% / +10% | +18% / +15% | +25% / +25% |
+
+**Hiển thị phẩm chất:**
+
+| Phẩm Chất | Màu | Prefix Hiển Thị | Hiếm |
+|-----------|-----|-----------------|------|
+| **C** | &7 (Xám) | `&7[C]` Phàm Thần | Phổ thông |
+| **B** | &a (Xanh lá) | `&a[B]` Linh Thần | Khá |
+| **A** | &b (Xanh dương) | `&b[A]` Thiên Thần | Hiếm |
+| **S** | &6&l (Vàng đậm) | `&6&l[S]` Chí Tôn Thần | Cực hiếm |
+
+> Hiển thị trên `/info`: `⚡ Nhập Thần: &6&l[S] Cuồng Công Thần — +300 ATK`
+
+#### 6.5.4 Nâng Cấp Phẩm Chất (Thăng Hoa)
+
+Người chơi có thể **nâng phẩm chất** từ C → B → A → S thông qua hệ thống **Thăng Hoa**:
+
+| Nâng Cấp | Nguyên Liệu | Tỉ Lệ Thành Công | Thất Bại |
+|-----------|-------------|-------------------|----------|
+| C → B | 3x Thăng Hoa Thạch + 50,000 LT | 60% | Mất nguyên liệu, giữ nguyên C |
+| B → A | 5x Thăng Hoa Thạch + 200,000 LT | 35% | Mất nguyên liệu, giữ nguyên B |
+| A → S | 10x Thăng Hoa Thạch + 1,000,000 LT | 15% | Mất nguyên liệu, giữ nguyên A |
+
+**Nguồn Thăng Hoa Thạch:**
+- Dungeon T6+ boss drop (5-10% chance)
+- Event phần thưởng
+- Shop VIP: 200 Linh Ngọc / viên
+- Craft: 50x Tinh Kim + 10x Long Tinh + 100,000 LT
+
+> [!WARNING]
+> **Không thể thay đổi loại Nhập Thần!** Chỉ nâng phẩm chất. Nếu muốn loại khác → dùng **Luân Hồi Nhập Thần Phù** (xem bên dưới).
+
+#### 6.5.5 Luân Hồi Nhập Thần (Re-roll)
+
+| Item | Hiệu Ứng | Nguồn | Giá |
+|------|-----------|-------|-----|
+| **Luân Hồi Nhập Thần Phù** | Random lại **loại** Nhập Thần (giữ phẩm chất) | Shop VIP | 500 Linh Ngọc |
+| **Thiên Mệnh Luân Phù** | Random lại **cả loại + phẩm chất** | Event cực hiếm | Không bán |
+| **Chỉ Định Thần Phù** | **Chọn** loại Nhập Thần mong muốn (giữ phẩm chất) | Limited Event / Battle Pass Lv100 | 2,000 Linh Ngọc |
+
+#### 6.5.6 Nhập Thần Cấp 2 — Thần Hồn Giác Tỉnh (Cảnh Giới 8+)
+
+Khi đạt **Đại Thừa** (CG 8), mở khóa **Thần Hồn Giác Tỉnh** — nâng cấp Nhập Thần lên tầm mới:
+
+| Nhập Thần | Hiệu Ứng Giác Tỉnh Thêm (Cấp 2) | Điều Kiện |
+|-----------|----------------------------------|-----------|
+| ⏱️ Tốc Chiến | Mỗi khi dùng skill, 20% chance reset CD skill khác | CG 8 + 5M LT |
+| 🛡️ Hộ Thể | Khi HP < 30%, tự động shield 500HP (CD 60s) | CG 8 + 5M LT |
+| ⚔️ Cuồng Công | Mỗi 5 đòn đánh, đòn thứ 5 gây x1.5 DMG | CG 8 + 5M LT |
+| 🎯 Bạo Kích | Skill crit gây thêm hiệu ứng Bleed 3s | CG 8 + 5M LT |
+| 💀 Diệt Sát | Giết mob bằng crit → hồi 5% MaxHP | CG 8 + 5M LT |
+| 💨 Tật Phong | Khi chạy 3s liên tục, +30% SPD thêm (burst speed) | CG 8 + 5M LT |
+| 🔮 Linh Nguyên | Hồi 3% Mana/s khi đứng yên 2s | CG 8 + 5M LT |
+| ❤️ Sinh Mệnh | Chết → hồi sinh 1 lần với 30% HP (CD 300s) | CG 8 + 5M LT |
+| 🩸 Hấp Huyết | Hút máu AoE: đòn AoE cũng hút máu (giảm 50% hiệu quả) | CG 8 + 5M LT |
+| 🌟 Thiên Mệnh | Double drop chance: 10% chance nhận x2 loot | CG 8 + 5M LT |
+
+#### 6.5.7 Synergy Class × Nhập Thần
+
+Một số Nhập Thần có **cộng hưởng đặc biệt** với Class cụ thể:
+
+| Nhập Thần | Class Cộng Hưởng | Bonus Thêm |
+|-----------|-----------------|------------|
+| ⏱️ Tốc Chiến | 🔮 Thiên Cơ | CD giảm thêm 5%, spam skill kinh hoàng |
+| 🛡️ Hộ Thể | 🛡️ Kim Thân | DEF bonus x1.3, tank bất tử |
+| ⚔️ Cuồng Công | ⚔️ Kiếm Tiên | ATK bonus x1.3, DPS vượt trội |
+| 🎯 Bạo Kích | 🗡️ Vô Ảnh | Crit Rate bonus x1.3, crit mọi đòn |
+| 💀 Diệt Sát | 🗡️ Vô Ảnh | Crit DMG bonus x1.3, one-shot chúa |
+| 💨 Tật Phong | 🗡️ Vô Ảnh | SPD bonus x1.3, không ai đuổi kịp |
+| 🔮 Linh Nguyên | 🔮 Thiên Cơ | Mana bonus x1.3, spam pháp thuật |
+| ❤️ Sinh Mệnh | 🛡️ Kim Thân | HP bonus x1.3, máu trâu vô đối |
+| 🩸 Hấp Huyết | ⚔️ Kiếm Tiên | Lifesteal bonus x1.3, đánh = hồi |
+| 🌟 Thiên Mệnh | 💚 Linh Dược | Drop/EXP bonus x1.3, support farm god |
+
+> [!TIP]
+> **Tâm lý gây nghiện Thức Tỉnh Nhập Thần:**
+> - **Gacha feeling**: Random loại + phẩm chất → hồi hộp, chia sẻ kết quả → viral
+> - **FOMO**: Trúng S = flex → người khác muốn re-roll → mua Luân Hồi Phù
+> - **Class identity**: Cộng hưởng Class tạo "build" độc đáo → thảo luận meta
+> - **Grind mục tiêu**: Thăng Hoa C → S là hành trình dài → engagement
+> - **Endgame depth**: Cấp 2 Giác Tỉnh tại CG 8 → thêm mục tiêu progression
+> - **Monetization**: Re-roll Phù + Chỉ Định Phù + Thăng Hoa Thạch shop = doanh thu
+> - **Server chat buzz**: `⚡ [PlayerName] đã thức tỉnh &6&l[S] Cuồng Công Thần!` → ghen tị
+
+#### 6.5.8 Công Thức Thực Lực (Cập Nhật)
+
+Thức Tỉnh Nhập Thần đóng góp vào **Thực Lực**:
+
+| Phẩm Chất | Thực Lực Bonus |
+|-----------|----------------|
+| C | +500 |
+| B | +2,000 |
+| A | +8,000 |
+| S | +25,000 |
+| Cấp 2 Giác Tỉnh | +15,000 thêm |
+
+```
+THỰC LỰC = Gear + Nhập_Thần_6.4 + Pet + Cảnh_Giới + Tu_Vi/200 + Thức_Tỉnh_Nhập_Thần
+```
 
 ---
 

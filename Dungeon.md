@@ -4,12 +4,12 @@
 **CG:** Luyện Khí Sơ Kỳ | **Thực Lực:** 500 | **Mob Lv:** 50-100
 
 ### Mob Thường
-| Mob | HP | DMG | Skill | Số lượng |
+| Mob | HP | DMG | Passive | Số lượng |
 |-----|-----|-----|-------|---------|
-| Sói Hoang | 200 | 15 | Cắn (1.5x DMG, 20% bleed 3s) | 15-20 |
-| Gấu Rừng | 400 | 25 | Vả Mạnh (AoE 2 block, knockback) | 8-10 |
-| Rắn Độc | 150 | 10 | Cắn Độc (poison 5s, 8 DMG/s) | 10-15 |
-| Nhện Khổng Lồ | 300 | 18 | Bắn Tơ (slow 50% 3s) | 6-8 |
+| Sói Hoang | 200 | 15 | Bầy Đàn — +10% ATK mỗi Sói gần 5 block | 15-20 |
+| Gấu Rừng | 400 | 25 | Da Dày — Giảm 15% DMG nhận | 8-10 |
+| Rắn Độc | 150 | 10 | Nọc Độc — Đòn đánh gây poison 3s (5 DMG/s) | 10-15 |
+| Nhện Khổng Lồ | 300 | 18 | Tơ Dính — Đòn đánh gây slow 20% 2s | 6-8 |
 
 ### Elite Mob
 | Mob | HP | DMG | Skill |
@@ -36,12 +36,12 @@
 **CG:** Luyện Khí Hậu Kỳ | **Thực Lực:** 1,500 | **Mob Lv:** 80-130
 
 ### Mob Thường
-| Mob | HP | DMG | Skill | Số lượng |
+| Mob | HP | DMG | Passive | Số lượng |
 |-----|-----|-----|-------|---------|
-| Âm Hồn | 350 | 25 | Xuyên Thể (ignore 30% DEF) | 15-20 |
-| Cương Thi | 600 | 35 | Cào (bleed 5s), Bất Tử (hồi 50 HP khi hạ target) | 8-12 |
-| Quỷ Lửa | 400 | 30 | Ném Lửa (ranged 8 block, burn 3s) | 8-10 |
-| Bạch Cốt | 250 | 20 | Tự Nổ (chết → AoE 3 block, 80 DMG) | 10-15 |
+| Âm Hồn | 350 | 25 | Xuyên Thể — Ignore 20% DEF | 15-20 |
+| Cương Thi | 600 | 35 | Bất Tử — Hồi 3% HP mỗi 5s | 8-12 |
+| Quỷ Lửa | 400 | 30 | Viêm Thể — Đòn đánh gây burn 2s (10 DMG/s) | 8-10 |
+| Bạch Cốt | 250 | 20 | Tự Nổ — Chết → AoE 3 block 80 DMG | 10-15 |
 
 ### Elite Mob
 | Mob | HP | DMG | Skill |
@@ -68,12 +68,12 @@
 **CG:** Trúc Cơ Sơ Kỳ | **Thực Lực:** 3,000 | **Mob Lv:** 120-200
 
 ### Mob Thường
-| Mob | HP | DMG | Skill | Số lượng |
+| Mob | HP | DMG | Passive | Số lượng |
 |-----|-----|-----|-------|---------|
-| Hỏa Yêu | 600 | 40 | Phun Lửa (cone 5 block, burn 4s) | 12-18 |
-| Nham Thạch Quái | 1,000 | 50 | Giáp Đá (+40% DEF), Nham Thạch Đạn (ranged) | 6-10 |
-| Hỏa Tinh Linh | 400 | 35 | Tự Bùng (AoE 4 block khi chết, 120 DMG) | 10-15 |
-| Viêm Xà | 700 | 45 | Phun Nọc Lửa (burn + poison 5s) | 6-8 |
+| Hỏa Yêu | 600 | 40 | Viêm Thể — Đòn đánh gây burn 3s (15 DMG/s) | 12-18 |
+| Nham Thạch Quái | 1,000 | 50 | Giáp Đá — +40% DEF | 6-10 |
+| Hỏa Tinh Linh | 400 | 35 | Tự Bùng — Chết → AoE 4 block 120 DMG | 10-15 |
+| Viêm Xà | 700 | 45 | Nọc Lửa — Đòn đánh gây burn + poison 3s | 6-8 |
 
 ### Elite Mob
 | Mob | HP | DMG | Skill |
@@ -100,12 +100,12 @@
 **CG:** Trúc Cơ Hậu Kỳ | **Thực Lực:** 6,000 | **Mob Lv:** 160-250
 
 ### Mob Thường
-| Mob | HP | DMG | Skill | Số lượng |
+| Mob | HP | DMG | Passive | Số lượng |
 |-----|-----|-----|-------|---------|
-| Băng Tinh Linh | 1,800 | 95 | Đóng Băng (freeze 2.5s), Băng Châm (ranged 80 DMG) | 15-20 |
-| Tuyết Nhân | 2,800 | 120 | Ném Tuyết (ranged slow 70% 4s), Giáp Băng (+40% DEF), Tuyết Lở (AoE 5 block 150 DMG) | 8-12 |
-| Băng Lang | 1,600 | 110 | Hú Băng (AoE slow 60%), Nanh Băng (2.5x DMG + freeze 2s), Bầy Đàn (+15% ATK mỗi Băng Lang gần) | 10-15 |
-| Hàn Quỷ | 2,200 | 100 | Hàn Khí (aura -30% ATK SPD gần 5 block), Hàn Băng Thuẫn (shield 400 HP khi dưới 50% HP) | 8-10 |
+| Băng Tinh Linh | 1,800 | 95 | Đóng Băng — Đòn đánh 15% freeze target 1.5s | 15-20 |
+| Tuyết Nhân | 2,800 | 120 | Giáp Băng — +40% DEF | 8-12 |
+| Băng Lang | 1,600 | 110 | Bầy Đàn — +15% ATK mỗi Băng Lang gần 5 block | 10-15 |
+| Hàn Quỷ | 2,200 | 100 | Hàn Khí — Aura giảm 25% ATK SPD gần 5 block | 8-10 |
 
 ### Elite Mob
 | Mob | HP | DMG | Skill |
@@ -133,12 +133,12 @@
 **CG:** Kim Đan Sơ Kỳ | **Thực Lực:** 12,000 | **Mob Lv:** 200-350
 
 ### Mob Thường
-| Mob | HP | DMG | Skill | Số lượng |
+| Mob | HP | DMG | Passive | Số lượng |
 |-----|-----|-----|-------|---------|
-| Huyết Tộc Lính | 3,000 | 140 | Hút Máu (heal 40% DMG dealt), Huyết Cuồng (+20% ATK khi ally chết) | 18-25 |
-| Huyết Bức | 4,500 | 170 | Huyết Trảm (5 combo 100 DMG mỗi), Huyết Giáp (+35% DEF), Huyết Nộ (berserk dưới 40% HP: +60% ATK) | 8-12 |
-| Huyết Pháp Sư | 2,500 | 120 | Huyết Cầu (ranged 250 DMG), Huyết Thuẫn (shield ally 1,200 HP), Huyết Hồi (heal ally 300 HP/s 3s) | 5-8 |
-| Huyết Dơi | 1,500 | 100 | Bay + Bổ Nhào (dash 10 block, 200 DMG), Siêu Âm (confusion 4s + blind 2s) | 12-18 |
+| Huyết Tộc Lính | 3,000 | 140 | Hút Máu — Heal 30% DMG dealt | 18-25 |
+| Huyết Bức | 4,500 | 170 | Huyết Giáp — +35% DEF | 8-12 |
+| Huyết Pháp Sư | 2,500 | 120 | Huyết Hồi — Heal mob gần nhất 2% HP/5s | 5-8 |
+| Huyết Dơi | 1,500 | 100 | Bay — Immune melee, chỉ chịu ranged DMG | 12-18 |
 
 ### Elite Mob
 | Mob | HP | DMG | Skill |
@@ -166,12 +166,12 @@
 **CG:** Kim Đan Hậu Kỳ | **Thực Lực:** 25,000 | **Mob Lv:** 260-400
 
 ### Mob Thường
-| Mob | HP | DMG | Skill | Số lượng |
+| Mob | HP | DMG | Passive | Số lượng |
 |-----|-----|-----|-------|---------|
-| Lôi Linh | 4,500 | 180 | Phóng Điện (chain 5 target, 120 DMG mỗi), Lôi Cầu Tự Dẫn (homing 200 DMG) | 15-18 |
-| Lôi Ưng | 3,800 | 200 | Bay + Bổ Nhào Sét (dash + stun 2s + 250 DMG), Sét Lông (ranged AoE 3 block) | 8-12 |
-| Lôi Nguyên Tố | 6,000 | 160 | Lôi Cầu (AoE 6 block, 300 DMG), Phân Thân (split thành 3 khi chết, 40% HP mỗi), Lôi Thuẫn (shield 1,000 HP) | 5-8 |
-| Điện Quang Thú | 5,000 | 220 | Sét Đánh (random target, 400 DMG + stun 1s), Tĩnh Điện (aura 100 DMG/s gần 3 block) | 6-10 |
+| Lôi Linh | 4,500 | 180 | Phóng Điện — Đòn đánh chain sang 1 target gần, 50% DMG | 15-18 |
+| Lôi Ưng | 3,800 | 200 | Bay — Immune melee, chỉ chịu ranged DMG | 8-12 |
+| Lôi Nguyên Tố | 6,000 | 160 | Phân Thân — Chết → split 2 bản sao 30% HP | 5-8 |
+| Điện Quang Thú | 5,000 | 220 | Tĩnh Điện — Aura 80 DMG/s gần 3 block | 6-10 |
 
 ### Elite Mob
 | Mob | HP | DMG | Skill |
@@ -200,12 +200,12 @@
 **CG:** Nguyên Anh Sơ Kỳ | **Thực Lực:** 50,000 | **Mob Lv:** 320-500
 
 ### Mob Thường
-| Mob | HP | DMG | Skill | Số lượng |
+| Mob | HP | DMG | Passive | Số lượng |
 |-----|-----|-----|-------|---------|
-| Độc Trùng | 6,000 | 200 | Phun Độc (poison 10s, 60 DMG/s), Bầy Đàn (3+ gần nhau → +40% ATK) | 18-25 |
-| Độc Nhện Hoàng | 8,500 | 250 | Tơ Độc (slow 80% + poison 50 DMG/s), Ổ Trứng (spawn 5 Độc Trùng khi chết), Tơ Bẫy (root 3s) | 5-8 |
-| Độc Yêu | 7,000 | 270 | Độc Vụ (AoE cloud 8 block 10s, 100 DMG/s), Độc Giáp (-30% DMG vật lý), Phun Axit (ignore 40% DEF) | 6-10 |
-| Hủ Thực Trùng | 5,000 | 180 | Ăn Mòn (-35% DEF target 15s, stack 3 lần), Nuốt Chửng (grab + 300 DMG/s 2s) | 10-15 |
+| Độc Trùng | 6,000 | 200 | Bầy Đàn — +20% ATK mỗi Độc Trùng gần 5 block | 18-25 |
+| Độc Nhện Hoàng | 8,500 | 250 | Ổ Trứng — Chết → spawn 3 Độc Trùng | 5-8 |
+| Độc Yêu | 7,000 | 270 | Độc Giáp — Giảm 30% DMG vật lý nhận | 6-10 |
+| Hủ Thực Trùng | 5,000 | 180 | Ăn Mòn — Đòn đánh giảm 15% DEF target 10s | 10-15 |
 
 ### Elite Mob
 | Mob | HP | DMG | Skill |
@@ -236,12 +236,12 @@
 > ⚠️ **TRYHARD ZONE** — Từ tầng này trở đi, 1 sai lầm = wipe. Yêu cầu party phối hợp chặt chẽ.
 
 ### Mob Thường
-| Mob | HP | DMG | Skill | Số lượng |
+| Mob | HP | DMG | Passive | Số lượng |
 |-----|-----|-----|-------|---------|
-| Cốt Long Binh | 15,000 | 350 | Xương Đạn (ranged 5 phát, 200 DMG mỗi), Tái Tạo (hồi 5% HP mỗi 5s), Cốt Giáp (+30% DEF) | 12-18 |
-| Thi Long | 22,000 | 420 | Long Vĩ (AoE sweep 8 block, 500 DMG + knockback), Long Tức Mini (cone 350 DMG + burn 8s), Phi Long (dash 10 block) | 5-8 |
-| U Linh Long | 12,000 | 300 | Xuyên Tường (teleport mỗi 5s), Hồn Trảm (ignore 60% DEF, 600 DMG), Tàng Hình (invisible 3s khi dưới 50% HP) | 8-10 |
-| Long Nha Thú | 18,000 | 380 | Nanh Long (crit 3x, 800 DMG), Lớp Vảy (+60% DEF dưới 30% HP), Cuồng Nộ (berserk +100% ATK dưới 20% HP) | 5-8 |
+| Cốt Long Binh | 15,000 | 350 | Tái Tạo — Hồi 3% HP mỗi 5s | 12-18 |
+| Thi Long | 22,000 | 420 | Long Vảy — +30% DEF | 5-8 |
+| U Linh Long | 12,000 | 300 | Xuyên Thể — Ignore 40% DEF | 8-10 |
+| Long Nha Thú | 18,000 | 380 | Cuồng Nộ — +50% ATK khi dưới 30% HP | 5-8 |
 
 ### Elite Mob
 | Mob | HP | DMG | Skill |
@@ -272,12 +272,12 @@
 > ⚠️ **EXTREME** — Boss có one-shot mechanic. Party PHẢI có healer + tank.
 
 ### Mob Thường
-| Mob | HP | DMG | Skill | Số lượng |
+| Mob | HP | DMG | Passive | Số lượng |
 |-----|-----|-----|-------|---------|
-| Đọa Tiên Binh | 25,000 | 450 | Tiên Kiếm (5 combo 300 DMG mỗi + bleed 100/s 5s), Phi Hành (teleport sau lưng mỗi 8s), Tiên Khí Bộc Phát (+50% ATK 5s sau teleport) | 12-16 |
-| Tiên Phế Pháp Sư | 20,000 | 380 | Tiên Thuật (AoE 10 block 600 DMG), Tiên Thuẫn (shield ally 5,000 HP), Tiên Hồi (heal ally 1,000 HP/s 3s) — **Phải giết trước!** | 5-8 |
-| Tà Tiên Thú | 30,000 | 500 | Tiên Khí Pháo (ranged homing 800 DMG), Cuồng Bạo (+120% ATK dưới 20% HP), Tiên Thể (immune magic 5s CD 20s) | 4-6 |
-| Linh Hồn Tiên | 15,000 | 320 | Hồn Khống (confusion 6s + reverse controls), Hồn Phệ (drain 300 HP/s 4s), Hồn Bạo (chết → AoE 10 block 1,000 DMG) | 8-10 |
+| Đọa Tiên Binh | 25,000 | 450 | Tiên Khí — +30% ATK SPD | 12-16 |
+| Tiên Phế Pháp Sư | 20,000 | 380 | Tiên Hồi — Heal mob gần nhất 3% HP/5s — **Phải giết trước!** | 5-8 |
+| Tà Tiên Thú | 30,000 | 500 | Tiên Thể — Giảm 40% magic DMG nhận | 4-6 |
+| Linh Hồn Tiên | 15,000 | 320 | Hồn Bạo — Chết → AoE 8 block 800 DMG | 8-10 |
 
 ### Elite Mob
 | Mob | HP | DMG | Skill |
@@ -309,12 +309,12 @@
 > ☠️ **ULTIMATE TRYHARD** — Dungeon khó nhất server. Tỉ lệ clear dự kiến: <5%. Yêu cầu party 4 người tối ưu gear + chiến thuật.
 
 ### Mob Thường
-| Mob | HP | DMG | Skill | Số lượng |
+| Mob | HP | DMG | Passive | Số lượng |
 |-----|-----|-----|-------|---------|
-| Hỗn Nguyên Thể | 40,000 | 550 | Hỗn Độn Chưởng (AoE 500 DMG + random debuff từ 5 loại), Phân Liệt (split 3 khi chết, 30% HP mỗi, các clone cũng split 1 lần nữa) | 8-12 |
-| Hư Không Thú | 50,000 | 600 | Không Gian Cắt (ignore DEF, 800 DMG), Dịch Chuyển (teleport mỗi 4s), Không Gian Xoắn (swap vị trí 2 player) | 4-6 |
-| Hỗn Nguyên Pháp Sư | 35,000 | 480 | Hỗn Nguyên Pháo (homing 1,000 DMG), Thời Gian Dừng (freeze 1 player 3s CD 15s), Không Gian Méo (reverse controls toàn party 4s) | 4-6 |
-| Nguyên Tố Thể | 60,000 | 400 | Nguyên Tố Bùng Nổ (chết → AoE 10 block 1,500 DMG — **MUST KILL FROM RANGE**), Hấp Thụ (immune 2 element), Nguyên Tố Hồi (heal nearby mob 5%/s) | 3-5 |
+| Hỗn Nguyên Thể | 40,000 | 550 | Phân Liệt — Chết → split 2 bản sao 30% HP | 8-12 |
+| Hư Không Thú | 50,000 | 600 | Dịch Chuyển — Teleport random mỗi 6s | 4-6 |
+| Hỗn Nguyên Pháp Sư | 35,000 | 480 | Hỗn Nguyên Thuẫn — Giảm 50% DMG nhận | 4-6 |
+| Nguyên Tố Thể | 60,000 | 400 | Nguyên Tố Bùng Nổ — Chết → AoE 8 block 1,200 DMG — **KILL FROM RANGE** | 3-5 |
 
 ### Elite Mob
 | Mob | HP | DMG | Skill |
@@ -338,6 +338,8 @@
 6. **Từ Diệt** *(Phase 3 - dưới 25% HP)* — Mỗi 6s chọn 1 player → **5,000 DMG nuke**, đồng thời Hỗn Độn Vạn Hóa liên tục, boss +100% ATK SPD
 7. **Tái Sinh Hỗn Nguyên** *(1 lần - dưới 10% HP)* — Hồi 25% HP, immune 8s, reset tất cả cooldown, heal toàn mob còn sống full HP
 8. **Hủy Diệt Cuối Cùng** *(Enrage - dưới 5% HP)* — +500% DMG, AoE 3,000 DMG mỗi 4s toàn map — **KILL IN 15s OR WIPE**
+
+---
 
 ---
 
@@ -372,3 +374,53 @@
 - Boss có thêm **Phase 2 mở rộng**
 - Drop rate: **x2**
 - Thêm cơ hội **Legendary drop**
+
+---
+
+## 🎁 HỆ THỐNG PHẦN THƯỞNG (LOOT)
+
+### 💰 Tiền Tệ Đặc Trưng
+- **Linh Thạch (L):** Tiền tệ cơ bản rơi từ tất cả mob.
+- **U Minh Tinh (UMT):** Rơi từ Boss Tầng 1-5. Dùng đổi trang bị Trúc Cơ.
+- **Hỗn Nguyên Đan (HND):** Rơi từ Boss Tầng 6-10. Dùng đổi trang bị Kim Đan/Nguyên Anh.
+
+### 📦 Chi Tiết Drops Theo Tầng
+
+| Tầng | Mob Thường (Linh Thạch) | Elite/Boss (Vật Phẩm Hiếm) | Tỉ Lệ Boss Drop |
+|------|-------------------------|----------------------------|-----------------|
+| 1 | 10-20 L | Da Sói, Nanh Gấu, **Kiếm Gỗ Linh Lực** | 5% |
+| 2 | 30-50 L | Âm Hồn Châu, Cốt Phấn, **Lá Bùa Trừ Tà** | 5% |
+| 3 | 70-100 L | Hỏa Tinh, Nham Thạch, **Hỏa Tuyến Kiếm** | 3% |
+| 4 | 150-200 L | Băng Tinh, Lông Tuyết, **Trượng Hàn Băng** | 3% |
+| 5 | 300-500 L | Huyết Châu, Răng Dơi, **Huyết Nguyệt Đao** | 2% |
+| 6 | 700-1K L | Lôi Thạch, Lông Lôi Ưng, **Lôi Đình Châm** | 2% |
+| 7 | 1.5K-2K L | Độc Tuyến, Tơ Nhện Độc, **Độc Long Trượng** | 1% |
+| 8 | 4K-6K L | Long Cốt, Long Lân, **Cổ Long Kiếm** | 0.5% |
+| 9 | 10K-15K L | Tiên Khí, Hồn Tiên, **Đọa Tiên Bào** | 0.2% |
+| 10 | 30K-50K L | Hỗn Nguyên Thạch, Hư Không Châu, **Hỗn Nguyên Kiếm** | 0.1% |
+
+---
+
+## 🛒 CỬA HÀNG DUNGEON (DUNGEON SHOP)
+
+*Nơi trao đổi linh thạch và vật phẩm đặc thù lấy tài nguyên tu luyện.*
+
+### 💊 Khu Vực Đan Dược
+- **Bổ Huyết Đan:** Hồi 30% HP ngay lập tức — *Giá: 500 Linh Thạch*
+- **Linh Khí Đan:** Hồi 20% Mana/Nội lực — *Giá: 800 Linh Thạch*
+- **Giải Độc Đan:** Xóa tất cả hiệu ứng Poison/Bleed — *Giá: 1,000 Linh Thạch*
+
+### ⚔️ Khu Vực Trang Bị (Đổi bằng UMT/HND)
+- **Sét Trang Bị Trúc Cơ (Tầng 1-5):**
+    - Kiếm/Trượng: 10 UMT + 50,000 L
+    - Giáp/Mũ: 8 UMT + 40,000 L
+- **Sét Trang Bị Kim Đan (Tầng 6-8):**
+    - Kiếm/Trượng: 15 HND + 200,000 L
+    - Giáp/Mũ: 12 HND + 150,000 L
+- **Trang Bị Thần Cấp (Tầng 9-10):**
+    - Vũ Khí Tiên/Ma: 50 HND + 1,000,000 L
+
+### 🛠️ Nguyên Liệu Nâng Cấp
+- **Đá Cường Hóa (Cơ bản):** Nâng cấp trang bị +1 -> +5 — *Giá: 5,000 L*
+- **Đá Cường Hóa (Cao cấp):** Nâng cấp trang bị +6 -> +10 — *Giá: 20,000 L + 1 UMT*
+- **Bùa Bảo Toàn:** Tránh hạ cấp khi cường hóa thất bại — *Giá: 100,000 L + 5 HND*

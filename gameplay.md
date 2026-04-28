@@ -325,12 +325,28 @@ Người chơi đến **khu vực Linh Mạch** (warp) và sử dụng lệnh `/
 
 #### Level (1-1000) — Hệ Thống PHỤ
 
-Level tăng **tự động** song song khi cày Tu Vi (cứ X Tu Vi = +1 Level). Level dùng để:
-- Hiển thị tiến độ nhanh (dễ hiểu hơn số Tu Vi lớn)
-- Mở khóa một số quest, NPC dialogue
-- Đóng góp vào Thực Lực (Level × 5)
-- **KHÔNG** quyết định cảnh giới — chỉ Tu Vi mới quyết định
+Level tăng **tự động** song song khi cày Tu Vi. Để đảm bảo trải nghiệm người chơi không bị nhàm chán, hệ thống sử dụng **Công thức tăng trưởng Phi tuyến tính** ($TuVi = MaxTuVi \times (\frac{Level}{1000})^{4.5}$), giúp thăng cấp nhanh lúc đầu và cực chậm về sau.
 
+**Bảng mốc Level tham chiếu:**
+
+| Level | Tu Vi Tích Lũy | Tương Ứng Cảnh Giới | Đặc Điểm Giai Đoạn |
+|-------|----------------|---------------------|--------------------|
+| **1** | 0 | Phàm Nhân | Khởi đầu tu luyện |
+| **50** | 1,000,000 | Hóa Thần | Tốc độ thăng cấp cực nhanh |
+| **100** | 14,000,000 | Đại Thừa | Hoàn tất Phàm Giới |
+| **200** | 320,000,000 | Thái Ất | Giai đoạn Tiên Giới trung kỳ |
+| **300** | 1,850,000,000 | Đại La | Bắt đầu chạm ngõ Thần Giới |
+| **500** | 19,800,000,000 | Thiên Đế | Đỉnh phong sức mạnh |
+| **700** | 100,000,000,000 | Hồng Mông | Bước vào Cảnh giới Tối thượng |
+| **900** | 280,000,000,000 | Hồng Mông (Đỉnh) | Thử thách endgame |
+| **1000** | **450,000,000,000** | **Vô Thượng Chân Tiên** | Cực hạn Tu Vi |
+
+> [!TIP]
+> **Quy tắc Level:**
+> - Level dùng để hiển thị trên chat/tab: `[Lvl 452] [Kim Tiên] Name`
+> - Đóng góp vào Thực Lực: `Thực Lực += Level * 50`
+> - Mở khóa các Quest ẩn tại các mốc Level tròn (100, 200, 500, 1000).
+> - **KHÔNG** dùng để đột phá, chỉ dùng để phân cấp sức mạnh phụ.
 ### 2.3 Đột Phá Cảnh Giới (Breakthrough) — Thiên Lôi Kiếp ⚡
 
 Khi đủ điều kiện, người chơi kích hoạt đột phá → trời giáng **Thiên Lôi Kiếp** (sét) xuống người chơi. Sống sót qua Kiếp Lôi = đột phá thành công!

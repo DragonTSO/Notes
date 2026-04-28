@@ -325,22 +325,26 @@ Người chơi đến **khu vực Linh Mạch** (warp) và sử dụng lệnh `/
 
 #### Level (1-1000) — Hệ Thống PHỤ
 
-Level tăng **tự động** song song khi cày Tu Vi. Để đảm bảo trải nghiệm người chơi không bị nhàm chán, hệ thống sử dụng **Công thức tăng trưởng Phi tuyến tính** ($TuVi = MaxTuVi \times (\frac{Level}{1000})^{4.5}$), giúp thăng cấp nhanh lúc đầu và cực chậm về sau.
+Level được đồng bộ hóa với Cảnh Giới để người chơi dễ dàng theo dõi tiến độ. Hệ thống áp dụng quy tắc: **10 Level = 1 Tiểu Cảnh Giới** và **50 Level = 1 Đại Cảnh Giới**.
 
-**Bảng mốc Level tham chiếu:**
+**Bảng mốc Level & Cảnh Giới:**
 
-| Level | Tu Vi Tích Lũy | Tương Ứng Cảnh Giới | Đặc Điểm Giai Đoạn |
-|-------|----------------|---------------------|--------------------|
-| **1** | 0 | Phàm Nhân | Khởi đầu tu luyện |
-| **50** | 1,000,000 | Hóa Thần | Tốc độ thăng cấp cực nhanh |
-| **100** | 14,000,000 | Đại Thừa | Hoàn tất Phàm Giới |
-| **200** | 320,000,000 | Thái Ất | Giai đoạn Tiên Giới trung kỳ |
-| **300** | 1,850,000,000 | Đại La | Bắt đầu chạm ngõ Thần Giới |
-| **500** | 19,800,000,000 | Thiên Đế | Đỉnh phong sức mạnh |
-| **700** | 100,000,000,000 | Hồng Mông | Bước vào Cảnh giới Tối thượng |
-| **900** | 280,000,000,000 | Hồng Mông (Đỉnh) | Thử thách endgame |
-| **1000** | **450,000,000,000** | **Vô Thượng Chân Tiên** | Cực hạn Tu Vi |
+| Level | Cảnh Giới Tương Ứng | Tu Vi Tích Lũy | Ghi chú |
+|-------|---------------------|----------------|---------|
+| **1 - 50** | Phàm Nhân (Cấp 1) | 0 - 5,000 | Giai đoạn khởi đầu |
+| **51 - 100** | Luyện Khí (Cấp 2) | 5,000 - 25,000 | Chọn Class tại Lvl 51 |
+| **151** | Kim Đan (Cấp 4) | 100,000 | Mở đảo Tier 3 |
+| **451** | Tiên Nhân (Cấp 10) | 50,000,000 | Bước vào Tiên Giới |
+| **651** | Đại La (Cấp 14) | 1,500,000,000 | Bước vào Thần Giới |
+| **801** | Thánh Nhân (Cấp 16) | 8,000,000,000 | Endgame Tier 1 |
+| **901** | Hồng Mông (Cấp 19) | 100,000,000,000 | Cảnh giới Tối Thượng |
+| **1000** | **Vô Thượng Chân Tiên** | **450,000,000,000** | Max Level & Tu Vi |
 
+> [!TIP]
+> **Quy tắc Đột Phá theo Level:**
+> - **Cứ mỗi 10 Level:** Có 1 lần đột phá tầng nhỏ (Tiểu Lôi Kiếp).
+> - **Cứ mỗi 50 Level:** Có 1 lần đột phá cảnh giới lớn (Thiên Lôi Kiếp).
+> - Ví dụ: Level 49 -> 50 là mốc đột phá từ Phàm Nhân lên Luyện Khí.
 > [!TIP]
 > **Quy tắc Level:**
 > - Level dùng để hiển thị trên chat/tab: `[Lvl 452] [Kim Tiên] Name`
